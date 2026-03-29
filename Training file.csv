@@ -1,0 +1,773 @@
+Nom du Physique,Codesite,Owner,Topolopgy,Region,Ville,Date,VENDOR,9/3/2026 0:00,10/3/2026 0:00,11/3/2026 0:00,12/3/2026 0:00,13/3/2026,14/3/2026,15/3/2026,Verification,RCA,ACTION PLAN,ETR,OWNER,STATUS
+Marche-Congo,LIT_547,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,38.82259452,29.428039150261377,32.01366571249613,28.340511564195765,28.340511564195765,24.349166417879864,33.55264987209432,"15/03/2026 Grid outage, grid only site /grid return awaited..09/03/2026 : power issue || mail send to camusat || Le point de marche Congo n’est plus à notre niveau,
+ENEO doit reprendre toute une BT dans la zone,
+Nous nous sommes débrouiller à déployer un GE mobile qui marche en journée et qu’on éteint la Nuit merci...15/03/2026 Grid outage, grid only site /grid return awaited..INC-20260314-00013163..2026-03-14 23:26:58..scheduled site / GEM stop at 06PM and will be started around 06AM..Others..user:OCM_NOC.CAMUSAT",Grid outage,grid return awaited,,CAMUSAT,Ongoing
+Garoua-Camp-Chinois-II,NRD_163,CAMUSAT,Medium Grid + GE,NORD,Garoua,16032026,HUAWEI,6.612003084956301,20.783649146222242,37.12418558909787,25.793648180344086,25.793648180344086,24.35878861317458,18.957828442477563,Impacted by NRD_073_H_Garoua-Camp-Chinois-IHS..Impacted by NRD_073_H_Garoua-Camp-Chinois-IHS..INC-20260314-00010616..Site UP après un reset sur Garoua orange ..GE Fault,Impacted by NRD_073_H_Garoua-Camp-Chinois-HIS. ODU Faulty,FME on site to check ODU 5/2 status and antenna chain,,GNOC,Ongoing
+Buea-Bakwere-Town-MTN,SUO_222,MTN sharing,,SUD-OUEST,Buea,16032026,HUAWEI,28.094852893829497,22.84133548753432,23.41036211650247,25.536592879429133,25.536592879429133,23.732431261671028,22.863177504990368,Power instabilities on site escalated to L5 of MTN,Power instabilities ,Stabilize Power  on site (escalated to L5 ),,MTN,Ongoing
+Buea-Boduma-IHS,SUO_186,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,25.245000117076142,13.169364539978575,48.193716377195905,25.473957144278785,25.473957144278785,0.926090564,10.080145935409092,Impacted by Buea-Low-Boduma,Impacted by Buea-Low-Boduma. Power Instabilities on site,Stabilize Power  on site (escalated to L5 ),,MTN,Ongoing
+Garoua-Camp-Chinois-IHS,NRD_073,IHS,Grid-Gen,NORD,Garoua,16032026,HUAWEI,6.5088846156097615,20.733489337290507,37.109605950980225,25.166979845342418,25.166979845342418,18.45443762475926,18.958926031294453,"14/03/2026 
+besoin d'un fme sur site de garoua-orange pour verifier le status de l ODU 5/2..14/03/2026 
+besoin d'un fme sur site de garoua-orange pour verifier le status de l ODU 5/2",ODU Faulty,FME on site to check ODU 5/2 status and antenna chain,,GNOC,Ongoing
+Ancien-Troisieme,LIT_653,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,0.18596813187456487,6.805928735753297,0.014341827207324187,24.53835414,24.53835414,5.074189686762787,1.6615665372975312,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+IHS-Bamenda-Bujong,NRO_133,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,1.4942025358692024,5.935687149137441,21.678677946952803,23.81277476306716,23.81277476306716,26.02626383693635,20.412627539820523,"15/03/2026 IHS Gen only, GEN overload ESCALADE L3 IHS 
+15/03/2026 Feedback IHS : FME Joseph is managing with level 0 escalade L2 IHS..15/03/2026 IHS Gen only, GEN overload ESCALADE L3 IHS 
+15/03/2026 Feedback IHS : FME Joseph is managing with level 0 escalade L2 IHS","Gen only, GEN overload",Upgrade Genarator,,IHS,Obs
+Marche-Central-Bonawon-New,LIT_740,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,27.40648177417183,23.199936047158268,25.747494570593982,20.43476224762775,20.43476224762775,21.454312499634135,24.048866117579568,Impacted by LIT_547_Z_Marche-Congo(LIT-547)..Impacted by LIT_547_Z_Marche-Congo(LIT-547)..INC-20260314-00013147..problème d énergie  sur le site porteur marche congo ..MW Link Down,Impacted by LIT_547_Z_Marche-Congo(LIT-547). Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Sodiko-III-MTN,LIT_741,MTN sharing,,LITTORAL,Douala,16032026,ZTE,0.3072699892875324,2.8795059679562613,3.380719901187737,19.839375193907358,19.839375193907358,3.7851082076228275,2.2631183815394347,15/03/2026 : Power issue, Power issue,Solve Power Issue on site,,MTN,Ongoing
+Ngd-CRTV,ADM_007,CAMUSAT,Good Grid + Solar + GE,ADAMAOUA,Ngaoundere,16032026,HUAWEI,18.966334755808436,18.966060358604214,18.966334755808436,18.966334755808436,18.966334755808436,18.966060358604214,18.966334755808436,"14.03.26; Expedition des ODU de Maroua pour Ngaoundéré, ETD=14.02.26
+11.03.26; Suite aux nouvelles recos du BO TX, ODUs à changer à Ngd-CRTV et à Trouamala, point au niveau de l'ing
+09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP..14.03.26; Expedition des ODU de Maroua pour Ngaoundéré, ETD=14.02.26
+11.03.26; Suite aux nouvelles recos du BO TX, ODUs à changer à Ngd-CRTV et à Trouamala, point au niveau de l'ing
+09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP",ODU Faulty,ODU shipment ongoing from Maroua to Ngaoundéré,,GNOC,Ongoing
+Maroua-Djarengol-II,EXN_143,IHS,Solar-Grid-Gen,EXTREME-NORD,Maroua,16032026,HUAWEI,18.966334755808436,18.966060358604214,18.966334755808436,18.966060358604214,18.966060358604214,18.966334755808436,18.966060358604214,"15.03.26; Expédition du matériel en cours de Ngd pour Mra, ETD=15.03.26
+12.03.26; Expédition du matériel en cours de Ngd pour Mra, ETD=14.03.26
+11.03.2026: Apres le remplacement du MSS8, la carte micro sD est egalement faulty. Apres verification les spares ne sont pas disponible dans les WH TELEINFRA mail en cours vers le SPM pour support
+
+10.02.26; FME sur site et investigations en cours avec le BO TX, travaux en cours
+10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC; FME sur site en attente du vigile
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)..15.03.26; Expédition du matériel en cours de Ngd pour Mra, ETD=15.03.26
+12.03.26; Expédition du matériel en cours de Ngd pour Mra, ETD=14.03.26
+11.03.2026: Apres le remplacement du MSS8, la carte micro sD est egalement faulty. Apres verification les spares ne sont pas disponible dans les WH TELEINFRA mail en cours vers le SPM pour support
+
+10.02.26; FME sur site et investigations en cours avec le BO TX, travaux en cours
+10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC; FME sur site en attente du vigile
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)", micro sD  and MSS8 Faulty,Equipment shipment ongoing from Maroua to Ngaoundéré,,GNOC,Ongoing
+Ngomedzap,CTR_188,IHS,Grid-Gen,CENTRE,Ngomedzap,16032026,NOKIA,18.965346925873238,11.037517780938833,17.46889433292942,18.96523716699155,18.96523716699155,18.965456684754926,18.96523716699155,"09.03.2026: Site Ngomedzap à basculer en terrestre et prendra sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR  Fin Mars 26
+
+UE relay site; New site installation ongoing, ETR=Mars 26..09.03.2026: Site Ngomedzap à basculer en terrestre et prendra sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR  Fin Mars 26
+
+UE relay site; New site installation ongoing, ETR=Mars 26",Transmission unavailable pending completion of Tiga site deployment (UE relay project),"Complete Tiga site installation, migrate Ngomedzap transmission to terrestrial link via Tiga",FIN MARS,GNOC,Ongoing
+Mokolo3-IHS,EXN_156,IHS,Grid-Gen,EXTREME-NORD,Maroua,16032026,NOKIA,1.580527896,1.1897073339852051,0.1366166145178648,18.96457861370142,18.96457861370142,12.439285045279197,1.580527896,14/03/2026 :  Travaux equipe projet ..14/03/2026 :  Travaux equipe projet ,Travaux Projet,Travaux Projet,,HWPJ,Ongoing
+Bonamoutongo-III,LIT_718,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,6.408839394950505,0.852424061,5.584477021,17.34918397930094,17.34918397930094,17.094525080636195,6.413577320010069,"INC-20260315-00011748..2026-03-15 19:11:41..Grid outage, grid only site /grid return awaited..MW Link Down..user:OCM_NOC.CAMUSAT","Grid outage, grid only",Awaiting Grid return,,CAMUSAT,Ongoing
+Institute-Samba-New,CTR_868,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,16.76237641149922,19.91307828296132,16.46163707567216,17.16755132325308,17.16755132325308,15.721587815886062,14.125785141867011,"0..15/03/2026 : Point suivi par le 3PP 
+14/03/2026 : Relance faite || Les perturbations de phases sont les causes de ces instabilités sur site (perte de phases, baisses de tensions, fluctuations de tensions) || Courant de sortie réduit → baisse de la tension DC. Surcharge possible des redresseurs restant → redresseurs alarmés || charge incomplète ou décharge rapide des batteries ||Le point est escaladé et suivi auprès de ENEO pour normalisation. Par ailleurs pas d’espace disponible pour poser un GE mobile.
+13/03/2026 : power issue || escalade du 3 PP au niveau de Mr. Theophile
+12/03/2026 : FME active : check VBPe1p du slot 6 et 8 || ETA: 13H || Power issue || point suivi par le 3PP
+07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ..15/03/2026 : Point suivi par le 3PP 
+14/03/2026 : Relance faite || Les perturbations de phases sont les causes de ces instabilités sur site (perte de phases, baisses de tensions, fluctuations de tensions) || Courant de sortie réduit → baisse de la tension DC. Surcharge possible des redresseurs restant → redresseurs alarmés || charge incomplète ou décharge rapide des batteries ||Le point est escaladé et suivi auprès de ENEO pour normalisation. Par ailleurs pas d’espace disponible pour poser un GE mobile.
+13/03/2026 : power issue || escalade du 3 PP au niveau de Mr. Theophile
+12/03/2026 : FME active : check VBPe1p du slot 6 et 8 || ETA: 13H || Power issue || point suivi par le 3PP
+07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ",Power instability due to phase disturbances (phase loss and voltage fluctuations),Follow up with ENEO for grid stabilization,,CAMUSAT,Obs
+Makepe-Bloc-E,LIT_613,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,21.38300581283037,20.20659182574387,17.00761433948568,16.566731204889095,16.566731204889095,16.86093988725568,22.409379408648416,"14.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L4 CAMUSAT
+13.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L3 CAMUSAT
+13.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L2 CAMUSAT..15/03/2026 : site down..15/03/2026 : site down..09/03/2026 : need BO RAN analysis || power issue || mail sent to camusat || délestages continue dans cette zone, le site est Grid only. Chaque 4H nous procédons à la vérification de la continuité...14.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L4 CAMUSAT
+13.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L3 CAMUSAT
+13.03.26; Camusat;  Grid outage, grid only / awaited grid return escalade L2 CAMUSAT"," Grid outage, grid only",awaited grid return escalade L4,,CAMUSAT,Ongoing
+Kumba-Nkamlikum,SUO_216,IHS,Grid-Gen,SUD-OUEST,Kumba,16032026,HUAWEI,16.75478475551575,13.643339977404304,18.188107698341614,16.20443542958163,16.20443542958163,26.283502069320782,28.403037540464442,,Impacted by Kumba-agence. Power Issue on site,Solve Power Issue on site,,IHS,Ongoing
+Afanoya-II,CTR_838,CAMUSAT,Medium Grid + GE,CENTRE,Yaounde,16032026,ZTE,6.805983615,14.330064713836645,8.669109895460919e-17,15.854231424406862,15.854231424406862,3.085303871122585,8.263087649052562,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Limbe-Ngueme,SUO_235,CAMUSAT,Medium Grid + GE,SUD-OUEST,Limbe,16032026,HUAWEI,0,2.4661540195165923,2.1727685287626812,15.606597094170192,15.606597094170192,1.9149997951167543,1.0663258287527293,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Limbe-Coconut-Island-MTN,SUO_219,MTN sharing,,SUD-OUEST,Limbe,16032026,HUAWEI,21.648238150431137,19.062575001902488,23.066213142967527,15.526436524243543,15.526436524243543,10.94367393709499,10.876721019264878,14/03/2026 : Power issue || Mail sent to MTN..14/03/2026 : Power issue || Mail sent to MTN..INC-20260315-00003183..MW Link Down,Power Issue on site,Solve Power Issue on site,,MTN,Ongoing
+Bamenda-Park-Pharmacy-MTN,NRO_113,MTN sharing,,NORD-OUEST,Bamenda,16032026,HUAWEI,23.70764404755632,23.707918444760544,23.707918444760544,14.579729583384557,14.579729583384557,0,13.583393334855325,15/03/2026 : Besoin d'analyse BO RAN ..15/03/2026 : Besoin d'analyse BO RAN ..15/03/2026 : Besoin d'analyse BO RAN ,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Etam-Bafia,CTR_721,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,9.724929607970543,22.55784658927934,14.224751066856328,14.224751066856328,14.224751066856328,14.224751066856328,14.224751066856328,"15/03/2026 14/03/2026 Grid outage, Grid only site / Grid return awaited (escalade L4 camusat )
+14/03/2026 Grid outage, Grid only site / Grid return awaited (escalade L3 camusat )..14/03/2026 : site down ..14/03/2026 : site down ..15/03/2026 14/03/2026 Grid outage, Grid only site / Grid return awaited (escalade L4 camusat )
+14/03/2026 Grid outage, Grid only site / Grid return awaited (escalade L3 camusat )","Grid outage, Grid only site",Grid return awaited (escalade L4 camusat ),,CAMUSAT,Ongoing
+Buea-Low-Boduma-MTN,SUO_170,MTN sharing,,SUD-OUEST,Buea,16032026,HUAWEI,20.14424878094469,15.518735109378381,39.021166634470724,14.045386761030036,14.045386761030036,0.8288259019253171,9.060705442284391,Power instabilities on site escalated to L5 of MTN..INC-20260315-00007729..Auto TT closure RCA..MW Link Down,Power Instabilities on site,Stabilize Power  on site (escalated to L5 ),,MTN,Ongoing
+Nkolfon-Cimencam-IHS,CTR_911,,,CENTRE,Mbankomo,16032026,ZTE,5.910570658377677,12.5379034,0,13.870778673410252,13.870778673410252,8.669109895460919e-17,5.259755369404493,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Kumba-Lutherian-Church-MTN,SUO_054,IHS,Grid-Gen,SUD-OUEST,Kumba,16032026,HUAWEI,13.363308483922518,13.316697545498716,13.536837275872363,13.699079196155218,13.699079196155218,13.27978197495741,13.364771935678368,grid outage,Grid outage,Awaiting Grid return,,IHS,Ongoing
+Stamatiades,LIT_014,IHS,GridOnly,LITTORAL,Douala,16032026,ZTE,0,0,0,12.64422317053896,12.64422317053896,17.71877872024071,26.84297967558201,"15/03/2026 IHS feedback : Grid only, No space // Awaiting grid return..15/03/2026 : site down..15/03/2026 : site down..15/03/2026 IHS feedback : Grid only, No space // Awaiting grid return","Grid outage, Grid only, No space",Awaiting Grid return,,IHS,Ongoing
+PK15-Auberge,LIT_728,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,3.9736007937762325,0,9.399567696,12.64422317053896,12.64422317053896,1.2721237319190528,3.9092089165188586,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mile16-Bolifamba-IHS,SUO_220,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,13.270489056307774,0,5.779463674200516,11.677393768037042,11.677393768037042,47.30223644697328,31.44838917865233,Impacted by Buea-Bomaka-III-MTN,Impacted by Buea-Bomaka-III-MTN. Grid outage,Awaiting Grid return,,MTN ,Ongoing
+Logpom-Akanji-Immeuble,LIT_618,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,3.123079219570448,0.18432174864923392,12.627667872550912,11.288774154271229,11.288774154271229,17.886526877754946,12.219767281901783,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Maroua-Boulore,EXN_237,CAMUSAT,Medium Grid + GE,EXTREME-NORD,Maroua,16032026,HUAWEI,0,5.138416925697627,0,10.070011531999834,10.070011531999834,0,2.4524524524524525,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Oyomabang-II,CTR_865,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,0,1.401346521960556,29.68278951466086,9.434251502964955,9.434251502964955,20.546862652125814,20.64974331056203,"up apres remplacement de la fibre ..15/03/2026 : probleme d'access
+14/03/2026 : FME sur site || need BO RAN  analysis || Check SFP, FIBER  and OF5  on RRU 73 needed || Problème accès camusat le vigile dit qu'il attend le GO de son patron de l Allemagne..15/03/2026 : probleme d'access || Intervention en cours || up apres remplacement de la fibre  
+14/03/2026 : FME sur site || need BO RAN  analysis || Check SFP, FIBER  and OF5  on RRU 73 needed || Problème accès camusat le vigile dit qu'il attend le GO de son patron de l Allemagne",FO issue,Up after replace Fiber,,CELLDOWN,Obs
+Koweit-City,CTR_258,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,1.6608713977135032,1.4645493446663038,3.796267027261179,9.082455994,9.082455994,7.345247294077705,11.910649684772494,"16.03.26; Need FME on site to check MPR status, ETA=11H UTC..Power status check ongoing",MPR issue,FME to check MPR status on site,,GNOC,Ongoing
+Buea-Bomaka-III-MTN,SUO_169,MTN sharing,,SUD-OUEST,Buea,16032026,HUAWEI,5.854172886336629,0,2.4819410053328195,8.844407272769844,8.844407272769844,20.718086507560184,20.577778070468128,Grid outage,Grid outage,Awaiting Grid return,,MTN ,Ongoing
+Yona-Hotel-MTN-IHS,CTR_466,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0,8.652676799606622,8.652676799606622,23.855544140631864,23.82768367782988,0..14/03/2026 : FME sur site || need BO TX analysis || Le MPR de  *CTR_466_Z_Yona-Hotel-MTN-IHS* est en perte de supervision. Il faut un FME sur site pour troubleshooting...14/03/2026 : FME sur site || need BO TX analysis || Le MPR de  *CTR_466_Z_Yona-Hotel-MTN-IHS* est en perte de supervision. Il faut un FME sur site pour troubleshooting.,Awaiting BO TX analysis,Need BO TX awaiting,,BO TX,Ongoing
+Ngousso-Maetur,CTR_567,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,1.6136201991465142,0,13.795923116098551,8.586565366536128,8.586565366536128,3.8923060487387966,15.869817185606658,0..15/03/2026 : site down ..15/03/2026 : site down ..INC-20260314-00012993..2026-03-14 23:28:14..Grid outage. Grid only site / Grid return awaited..Others..user:OCM_NOC.CAMUSAT,"Grid outage, no space to deploy MDG",Awaiting Grid return,,CAMUSAT,Ongoing
+BTS-Mobile-Tagidor-Hotel,OST_306,CAMUSAT,Medium Grid + GE,OUEST,Bafoussam,16032026,NOKIA,3.3153219008482164,8.281124691943406,6.739177042539615,8.570760087572953,8.570760087572953,3.9397035924813713,27.118297728677852,"15/03/2026 FME active EAT asap 
+besoin d'un fme a bana pour verifier le status de l ODU 3/1 ..INC-20260314-00012752..ODU instable à bana ..Others",ODU Faulty,FME on sitre to replace ODU fault,,GNOC,Ongoing
+Nsimalen-highway-II,CTR_725,,,CENTRE,Yaounde,16032026,ZTE,19.45798137318605,10.90761814446025,23.425746653085834,8.071594986799665,8.071594986799665,13.090722301248617,13.771739575833143,15/03/2026 power issue MTN activé..15/03/2026 power issue MTN activé,Power Issue,Solve Power Issue on site,,MTN,Ongoing
+Balissa-MTN-IHS,CTR_170,IHS,Solar-Gen,CENTRE,Balissa,16032026,NOKIA,4.7452428053684494,4.579629233,0.1538713874355472,7.911989010839881,7.911989010839881,7.909427096695123,7.902017514590614,"14/03/2026 FME en route ETA=10H UTC  //  FME sur site ODU 3DB20859ACAA07 fautlty commande pas disponible au WH point transmisa ocm en attente de retour
+13.03.26; FME en route pour le site, ETA=17H UTC (escalade faite au FM manager)
+12.03.26; Level 0 sur site et investigations en cours
+12.03.26; Level 0 en route pour le site, ETA=16H30 UTC
+12.02.26; Besoin d'un FME sur site pour vérifier le statut du MPR; FME manage avec le niveau 0..14/03/2026 FME en route ETA=10H UTC  //  FME sur site ODU 3DB20859ACAA07 fautlty commande pas disponible au WH point transmisa ocm en attente de retour
+13.03.26; FME en route pour le site, ETA=17H UTC (escalade faite au FM manager)
+12.03.26; Level 0 sur site et investigations en cours
+12.03.26; Level 0 en route pour le site, ETA=16H30 UTC
+12.02.26; Besoin d'un FME sur site pour vérifier le statut du MPR; FME manage avec le niveau 0",ODU 3DB20859ACAA07 unavailable,Awaiting OCM return,,GNOC,Ongoing
+Doualare-II,EXN_197,CAMUSAT,Medium Grid + GE,EXTREME-NORD,Maroua,16032026,HUAWEI,0,0,0,7.489122894824648,7.489122894824648,33.19026263,26.815192385367823,"15/03/2026 escalade L4 camusat 
+14/032026 Camusat: FME is on the way ETA 03:30 escalde L3 camusat 
+14/03/2026 FME en route ETA=11H20 UTC  // Power issue sur site camusat activé 
+13.03.26;Besoin d'un FME sur site pour reset physique du MPR; CM-20260313-00004122; FME Eric activé pour investigations, update ASAP..15/03/2026 escalade L4 camusat 
+14/032026 Camusat: FME is on the way ETA 03:30 escalde L3 camusat 
+14/03/2026 FME en route ETA=11H20 UTC  // Power issue sur site camusat activé 
+13.03.26;Besoin d'un FME sur site pour reset physique du MPR; CM-20260313-00004122; FME Eric activé pour investigations, update ASAP",Power issue on site,Solve Power Issue on site,,CAMUSAT,Ongoing
+Buea-Prime22,SUO_241,CAMUSAT,Medium Grid + GE,SUD-OUEST,Buea,16032026,HUAWEI,0.7609949130416966,1.4177920610669148,2.797040461514146,7.135498071170585,7.135498071170585,18.47615159018668,12.503420818479295,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Maroua-Entree,EXN_250,CAMUSAT,Bad Grid + GE,EXTREME-NORD,Maroua,16032026,HUAWEI,0,0,15.352962611734544,6.993177387914229,6.993177387914229,12.713334679708947,15.608755685510072,16.93.26; Need FME on site to check MPR status; ETA=12H UTC..INC-20260314-00007944..Auto TT closure RCA..MW Link Down,MPR Faulty,Dispatch FME on site to check MPR status,,GNOC,Ongoing
+Ngo-Njo-II,LIT_585,CAMUSAT,Medium Grid + GE,LITTORAL,Douala,16032026,ZTE,6.717078921,0.8346431226548185,5.849947169391614,6.980244133021911,6.980244133021911,16.106969542642055,7.376089539832232,INC-20260315-00011747..2026-03-15 19:48:49..relai de demarrage faulty  / guard  is informed to start GE..GE Fault..user:OCM_NOC.CAMUSAT,Faulty generator start relay,Guard to manually start GE,,CAMUSAT,Ongoing
+Etoudi,CTR_086,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,5.226626480281451,6.724707163303653,6.724707163303653,1.6287669248195569,5.888070088,0..15/03/2026 : need BO RAN analysis..15/03/2026 : need BO RAN analysis,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkolmeyos-IHS,SUD_111,IHS,Gen-Lithium,SUD,Nkolmeyos,16032026,NOKIA,6.320867651277008,6.321196927922075,6.321270100509866,6.321123755334281,6.321123755334281,6.321087169040385,6.321123755334281,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkong-CRTV,LIT_116,CAMUSAT,Good Grid + GE,LITTORAL,Nkongsamba,16032026,ZTE,0.5104702655872251,1.4481769781477383,5.460358018837551,6.299482962494658,6.299482962494658,0.7089326168273541,1.3211676588869568,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Brazz-Tergal,LIT_340,IHS,Grid-Gen,LITTORAL,Douala,16032026,ZTE,3.432434627610067,16.297328029784172,5.508615340486686,5.992066628,5.992066628,6.033116449783116,8.493672766333583,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Korek-Djarengol-II,EXN_235,CAMUSAT,Bad Grid + GE,EXTREME-NORD,Maroua,16032026,HUAWEI,0.24285981888321065,0.47827432695853755,1.4945866919551127,5.940278729,5.940278729,7.491372951899268,7.311770835162648,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Eloumdem,CTR_630,CAMUSAT,HGB,CENTRE,Yaounde,16032026,ZTE,0,0.9150963829326404,0.3683325138003505,5.847825164345632,5.847825164345632,0,14.628828389793298,INC-20260315-00004467..GE Fault,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Gospel-Radio-IHS,NRO_126,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,5.734279601238665,5.734279601238665,0.47971948556743876,4.640550638357656,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+T-junction-IHS,NRO_124,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,5.612794812356215,5.612794812356215,1.287746079412746,4.902892658740612,INC-20260315-00014054..MW Link Down,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mbalgong-Carrefour,CTR_831,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,0,1.0527340205702769,0.629192789,5.358977398451082,5.358977398451082,0,13.688780154423426,0..15/03/2026 : site down..15/03/2026 : site down..INC-20260315-00004463..2026-03-15 09:53:29..Grid outage. Grid only site / Grid return awaited..Others..user:OCM_NOC.CAMUSAT,Grid outage. Grid only site,Awaiting Grid return,,CAMUSAT,Ongoing
+Phacochere,ADM_160,CAMUSAT,Hybrid Solar - S3,ADAMAOUA,Phacochere,16032026,NOKIA,0.7172125310865812,0.013866576,1.4082519165549334,5.278237871967915,5.278237871967915,9.482234427409866,8.307155840050577,INC-20260313-00004813..project team Huawei undergo swap on site..MW Link Down,Travaux Projet,Travaux Projet,,HWPJ,Ongoing
+Mvog-Mangaa-II,CTR_669,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,16032026,ZTE,5.406429822,3.876573942363416,3.5573768212657098,5.076640968453835,5.076640968453835,5.914650030147106,4.575152638018135,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bois-Des-Singes-II-MTN,LIT_753,,,LITTORAL,Douala,16032026,ZTE,4.438265019,4.3761963718104075,3.2019409760637823,5.054414794911871,5.054414794911871,6.165174677601579,2.105102178201594,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Diang-MTN,EST_076,IHS,Grid-Gen,EST,Diang,16032026,NOKIA,0.001481745,1.9488969964116163,2.0170389687933548,4.932875126588576,4.932875126588576,5.222016607250526,10.290206141814329,"Impacted by Diang-MTN_G9U9L8L7_EST_089..Impacted by Diang-MTN_G9U9L8L7_EST_089..INC-20260315-00006436..2026-03-15 14:33:19..Merci de noter qu’après plusieurs tentatives de reset logique et physique effectuées sur le BOTX et le FME du site de BOUM, l’opération est restée sans succès.
+
+Concernant l’ODU qui devait arriver aujourd’hui, le magasinier nous informe, après échange avec le responsable de l’agence, que le camion chargé d’acheminer l’équipement vers Bertoua a accusé un léger retard. La livraison est désormais attendue pour demain 16/03/2026.
+
+En attendant, le FME poursuit les actions avec le BOTX dans l’espoir de restaurer les sites...Reset physique du MPR..Others..Perte de rendement de l'UBT-T BOUAM..user:ZIEGA HERMANN",Impacted by Diang-MTN_G9U9L8L7_EST_089. UBT-T performance degradation on BOUAM; ODU suspected faulty,Replace faulty unit upom receive new ODU,,GNOC,Ongoing
+Hikoa-Malep-Camrail,LIT_402,CAMUSAT,Hybrid Solar - S3,LITTORAL,Messondo,16032026,NOKIA,0,0,0.072989656,4.8495498422399015,4.8495498422399015,5.979298011461754,2.9171715575224346,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkolmeyang-IHS,CTR_442,IHS,Grid-Gen,CENTRE,Nkolmeyang,16032026,NOKIA,4.740595859016911,4.740266582371846,4.740540979576068,4.757956055470675,4.757956055470675,4.740705618,4.740486100135223,"09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)..09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)",Transmission unavailable pending installation of NKOMEYANG–TIGA link,Complete installation of NKOMEYANG–TIGA link,,GNOC,Ongoing
+CRTV_Yaounde_Mballa_II,CTR_842,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,4.3497993607642735,6.4119675230786335,6.8316489,4.741583689,4.741583689,4.741583689,3.6273846946361568,"0..
+15/03/2026 : probleme escalade au niveau de Mr SEKA 
+14/03/2026 : FME active || LE responsable de l'immeuble nous dis qui'il ya probleme de disjonction depuis 5 jours 
+13/03/2026 : need BO RAN analysis || Possible impact from an Operation(Deep investigation of BO ongoing)..
+15/03/2026 : probleme escalade au niveau de Mr SEKA 
+14/03/2026 : FME active || LE responsable de l'immeuble nous dis qui'il ya probleme de disjonction depuis 5 jours 
+13/03/2026 : need BO RAN analysis || Possible impact from an Operation(Deep investigation of BO ongoing)",Power disjunction issue at building impacting site,Check and restore breaker status,,CAMUSAT,Ongoing
+Nkomekui,SUD_016,,,SUD,Nkomekui,16032026,NOKIA,4.740595859016911,4.740266582371846,4.740540979576068,4.740486100135223,4.740486100135223,4.740705618,4.740486100135223,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nsimalen-highway-I,CTR_724,,,CENTRE,Yaounde,16032026,ZTE,0,0,4.7861823812116215,4.202320010068547,4.202320010068547,0.7883797540230287,21.883085570951067,Reset ODU,ODU Faulty,Up after reset ODU,,GNOC,Obs
+Obobogo-Paloma,CTR_598,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,0,13.82619827429769,4.909368432760245,4.074926534721857,4.074926534721857,3.0031676413255357,1.1664259288528285,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Buea-Street2,SUO_240,CAMUSAT,Medium Grid + GE,SUD-OUEST,Buea,16032026,HUAWEI,0.35695417639862087,0,0,4.057017543859649,4.057017543859649,0,14.883212891253827,INC-20260315-00014321..Auto TT closure RCA..GE Fault,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+MOLYKO-CHIEF-STREET-MTN,SUO_228,MTN sharing,,SUD-OUEST,Buea,16032026,HUAWEI,4.252150542355221,1.2935267138483515,10.899880143301194,3.719197999168759,3.719197999168759,15.909714539100506,6.083697001094663,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+PK5-Auberge,LIT_647,CAMUSAT,Good Grid no GE - 12h,LITTORAL,Douala,16032026,ZTE,0,0,3.027570699354326,3.4510570512032506,3.4510570512032506,6.784470874383156,22.288973915435896,0..15/03/2026 : site down ..15/03/2026 : site down ..INC-20260314-00013922..2026-03-14 23:21:13..Grid outage. Grid only site / Grid return awaited..Others..user:OCM_NOC.CAMUSAT,Grid outage,Awaiting Grid return,,CAMUSAT,Ongoing
+Buea-Bwitingui-Road,SUO_232,CAMUSAT,Medium Grid + GE,SUD-OUEST,Buea,16032026,HUAWEI,0.13381436992548104,0.1327350742555421,5.074829947,3.398610598902996,3.398610598902996,2.8282119839137385,10.970473397373983,"INC-20260315-00014261..Site was down due to a network outage around Signal-Hill, affected by a power issue. Generator fail to start due to issue with ATS. Problem already fixed by power team...MW Link Down",ATS fault preventing generator start during power outage,Up after intervention,,CAMUSAT,Obs
+Bfsam-Tyo-II,OST_232,CAMUSAT,Good Grid + GE,OUEST,Bafoussam,16032026,HUAWEI,0.26397011046133856,0.5853441160458704,1.1773469375808558,3.3948422106316842,3.3948422106316842,4.259010472460765,4.721625865631714,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+LIT_871_Z_Bonamatoumbe-III-IHS,LIT_871,I_HS,Grid-Gen,LITTORAL,Douala,16032026,ZTE,0,0,5.690046771918116,3.393488517757524,3.393488517757524,3.2991873452399765,2.503764729641923,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Garoua-Ngalbidje-II,NRD_158,CAMUSAT,Good Grid + Solar + GE,NORD,Garoua,16032026,HUAWEI,2.534954545188463,1.7770877602748947,7.587357093936042,3.349237395290027,3.349237395290027,4.597708088205164,5.568360758419238,INC-20260315-00007446..power issue ..GE Fault,Power Issue on site,Solve Power Issue on site,,CAMUSAT,Ongoing
+Maroua-Meskin,EXN_233,CAMUSAT,Bad Grid + GE,EXTREME-NORD,Maroua,16032026,HUAWEI,5.488383119962068,0,0,3.254716705009103,3.254716705009103,0.7628242277365085,4.0325596063900155,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nyazoro-MTN-IHS,CTR_169,IHS,Solar-Gen,CENTRE,Nyazoro,16032026,NOKIA,3.1653546821675476,2.0588897358530174,0.038160436,3.2390943575154103,3.2390943575154103,3.162464364949745,3.161055793,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Garoua-Foulbere-II,NRD_139,CAMUSAT,Good Grid + GE,NORD,Garoua,16032026,HUAWEI,0,2.2894422199977758,0.7814649444766404,3.182934396384689,3.182934396384689,2.863097015143799,1.9516226753068862,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ngalbidje-MTN-IHS,NRD_117,IHS,Grid-Gen,NORD,Garoua,16032026,HUAWEI,0.4659813322094024,0.8477044295757747,0.4542188387217627,3.108206891101628,3.108206891101628,0.11405777122151392,11.674027828998588,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Bamenda-Old-Town-IHS,NRO_119,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,2.7429659191355102,2.7429659191355102,0,5.7722561743029575,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bfsam-Djeleng,OST_016,IHS,Grid-Gen,OUEST,Bafoussam,16032026,HUAWEI,0.18146801772532767,0,0.057605119739622665,2.7081174741993452,2.7081174741993452,0.6928712338069063,2.051576430231401,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bamenda-Abangoh-IHS,NRO_064,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,2.6959525314788473,2.6959525314788473,0,8.071851090856937,16.03.2026: FME Activated is managing for intervention tomorrow because of today Ghost Town..Power status check ongoing,Ghost Town,Restore access on site,,GNOC,Ongoing
+Bda-Nitop-II,NRO_226,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,2.6884523412301187,2.6884523412301187,0,5.822946484496192,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Hilton,CTR_702,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,1.3702481721487567,3.651513355460724,6.974243980822927,2.4794714304948227,2.4794714304948227,28.398738650931634,14.224751066856328,"14/03/2026 escalade L3 CAMUSAT negocaitaion d'accès en cours
+14/03/2026 FME activé negociation de l'acces en cours avec Gilber Mvogo : +237 6 91 57 32 91
+13.03.26; Demande d'accès effectuée auprès de Camusat et en attente de validation de l'accès
+12.03.26; Power issue resolved and we need FME at CTR_014_Mercure to check antenna chain of ODU 3.1, update ASAP
+12.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L5)
+11.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)
+10.02.26: Camusat; Grid only site / grid return awaited..13/03/2026 : site down
+12/03/2026 : site down..13/03/2026 : site down
+12/03/2026 : site down..14/03/2026 escalade L3 CAMUSAT negocaitaion d'accès en cours
+14/03/2026 FME activé negociation de l'acces en cours avec Gilber Mvogo : +237 6 91 57 32 91
+13.03.26; Demande d'accès effectuée auprès de Camusat et en attente de validation de l'accès
+12.03.26; Power issue resolved and we need FME at CTR_014_Mercure to check antenna chain of ODU 3.1, update ASAP
+12.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L5)
+11.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)
+10.02.26: Camusat; Grid only site / grid return awaited",Access constraint; site access under negotiation with Camusat,"Access negotiation ongoing, awaiting confirmation from CAMUSAT",,CAMUSAT,Ongoing
+Salapoumbe-Ville-MTN-IHS,EST_103,IHS,Hybrid-Gen,EST,SALAPOUMBE,16032026,NOKIA,0.6428394769038045,1.3970293392808013,1.396791528370476,2.4747335054352595,2.4747335054352595,1.4450671431665583,3.3386639563540146,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bda-Agence,NRO_016,CAMUSAT,Medium Grid + GE,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,2.3553341353048958,2.3553341353048958,0,5.7847503936685225,0,Power Issue ,Solve Power Issue on site,,CAMUSAT,Ongoing
+Garoua-Djamboutou-Village-IHS,NRD_086,IHS,Grid-Gen,NORD,Garoua,16032026,HUAWEI,0.4283157426432281,0.609674001,0.30791024943071726,2.312235481,2.312235481,0.17149825263860352,1.6664873938265752,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bamenda-Blue-moon-IHS,NRO_128,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0.007866053,0,2.2209709709709706,2.2209709709709706,0,4.653685117866406,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bamenda-ATTIAH-IHS,NRO_127,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,0,0,2.1992935918374514,2.1992935918374514,0,4.684545656767879,INC-20260315-00014063..Impacted by Bda Agence NRO_016 (Not managed by IHS)...Impacted by Bda Agence NRO_016 (Not managed by IHS)...GE Fault,Impacted by Bda Agence NRO_016. Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Ouro-Kessoun,NRD_040,IHS,Grid-Gen,NORD,Garoua,16032026,HUAWEI,1.8625167565226042,0,0.16802255471846114,2.149902095077534,2.149902095077534,0.003420818,8.501483940080432,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nyalla-III,LIT_751,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,5.3120737696761084,14.224751066856328,28.209002130785755,1.9728793120605985,1.9728793120605985,3.675751775166979,1.197780382721903,09/03/2026 : need BO RAN analysis || Site unstable => Transmission investigaiton needed..INC-20260315-00008058..MW Link Down,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+SUO_195_H_Wonya-Mavio-IHS,SUO_195,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,0,0,2.2678014271581524,1.9243475932072427,1.9243475932072427,0,3.578084663610979,INC-20260315-00014312..Impacted by Buea Signal Hill (Not managed by IHS)...Impacted by Buea Signal Hill (Not managed by IHS)...GE Fault,Impacted by SUO_023_H_Buea-Signal-Hill. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Newb-Ancien-Etage-New,LIT_528,CAMUSAT,GridOnly,LITTORAL,Douala,16032026,ZTE,5.072287199480182,0.884748052,14.411853373841678,1.9210914130504786,1.9210914130504786,0,2.1681403625848072,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Zemda,OST_262,CAMUSAT,Hybrid Solar - S3,OUEST,Zemda,16032026,NOKIA,0.21176146907141066,2.3849873265077948,4.9740347072218425,1.8974932534874052,1.8974932534874052,10.204045419688695,4.318243682,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Abom-Plateau,CTR_650,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,0,0,0,1.8715352779680272,1.8715352779680272,0,4.001589308606853,"16.03.26; Grid outage, awaiting grid",Grid Outage,Awaiting Grid return,,CAMUSAT,Ongoing
+Bamenda-hospital-roundabout-IHS,NRO_131,IHS,Grid-Gen,NORD-OUEST,Bamenda,16032026,HUAWEI,0,5.679162349483987,0,1.7771792260096355,1.7771792260096355,0,4.471942702936854,INC-20260315-00014065..Impacted by Bda Agence NRO_016 (Not managed by IHS)...Impacted by Bda Agence NRO_016 (Not managed by IHS)...GE Fault,Impacted by Bda Agence NRO_016. Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Buea-Camtel,SUO_226,CAMUSAT,Good Grid no GE - 8h,SUD-OUEST,Buea,16032026,HUAWEI,0,0,0,1.7475443279536849,1.7475443279536849,0,3.437245725257422,"INC-20260315-00014336..Site was down due to a network outage around Signal-Hill, affected by a power issue. Generator fail to start due to issue with ATS. Problem already fixed by power team...MW Link Down","Power Issue, Gen fault",Up after power team intervention,,CAMUSAT,Obs
+GSS-BUEA-TOWN-IHS,SUO_184,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,0,0,0,1.7475077416597882,1.7475077416597882,0,3.4000374643649494,"INC-20260315-00000755..Site was down due to a network outage around Signal-Hill, affected by a power issue. Problem already fixed by power team...MW Link Down",Impacted by SUO_023_H_Buea-Signal-Hill. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+KUMBA-BONAKAMA,SUO_218,IHS,Grid-Gen,SUD-OUEST,Kumba,16032026,HUAWEI,6.1985596707818935,7.345302173518548,9.165525174297102,1.7051408133279478,1.7051408133279478,5.909454776413841,18.03782949616283,,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Kika-IHS,EST_115,IHS,Hybrid-Gen,EST,Kika,16032026,NOKIA,2.7501185395922234,1.684030522,1.6375842216485492,1.6706216450368498,1.6706216450368498,1.6609445703012957,1.6469686060329336,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+NYANGOBE-MTN,LIT_685,,,LITTORAL,Douala,16032026,ZTE,1.064825790702984,0,1.3439609199843119,1.5879732071252537,1.5879732071252537,0,13.049946876701263,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Boubara-IHS,EST_096,IHS,Hybrid-Gen,EST,Boubara,16032026,NOKIA,1.579905929321134,1.580070567643667,1.6368342026236764,1.5800339813497708,1.5800339813497708,1.5848633721440737,1.5800339813497708,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Lokomo-MTN,EST_042,IHS,Grid-Gen,EST,Lokomo,16032026,NOKIA,1.587881741390513,1.5812596221952946,1.5801071539375633,1.5800339813497708,1.5800339813497708,1.5851194762013474,1.5800339813497708,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Brazzaville-II,LIT_694,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,1.7918686230089742,8.039453927611822,2.9190740448050385,1.5181665583712376,1.5181665583712376,1.6407855223644694,2.9470076801948144,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Cite-Sic,LIT_098,IHS,Grid-Gen,LITTORAL,Douala,16032026,ZTE,0.6399308665390535,0.10977717483565506,0.1271739575833144,1.5170323832604542,1.5170323832604542,0.1127772509351457,1.2415375902218009,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+BTS-Mobile-Krystal-Palace,LIT_756,CAMUSAT,Good Grid + GE,LITTORAL,Douala,16032026,ZTE,7.096808065375317,0.7614522417153995,2.2142025066001674,1.4436585708515535,1.4436585708515535,0,1.0522766918965751,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ngd-Agence,ADM_026,OCM/Strategique,,ADAMAOUA,Ngaoundere,16032026,HUAWEI,0,0,0,1.297075584356286,1.297075584356286,4.774054025,3.813736982596632,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+NKONGSAMBA-Q8-CIMETIERE-IHS,LIT_735,IHS,Grid-Gen,LITTORAL,Nkongsamba,16032026,ZTE,0,0,0,1.2196041070310075,1.2196041070310075,0,2.8193581007908493,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Buea-Hospital,SUO_163,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,0,0,0,1.213164919,1.213164919,0,4.223503474234469,INC-20260315-00014285..Impacted by Buea Signal Hill (Not managed by IHS)...Impacted by Buea Signal Hill (Not managed by IHS)...GE Fault,Impacted by SUO_023_H_Buea-Signal-Hill. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Galim-Tignere,ADM_024,IHS,Hybrid-Gen,ADAMAOUA,Galim-Tignere,16032026,NOKIA,0.023764608,6.200854202467896,5.320508179791446,1.0529661424675485,1.0529661424675485,1.528055551135894,1.1576762207444569,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Abom-Plateau-II,CTR_872,CAMUSAT,Good Grid + GE,CENTRE,Abom,16032026,ZTE,0,0,0,1.0187453535406747,1.0187453535406747,0,2.8644872943118553,Impacted by CTR_650_Z_Abom-Plateau (Power issue,Impacted by CTR_650_Z_Abom-Plateau. Grid Outage,Awaiting Grid return,,CAMUSAT,Ongoing
+Tradex-Simbock-MTN,CTR_851,,,CENTRE,Yaounde,16032026,ZTE,3.2598204930076284,0.3607408578168806,1.0957777953391985,0.8873456790123456,0.8873456790123456,1.525977732118083,1.3529428551358376,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Meskin-MTN-IHS,EXN_157,IHS,Grid-Gen-Lithium,EXTREME-NORD,Maroua,16032026,HUAWEI,1.0448130879417434,0.42494980360477447,0,0.8588998355080225,0.8588998355080225,0.08934373,1.3573332104033857,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Buca-Voyage,LIT_616,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,2.5373143611447713,0.897169099,9.976826241446123,0.8355394868552763,0.8355394868552763,0.3551248617038088,2.2064462122941655,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+H-Paradis,CTR_093,IHS,GridOnly,CENTRE,Yaounde,16032026,ZTE,1.950945828869805,0,7.092692107311991,0.8052277423622451,0.8052277423622451,10.34773808896616,9.483167378,"14/03/2026 Grid outage, no space to deploy MDG // awaiting grid return..14/03/2026 : site down..14/03/2026 : site down..14/03/2026 Grid outage, no space to deploy MDG // awaiting grid return","Grid outage, no space to deploy MDG", Awaiting grid return,,IHS,Ongoing
+Buea-GRA-HIS,SUO_242,IHS,,SUD-OUEST,Buea,16032026,HUAWEI,3.3638719128485213,0,0,0.7959348237126014,0.7959348237126014,0,4.159093303830145,16.03.2026: FME Activated is managing for intervention tomorrow because of today Ghost Town,Ghost Town,Restore access on site,,GNOC,Ongoing
+Moloundou,EST_015,IHS,Solar-Gen,EST,Moloundou,16032026,NOKIA,9.116298315859721,0.8983764466220608,0.9757198719187024,0.7001884925861535,0.7001884925861535,0.7880321842310147,1.207695268367783,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mendong-IV-MTN,CTR_746,,,CENTRE,Yaounde,16032026,ZTE,0,1.7681789977111613,1.9731537092648201,0.6586630490139267,0.6586630490139267,0,8.280027103,0..15/03/2026 : need BO RAN analysis..15/03/2026 : need BO RAN analysis,Awaiting BO RAN analysis,Need BO RAN analysis,,BO RAN,Ongoing
+CNDH,CTR_046,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,2.9185435435435427,1.7239827546845092,0.6272354225570607,0.6272354225570607,0,1.2916242265657472,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Douala-Bali-III-MTN,LIT_746,,,LITTORAL,Douala,16032026,ZTE,4.056377283716464,0,2.0008495337442715,0.5822159879177424,0.5822159879177424,1.1196503521064924,1.5920708720416314,09/03/2026 : power issue || mail send to MTN,Power Issue,Awaiting MTN's return,,MTN,Ongoing
+Buea-David-Square,SUO_077,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,0,0,2.2680758243623744,0.5818135386848837,0.5818135386848837,0,3.4944849820580823,INC-20260315-00014271..Impacted by Buea Signal Hill (Not managed by IHS)...Impacted by Buea Signal Hill (Not managed by IHS)...GE Fault,Impacted by SUO_023_H_Buea-Signal-Hill. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Ekounou-Lycee-MTN,CTR_726,MTN sharing,,CENTRE,Yaounde,16032026,ZTE,14.109924983462998,12.85578341499394,22.171184342236977,0.5395929555286291,0.5395929555286291,4.445673743919357,8.178006222596865,Up after return power ..15/03/2026 : Power issue  ..site down,Power issue,Up after return power,,MTN,Obs
+Bafia-CRTV,CTR_101,CAMUSAT,Medium Grid + GE,CENTRE,Bafia,16032026,ZTE,0.77469648,3.6591415977380892,0,0.4727132102863095,0.4727132102863095,11.729876806631191,25.110325969244094,"0..15/03/2026 : FME active || ETA : 13H 
+14/03/2026 : Check RRU 51..15/03/2026 : FME active || ETA : 13H | intervention en cours |
+14/03/2026 : Check RRU 51",RRU faulty,FME on site to check RRU status and connections,,CELLDOWN,Ongoing
+GP-Etoudi,CTR_735,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,16032026,ZTE,17.46007703610043,24.95558423920997,16.657703024662087,0.35442972211978013,0.35442972211978013,3.1036336043645996,3.6964962038061455,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Old-Airport-IHS,LIT_122,IHS,Grid-Lithium,LITTORAL,Douala,16032026,ZTE,25.940066528516823,25.547385836128527,6.6230338525660155,0.2907695707403306,0.2907695707403306,1.2187077428305502,1.9385247820920333,site down..INC-20260314-00015148..Others,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nyalla-Marche,LIT_655,CAMUSAT,Medium Grid + GE,LITTORAL,Douala,16032026,ZTE,0,0,0,0.2892695326905849,0.2892695326905849,1.0531913492439802,1.3498330201546584,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Lemla,OST_261,CAMUSAT,Hybrid Solar - S3,OUEST,Bandjoun,16032026,HUAWEI,0,0,0,0.2789887841057431,0.2789887841057431,7.267117263462294,16.736473315420685,grid outage,Grid Outage,Awaiting Grid return,,CAMUSAT,Ongoing
+Bankwop-IHS,OST_161,IHS,Grid-Gen,OUEST,Bankwop,16032026,NOKIA,0.019024872826042465,0.071599377,0.15999186320823747,0.26973245174999566,0.26973245174999566,1.0514900865778063,5.661033840858402,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+LIT_857_Z_Bois-des-Singes-III-IHS,LIT_857,ESCO,Grid-Gen,LITTORAL,Yaounde,16032026,ZTE,6.528970490958795,0.28760485631830696,5.406429822,0.24382935567146163,0.24382935567146163,0.018219974360325276,2.879249863898987,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Darassalam-IHS,ADM_153,IHS,Hybrid-Gen,ADAMAOUA,Darra Salam,16032026,NOKIA,0.5038561696277724,2.057245512360297,0.016958350675605104,0.197255563,0.197255563,2.9497364104183337,10.939346281223335,"15/03/2026 FME manage avec le mevel 0 
+Bsoin d'un fme sur site MAYO-TOLLERE pour verifier le status de lm ODU 3/2 ..15/03/2026 FME manage avec le mevel 0 
+Bsoin d'un fme sur site MAYO-TOLLERE pour verifier le status de lm ODU 3/2 ..INC-20260315-00012143..la liaisons mayo tolère- darrassalam est tres instable : ongoing ..MW Link Down",ODU 3/2 issue at MAYO-TOLLERE,FME to verify ODU 3/2 status on site with Level 0,,GNOC,Ongoing
+Kumba-Makata-IHS,SUO_111,IHS,Grid-Gen,SUD-OUEST,Kumba,16032026,HUAWEI,0.9950557282428629,0.769135363,4.407605705120325,0.12036890691861452,0.12036890691861452,0,10.706100837679786,15/03/2026 : Besoin d'analyse BO RAN || Insufficient license: Period for the License File Expired..15/03/2026 : Besoin d'analyse BO RAN..15/03/2026 : Besoin d'analyse BO RAN || Insufficient license: Period for the License File Expired..15/03/2026 : Besoin d'analyse BO RAN || Insufficient license: Period for the License File Expired,License expired on equipment,Verify license status on equipment,,GNOC,Ongoing
+Mambine,CTR_097,IHS,Grid-Gen,CENTRE,Mambine,16032026,NOKIA,0.001189055,0,0.00621967,0.031555678,0.031555678,4.344329709826786,9.482069789087332,"16/03/2026 FSMF en defaut commande passée ETD 16/03/2026 
+15/03/2026 FME en route pour le site ETA =10H27 UTC
+14/03/2026 fme activé ETA asap 
+Besoin d'un fme sur site pour verifier l'interco entre le MPR et la BTS S1P2..15/03/2026 FME en route pour le site ETA =10H27 UTC
+14/03/2026 fme activé ETA asap 
+Besoin d'un fme sur site pour verifier l'interco entre le MPR et la BTS S1P2",Faulty FSMF board,Replace faulty FSMF board,,GNOC,Ongoing
+Bandjoun-Soung,OST_067,IHS,Grid-Gen,OUEST,Bandjoun,16032026,HUAWEI,12.799806385332703,0,0.007683122,0.007957519,0.007957519,7.915554443332222,17.003534967716256,Grid outage,Grid Outage,Awaiting Grid return,,IHS,Ongoing
+Bokova-IHS,SUO_254,IHS,,SUD-OUEST,Buea,16032026,HUAWEI,0,0.17378489600711822,2.1130596971240245,0.005945273,0.005945273,0,4.343744329124446,"INC-20260315-00014229..Site was down due to a network outage around Signal-Hill, affected by a power issue. Generator fail to start due to issue with ATS. Problem already fixed by power team...MW Link Down",Power issue; generator failed to start due to ATS fault,Up after intervention,,IHS,Obs
+Ba-aba,CTR_755,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,1.3394790989820229,5.4708948714796675,0.11010645148072092,0.000274397,0.000274397,0.4108640804547239,1.756873832897225,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bfsam-Q-Haoussa,OST_100,IHS,Grid-Gen,OUEST,Bafoussam,16032026,HUAWEI,0,0,0,0,0,7.278660239186556,28.749052414988086,"14/03/2026 FME activé ETA asap 
+14/03/2026 besoin d'un d'un fme sur bafousam pour verifier le status de L ODU 5/2 ..14/03/2026 FME activé ETA asap 
+14/03/2026 besoin d'un d'un fme sur bafousam pour verifier le status de L ODU 5/2 ",ODU Faulty,Replace ODU,,GNOC,Ongoing
+Meyo-II,CTR_850,CAMUSAT,Good Grid no GE - 8h,CENTRE,Binguela,16032026,ZTE,0,0,0,0,0,4.635007814832377,28.381012591538905,"0..15/03/2026 : site down ..15/03/2026 : site down ..INC-20260314-00013465..2026-03-14 23:22:39..Grid outage, Gen stopped due to noise disturbance / Grid return awaited..GE Fault..user:OCM_NOC.CAMUSAT",Grid outage; generator stopped due to noise disturbance,Restore grid supply,,CAMUSAT,Ongoing
+Odza-III,CTR_628,CAMUSAT,Bad Grid + GE,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,11.358123474351546,28.07099863020916,"0..15/03/2026 : site down ..15/03/2026 : site down ..Power status check ongoing..INC-20260315-00009149..2026-03-15 16:32:05..grid outage, insuffisance de redresseurs / fme informe que le site va remonté..GE Fault..user:OCM_NOC.CAMUSAT",Insuffisance de redresseurs,Resoudre le probleme de redresseurs sur le site,,GNOC,Ongoing
+Etoa-Meki-II,CTR_682,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,5.824190418488664,25.89674835654367,15/03/2026 Grid outage. Grid only site / Grid return awaited..15/03/2026 : power issue || mail sent Cmausat ..15/03/2026 Grid outage. Grid only site / Grid return awaited..INC-20260315-00002479..Others,power issue,Solve Power Issue on site and awaiting Camusat's  return,,CAMUSAT,Ongoing
+Bfsam-Tougang,OST_064,IHS,Grid-Gen,OUEST,Bafoussam,16032026,HUAWEI,0,0,0,0,0,7.7508063619174745,25.844448249419006,Impacted by OST_100_H_Bfsam-Q-Haoussa..Impacted by OST_100_H_Bfsam-Q-Haoussa,Impacted by OST_100_H_Bfsam-Q-Haoussa. ODU Faulty,Replace ODU,,GNOC,Ongoing
+CTR_939_Z_Mehanda-IV,CTR_939,ESCO,,CENTRE,Nkolafamba,16032026,ZTE,0,0,0,0,0,12.729670459933617,25.52720849504475,0..15/03/2026 : need BO RAN analysis,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Satcom,CTR_199,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,5.641441880476966,25.28418403783901,Impacted by CTR_682_Z_Etoa-Meki-II | Grid outage. Grid only site / Grid return awaited..Impacted by CTR_682_Z_Etoa-Meki-II(CTR-682)..INC-20260315-00002473..2026-03-15 08:37:34..The Optim Link Radio Satcom_Etoa-Meki is cut so please to involve CDS..power issues responsabilité ihs ..MW Link Down..user:NYOBE BENOIT n84280187,Impacted by CTR_682_Z_Etoa-Meki-II. Power issue,Solve Power Issue on site and awaiting Camusat's  return,,CAMUSAT,Ongoing
+Ndjeleng-II,OST_165,IHS,Grid-Gen,OUEST,Bandjoun,16032026,HUAWEI,16.24457059,2.0326430231400994,0,0,0,8.907939372,20.385096353663602,grid outage,Grid outage,Awaiting Grid return,,IHS,Ongoing
+Essomba,CTR_266,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0.12565562638662056,0,0,20.08841809645903,20.347778333889444,0..15/03/2026 : need BO RAN analysis..INC-20260315-00005380..MW Link Down,Need BO Ran awaiting,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bandjoun,OST_009,IHS,Grid-Gen,OUEST,Bandjoun,16032026,HUAWEI,8.409451117784451,0,0,0,0,7.875090002282985,20.29533188158919,Power Issue,Power Issue ,Solve Power Issue on site,,IHS,Ongoing
+Nkoulou-II,CTR_777,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,9.801815704593484,19.767446540107358,0..15/03/2026 : need BO RAN analysis..INC-20260314-00009858..GE Fault,Need BO Ran awaiting,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Abome-II,CTR_662,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,16032026,ZTE,0.9302431086056823,1.5756253329352747,0.900059416,0,0,0.6463883474117397,19.730896832505017,up aftern return power ..15/03/2026 : Power issue..15/03/2026 : Power issue,Faulty fiber on RRU 73,Up after replace Fiber,,GNOC,Obs
+Bfsam-Megom,OST_238,CAMUSAT,Good Grid no GE - 8h,OUEST,Bafoussam,16032026,HUAWEI,0,0,0,0,0,6.859399604282644,17.20580229352159,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Nsimalen,CTR_010,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,13.340259118767891,16.323505523066927,INC-20260314-00009031..2026-03-15 09:15:53..The Optim Link Radio Nkolnda_Nsimalen is cut so please to involve the Powerco..GE Fault..user:OCM_NOC.IHS,Optim Radio link Nkolnda–Nsimalen cut,Involve PowerCo to inspect and repair the link,,IHS,Ongoing
+Briqueterie,CTR_321,IHS,Grid-Lithium,CENTRE,Yaounde,16032026,ZTE,0,0,0.9247002850804027,0,0,5.781988128479357,16.283827687336462,"16.03.26; Grid outage, no space to deploy MDG // awaiting grid return..INC-20260315-00000439..Others","Grid outage, no space to deploy MDG",Awaiting Grid return,,IHS,Ongoing
+Ngd-Burkina-II-IHS,ADM_101,IHS,Grid-Gen,ADAMAOUA,Ngaoundere,16032026,HUAWEI,0,0,0,0,0,13.929042346440005,15.919702597334176,"15/03/2026 
+The FME should check connectivity between the ODU 3.1 and MPTACC at NGD-Burkina..15/03/2026 
+The FME should check connectivity between the ODU 3.1 and MPTACC at NGD-Burkina",Connectivity issue between ODU 3.1 and MPTACC at NGD-Burkina,FME to check connectivity between ODU 3.1 and MPTACC,,GNOC,Ongoing
+Ekounou-II,CTR_719,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,6.768738768007774,8.839962038061454,0,0,0,29.066237289921503,14.224751066856328,"14/03/2026 ODU UBT-T 3DB29218ABAF06 faulty expedition en cours Douala vers YDE ETD=15/03/2026
+14/03/2026 CTR_719_Z_Ekounou-II; Need FME on site to check antenna chain of ODU 3.1 3DB29218ABAF06
+14/03/2026 Power resolu mais stade abega down 
+14/03/2026 Camusat: technicein sur site ..14/03/2026 ODU UBT-T 3DB29218ABAF06 faulty expedition en cours Douala vers YDE ETD=15/03/2026
+14/03/2026 CTR_719_Z_Ekounou-II; Need FME on site to check antenna chain of ODU 3.1 3DB29218ABAF06
+14/03/2026 Power resolu mais stade abega down 
+14/03/2026 Camusat: technicein sur site ",ODU UBT-T 3DB29218ABAF06 faulty,ODU shipment ongoing from Douala to Yaoundé,,GNOC,Ongoing
+Denver2,LIT_486,IHS,GridOnly,LITTORAL,Douala,16032026,ZTE,0,0,0,0,0,1.487177967441125,14.224751066856328,"15/03/2026 IHS feedback : Grid only, No space // Awaiting grid return..15/03/2026 : site down ..15/03/2026 : site down ..15/03/2026 IHS feedback : Grid only, No space // Awaiting grid return","Grid only, grid Outage, No space",Awaiting Grid return,,IHS,Ongoing
+Croix-Rouge-Yde,CTR_759,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,12.572605500237083,14.224751066856328,"15/03/2026 Grid Only Site/ pas de manque secteur pas d'accès aux équipements toutes les portes sont fermées les dimanches sur ordres du DG de la croix rouge
+14/03/2026 en attente de retour camusat power issue ..14/03/2026 : site down..14/03/2026 : site down..15/03/2026 Grid Only Site/ pas de manque secteur pas d'accès aux équipements toutes les portes sont fermées les dimanches sur ordres du DG de la croix rouge
+14/03/2026 en attente de retour camusat power issue ",No access to equipments,Restore acces to equipments,,CAMUSAT,Ongoing
+Makepe-Conteneur,LIT_730,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,16032026,ZTE,32.91959722880776,3.5759077791241545,2.0976019879528653,0,0,0.8830102031856415,14.149950388985477,15/03/2026 Grid outage. Grid only site / Grid return awaited..15/03/2026 : site down ..15/03/2026 : site down ..site down..15/03/2026 Grid outage. Grid only site / Grid return awaited," Grid only site, Grid outage",Grid return awaited,,CAMUSAT,Ongoing
+Pitoa-II,NRD_183,CAMUSAT,Hybrid Solar - S1,NORD,Garoua,16032026,HUAWEI,0,0,0,0,0,7.231646851529892,12.551293984042522,15/03/2026: Power instability || Mail sent to camusat..15/03/2026: Power instability || Mail sent to camusat,Power instability,Awaiting Camusat's return,,Camusat,Ongoing
+ETOUDI-NEW,CTR_917,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,16032026,ZTE,5.434198818701743,0,2.325058977,0,0,9.211678784047207,10.218588471512447,0,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Mankouotmbou,OST_245,CAMUSAT,Hybrid Solar - S3,OUEST,Mankouotmbou,16032026,NOKIA,0,0,0.073410399,0,0,2.1686708638463026,9.481905151,"16.03.26; ODU 3DB20858AC faulty and not available
+15/03/2026 FME sur site travaux en cours 
+Besoin d'un fme sur site de MASSANGAM pour verifier le status de l ODU 5/1 & 5/2..15/03/2026 FME sur site travaux en cours 
+Besoin d'un fme sur site de MASSANGAM pour verifier le status de l ODU 5/1 & 5/2",ODU 3DB20858AC faulty and not available,Replace ODU,,GNOC,Ongoing
+Bfsam-Toket,OST_045,IHS,Grid-Gen,OUEST,Bafoussam,16032026,HUAWEI,0,0,0,0,0,5.228510674417107,9.457044764062308,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bfsam-Stade,OST_110,IHS,GridOnly,OUEST,Bafoussam,16032026,HUAWEI,0,0,0,0,0,2.4168905747853118,8.021307126,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Anguissa-IHS,CTR_478,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,18.70957214524466,7.923749773164977,Impacted by labogenie..Impacted by labogenie,Impacted by labogenie. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Foumban-Njinka,OST_101,IHS,Grid-Gen,OUEST,Foumban,16032026,HUAWEI,4.741583689,1.867455906198596,0,0,0,1.9780379794999678,4.741583689,14/03/2026 : Swape en cours ,Swap en cours,Swap en cours,,BO RAN,Ongoing
+Dschang-Vallee,OST_096,IHS,Grid-Gen,OUEST,Dschang,16032026,HUAWEI,3.076267056530215,2.4853984101060127,1.9552630115495613,0,0,0.040336389,3.7560403971222684,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkoulou-carriere,CTR_897,CAMUSAT,,CENTRE,Yaounde,16032026,ZTE,2.225745482,0,0.3906501530770538,0,0,2.775582600144004,3.718978481405384,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mile16-Buea-HIS,SUO_243,IHS,Grid-Gen,SUD-OUEST,Buea,16032026,HUAWEI,0,0,9.497436032523753,0,0,0.008048985,3.401080173740992,INC-20260315-00014316..impacted by Signal Hill Buea ..MW Link Down,Impacted by SUO_023_H_Buea-Signal-Hill. Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Ondoa-Otoa-IHS,CTR_622,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0,0,0,1.5578443941017044,2.791241533931592,"15/03/2026 : FME active 
+14/03/2026 : Check RRU 83..15/03/2026 : FME active || Intervention en cours || 
+14/03/2026 : Check RRU 83..INC-20260315-00009195..site went down because fme kenfack (693932700) of society SNEF was on site for SWAP MWALCORAGE //End of work..site went down because fme kenfack (693932700) of society SNEF was on site for SWAP MWALCORAGE //End of work..GE Fault",RRU 83 issue,check and repair RRU,,GNOC,Obs
+Crf-Nkomo-IHS,CTR_554,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,0,0.41247387738615787,0,0,1.111875764653542,2.157402285326263,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Messondo,LIT_134,CAMUSAT,HGB,LITTORAL,Messondo,16032026,NOKIA,0.539263679,0,0.035250894169023064,0,0,1.2686846202928075,1.960494851576723,14/03/2026 : nee d BO RAN analysis..14/03/2026 : nee d BO RAN analysis,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Newb-Srce-Quartier,LIT_095,IHS,GridOnly,LITTORAL,Douala,16032026,ZTE,0,4.014595736086965,2.8646702257813357,0,0,0.5712949791897171,1.7369891821646208,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Biteng-OKUI,CTR_705,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,16032026,ZTE,0.8395822723308105,0,0.2496648695479107,0,0,1.9520800039805888,1.054106006591387,"INC-20260315-00005451..Trafic basculé sur AOF après son rétablissement. 
+Reset logique effectué sur le lien FH par le BO.
+Statut : Alarme acquittée, lien FH sous observation..MW Link Down.. Alarme LOS sur lien FH.",LOS alarm on MW (FH) link,up after raffic switched to AOF,,GNOC,Obs
+Mvan-MRS-IHS,CTR_487,IHS,Grid-Gen,CENTRE,Yaounde,16032026,ZTE,0,2.184037107282721,0.4132970689988243,0,0,7.046666549590526,1.0372580182521698,0,Need Bo Ran Analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ndokoti-Carrefour-MTN,LIT_684,,,LITTORAL,Douala,11032026,ZTE,29.960680709949717,29.921222391982624,29.943411979230692,29.71438177944026,30.012834471898795,29.890069162729983,30.021139560613246,10/03/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..site down..site down..site down..09/05/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..09/05/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..09/05/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..INC-20260309-00010333..2026-03-09 20:37:27..09/05/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM..power issu coupure d'électricité dans la zone en attente du retour secteur site Grid Only ..Others,Grid instability causing power issue on site,Escalate to MTN and OCM for grid stabilization,,MTN,ONGOING
+Marche-Congo,LIT_547,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,26.705634728295546,26.573503327889302,29.308841004747443,31.29783657926932,34.15809815663616,38.82259452,29.428039150261377,Power status check ongoing..Power status check ongoing..INC-20260309-00009057..2026-03-09 17:48:45..Grid outage gen cannot be started at this time due to noise disturbance /The gen will be started in the morning..Others,Grid outage; generator cannot be started due to noise disturbance,Restore power supply and confirm site restoration,,CAMUSAT,obs
+Oyomabang-marche,CTR_718,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0.4953235399141836,1.6364500465377658,9.647732527849488,28.65043405979078,14.224751066856328,14.224751066856328,28.919142095311685,"07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to C
+AMUSAT..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to C
+AMUSAT..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to C
+AMUSAT..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to C
+AMUSAT","Grid outage, grid only",Grid restoration awaited,,CELLDOWN,Ongoing
+Old-Airport-IHS,LIT_122,IHS,Grid-Lithium,LITTORAL,Douala,11032026,ZTE,3.5812676711799516,0,2.745344028238764,8.426664969,9.483167378,25.940066528516823,25.547385836128527,"site down..site down..INC-20260310-00015936..Grid only, No space // Awaiting grid return..Grid return..Others","Grid only, No space",Awaiting grid return,,IHS,ONGOING
+GP-Etoudi,CTR_735,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,11032026,ZTE,6.318727353084077,9.079949832873808,14.78600310837153,15.18483029813439,12.386637368362516,17.46007703610043,24.95558423920997,"Power status check ongoing..site down..Power status check ongoing..INC-20260310-00003985..2026-03-10 09:24:54..Grid outage, Grid only site / Grid return awaited..MW Link Down","Site down, Grid outage, grid only",Grid restoration awaited,,CAMUSAT,Ongoing
+Carrefour-Diderot,CTR_841,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0.048202442,0,32.47128707655024,22.711563903084365,0,24.85608781295915,"10.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)..site down..site down..site down..10.03.26; Grid outage, Grid only site / Grid return awaited..10.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)..INC-20260310-00000862..2026-03-10 16:59:03..Grid outage, Grid only site / Grid return awaited (escalated to L3)..Others","Grid outage, grid only",Grid return awaited (escalated to L3),,CAMUSAT,Ongoing
+Marche-Central-Bonawon-New,LIT_740,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,27.309089059820053,19.080063250384885,21.06223548109513,29.251327350742553,24.709834103108957,27.40648177417183,23.199936047158268,"Grid outage, awaiting grid..Power status check ongoing..Power status check ongoing..INC-20260310-00004828..2026-03-10 10:42:53..GE Fault","Impacted by LIT_547_Z_Marche-Congo(LIT-547).Site down, Grid outage, grid only",Grid restoration awaited,,CAMUSAT,Ongoing
+Buea-Bakwere-Town-MTN,SUO_222,MTN sharing,,SUD-OUEST,Buea,11032026,HUAWEI,21.29346085851933,20.217549420765792,26.746282100814263,23.033907445457153,23.937515732106384,28.094852893829497,22.84133548753432,10/03/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..Power status check ongoing..Power status check ongoing..Power status check ongoing,Grid instability causing power issue on site,Escalate to MTN and OCM (L5),,MTN,ONGOING
+Hilton,CTR_702,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0.29986126477354536,0,0,0,9.724929607970543,22.55784658927934,"11.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)
+10.02.26: Camusat; Grid only site / grid return awaited..Power status check ongoing..10.02.26; Camusat; Grid only site / grid return awaited",Grid only site,grid return awaited,,CAMUSAT,ONGOING
+Garoua-Camp-Chinois-II,NRD_163,CAMUSAT,Medium Grid + GE,NORD,Garoua,11032026,HUAWEI,10.492583226501354,7.024422082901615,8.695354711436583,8.823315274338666,20.86885862470658,6.612003084956301,20.783649146222242,Power status check ongoing..Power status check ongoing..Impacted by NRD_073_H_Garoua-Camp-Chinois-IHS..INC-20260310-00012649..2026-03-10 21:50:10..FME activé..Auto TT closure RCA..MW Link Down,Impacted by NRD_073_H_Garoua-Camp-Chinois-HIS. Faulty FSMF board,"Deliver new FSMF to site, replace faulty board,",ETA=13.03.26,GNOC,Ongoing
+Garoua-Camp-Chinois-IHS,NRD_073,IHS,Grid-Gen,NORD,Garoua,11032026,HUAWEI,10.484698880166716,6.984414970526081,8.722904190740449,8.792820598376155,20.869736695760086,6.5088846156097615,20.733489337290507,"Whatsapp : Retour BO :The FME should reset or replace the UBT-T 5.2 at GAROUA-ORANGE
+Power status check ongoing..Power status check ongoing..Power status check ongoing",Faulty FSMF board,"Deliver new FSMF to site, replace faulty board,",ETA=13.03.26,GNOC,Ongoing
+Makepe-Bloc-E,LIT_613,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,6.995262806666315,12.541031528604629,11.039676372278711,2.0943641009430483,21.47081291818134,21.38300581283037,20.20659182574387,"11.03.26; Grid outage, Grid only site / Grid return awaited..
+09/03/2026 : need BO RAN analysis || power issue || mail sent to camusat || délestages continue dans cette zone, le site est Grid only. Chaque 4H nous procédons à la vérification de la continuité...10/03/2026 : site down
+09/03/2026 : need BO RAN analysis || power issue || mail sent to camusat || délestages continue dans cette zone, le site est Grid only. Chaque 4H nous procédons à la vérification de la continuité...10/03/2026 : site down
+09/03/2026 : need BO RAN analysis || power issue || mail sent to camusat || délestages continue dans cette zone, le site est Grid only. Chaque 4H nous procédons à la vérification de la continuité...Power status check ongoing..10.03.26; Power alarms; Camusat feedback awaiting..INC-20260310-00004582..2026-03-10 14:03:12..Grid outage, Grid only site / Grid return ..MW Link Down",Power Issue,Solve Power Issue on site,,CAMUSAT,ONGOING
+Institute-Samba-New,CTR_868,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,24.466205972053924,0.3103249448278688,18.79878782291063,17.347574182369506,20.99467888941573,16.76237641149922,19.91307828296132,"10.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ..07/03/2026 : Grid outage, Grid only site // Grid restoration awaited.
+06/03/2026 : power issue || mail send to CAMUSAT ..Power status check ongoing..10.03.26; Grid outage, Grid only site / Grid return awaited..10.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)..INC-20260310-00003575..2026-03-10 16:58:07..grid outage grid only site / awaiting grid return (escalated to L3)..grid outage grid only site / awaiting grid return..Coupure Secteur..grid outage grid only site / awaiting grid return","Grid outage, Grid only site",Grid restoration awaited,,CAMUSAT,Ongoing
+Emombo-2eme-Crf,CTR_558,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0.3771498106293431,0.11572244759379273,0,0,3.0907552289131233,19.790733716172312,"10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+09/03/2026 Power issue camusat activé..site down..site down..10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+09/03/2026 Power issue camusat activé..INC-20260309-00012027..MW Link Down","Site down, Grid outage, grid only",Grid restoration awaited,,CAMUSAT,Ongoing
+Limbe-Coconut-Island-MTN,SUO_219,MTN sharing,,SUD-OUEST,Limbe,11032026,HUAWEI,22.48738138723519,20.05285621879189,19.550343472127096,19.381772123000193,20.01303203788584,21.648238150431137,19.062575001902488,09/05/2026 Rectifiers issue and access issue escalade L5 MTN et OCM ..10/03/2026 : Power instability || Mail sent to MTN..10/03/2026 : Power instability || Mail sent to MTN..10/03/2026 : Power instability || Mail sent to MTN..09/05/2026 This is a grid site. Grid is not stable in the area escalade L5 MTN et OCM ..09/05/2026 Rectifiers issue and access issue escalade L5 MTN et OCM ..09/05/2026 Rectifiers issue and access issue escalade L5 MTN et OCM ,Power instability ,Solve instability power on site,,MTN,ONGOING
+Mankon,NRO_029,IHS,Grid-Gen,NORD-OUEST,Bamenda,11032026,HUAWEI,0.060001522,0,0,0,0,2.0531496408689396,18.966334755808436,INC-20260309-00013675..FEEDBACK IS AWAITED..Auto TT closure RCA..GE Fault,site down,FEEDBACK IS AWAITED,,GNOC,ONgoing
+Maroua-Djarengol-II,EXN_143,IHS,Solar-Grid-Gen,EXTREME-NORD,Maroua,11032026,HUAWEI,18.966334755808436,18.966060358604214,18.966334755808436,18.966060358604214,18.966334755808436,18.966334755808436,18.966060358604214,"11.02.26; Micro SDs reçues faulty et récupération en cours d'un nouvel au magazin, ETA=11H30 UTC
+10.02.26; FME sur site et investigations en cours avec le BO TX, travaux en cours
+10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC; FME sur site en attente du vigile
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)..10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)..10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC; FME sur site en attente du vigile
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)..10.02.26; FME sur site et investigations en cours avec le BO TX, travaux en cours
+10.03.26; FME en route pour remplacement du chassis, ETA=11H UTC; FME sur site en attente du vigile
+09.03.26; Materiel recu expedition en cours de Douala vers Maroua ETD=09/03/2026
+03/03/2026 Materiel recu expedition en cours de Douala vers Maroua ETD=08/03/2026 
+27.02.26; Micro  SD faulty et disponible; Chassis MSS8 de PN 3DB18485GAA pas disponible, commande passée vers OCM
+25/02/2026 Micro SD faulty et expédition en cours de Garoua, ETD=26.02.26
+Impacted by CEXN_083_H_Maroua-Ouro-Bah (TX issue)",Faulty FSMF module,FSMF shipment from Yaoundé to Sangmélima ongoing,ETA=13.03.26,GNOC,ONGOING
+Ngd-CRTV,ADM_007,CAMUSAT,Good Grid + Solar + GE,ADAMAOUA,Ngaoundere,11032026,HUAWEI,18.966334755808436,18.966060358604214,18.966334755808436,18.966060358604214,18.966334755808436,18.966334755808436,18.966060358604214,"11.03.26; Suite aux nouvelles recos du BO TX, ODUs à changer à Ngd-CRTV et à Trouamala, point au niveau de l'ing
+09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP..09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP..09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP..09.03.2026: En Attente de la clarification du type d'ODU demander par Huawei. Un Update sera partage d'ici 30 minutes
+
+06/03/2026 En attente toujours du Materiel de OCM 
+05.03.2026: Possiilite d'utiliser un stock du Projet Mbokolo Phase  En Attente de la confrimation de Jose demain 06.03.2025
+24.02.26; Retour OCM; Démentellement des ODUs en cours et mise à disposition à Huawei ASAP
+21/02/2026 OCM : En attente de la mise a disposition du materiel le 23/02/2026 
+16/02/2026 ODU recu faulty mail transmis a ORANGE 
+15.03.26; ODU pas encore arrivé, nouvel ETD ce 15.02.26 soir
+14.02.26; ODU pas encore arrivé à Ngd, nouvel ETD=14.02.26
+13.02.26; Défaut ODU; ODU expédié de Garoua pour Ngaoundéré, ETD=13.02.26
+12.02.26; Apres resolution du soucis power, le site est rester down et après investigation, il en resort que l’ODU soit faulty et l’expedition en cours de GAROUA vers NGAOUNDERE ETD 13-Fev
+12.02.26; ODU 3DB29182AA en défaut sur le site porteur et pas disponible dans le grand nord, commande passée à Douala et vérifications du SPM en cours
+11/02/2026 FME sur site apres travaux bo tx recommande le remplacement de L ODU commande en cours 
+11.02.2026: Apres action cote Ngd-CTRV, La suite de l'intervention doit se faire sur le site de Trouamala. FME Ndewa a pris le point ETA=2H
+11.02.2026: Power Issue solved. Need FME on the site to check MPR status.|  Souleymanou activated ETA=01:00 PM UTC
+10/02/2026 FME sur site power issue escalde L2 camusat 
+10.02.26; FME en route pour le site, ETA=18H UTC
+10.02.26; FME pour vérifier le status de la radio 5.3 et la ligne antenaire  à NGD-Trouamala-ADM_058; FME Ndewa activé pour investigations, update ASAP",Faulty ODU (3DB29182AA),Await Huawei clarification on required ODU type,,GNOC,ONGOING
+Bengbis-MTN-IHS,SUD_052,IHS,Grid-Gen,SUD,Bengbis,11032026,NOKIA,0.4748169221853433,0.48423789286362384,0.2692751230762927,0.6995299392960211,0.975482061,10.80878027149957,18.963590783766225,"11.03.26; FME en route pour le site, ETA=14H UTC
+10.03.26; FSMF faulty et disponible à Sangmélima, remplacement ce 11.03.26
+10.03.26; FME en route pour le site, ETA=13H UTC; FME sur site et investigations en cours avec le BO TX
+09.03.26; Besoin d'un FME sur site pour vérifications du statut du BUC et du modem idirect; CM-20260309-00003347; FME Kenfack activé pour investigations, update ASAP..10.03.26; FME en route pour le site, ETA=13H UTC
+09.03.26; Besoin d'un FME sur site pour vérifications du statut du BUC et du modem idirect; CM-20260309-00003347; FME Kenfack activé pour investigations, update ASAP..10.03.26; FME en route pour le site, ETA=13H UTC
+09.03.26; Besoin d'un FME sur site pour vérifications du statut du BUC et du modem idirect; CM-20260309-00003347; FME Kenfack activé pour investigations, update ASAP..10.03.26; FSMF faulty et disponible à Sangmélima, remplacement ce 11.03.26
+10.03.26; FME en route pour le site, ETA=13H UTC; FME sur site et investigations en cours avec le BO TX
+09.03.26; Besoin d'un FME sur site pour vérifications du statut du BUC et du modem idirect; CM-20260309-00003347; FME Kenfack activé pour investigations, update ASAP",Faulty FSMF module affecting VSAT equipment,Replace faulty FSMF module,,GNOC,ONGOING
+Crfr-Ecole-Maternelle-Carriere,CTR_557,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,0,6.129814024550868,18.445382517019944,10/03/2026 : need BO RAN analysis || Site unstable => Power investigation needed..10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis || Site unstable => Power investigation needed..10/03/2026 : need BO RAN analysis || Site unstable => Power investigation needed,Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Hila,LIT_008,IHS,GridOnly,LITTORAL,Douala,11032026,ZTE,0.5525810898617914,0,1.4045844089703736,0,0.361198186,1.179706753537162,18.281969835332408,"10.03.26; Grid only, No space // Awaiting grid return..site down..site down..10.03.26; Grid only, No space // Awaiting grid return..10.03.26; Grid only, No space // Awaiting grid return..INC-20260310-00007395..MW Link Down","Grid outage, Grid only site, no space",Awaiting grid return,,IHS,Ongoing
+Nkongmondo,LIT_091,IHS,GridOnly,LITTORAL,Douala,11032026,ZTE,4.026467988456294,17.249632673609288,12.894381955054472,0,0.000914657,5.716571834992887,16.43902674604429,INC-20260309-00011407..power Grid outage here ..MW Link Down,Grid outage,Grid restoration awaited,,IHS,ONGOING
+Mvog-Ada-TKC,CTR_096,IHS,Grid-Lithium,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,6.218883357041252,1.5395695403005336,16.436575464353243,"10.03.26; Grid only, No space // Awaiting grid return (escalated to L2)..site down..site down..Power status check ongoing..10.03.26; Grid only, No space // Awaiting grid return..10.03.26; Grid only, No space // Awaiting grid return (escalated to L2)..INC-20260310-00003928..2026-03-10 17:04:48..Grid only, No space // grid return..Grid only, No space // grid return..Others","Grid outage, Grid only site, no space",Awaiting grid return,,IHS,Ongoing
+Brazz-Tergal,LIT_340,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0,2.347815652,0.8790405902979004,6.528220471933921,3.432434627610067,16.297328029784172,"Site UP without action, power issue..10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis || vSite unstable => Power investigation needed || mail sent to IHS..INC-20260310-00005962..GE Fault",vSite unstable,Up without action,,CELLDOWN,obs
+Buea-Low-Boduma-MTN,SUO_170,MTN sharing,,SUD-OUEST,Buea,11032026,HUAWEI,36.595129486211356,18.89312558172207,21.717404539041965,14.331491579298595,23.13395266611641,20.14424878094469,15.518735109378381,"11.03.26; FME Fabien on the way to the site, ETA=12 UTC
+10.03.26; Need FME on site to check MPR status which is probably hanged due to power issue; CM-20260310-00002332; FME Fabien is activated to check, update ASAP
+10.03.26; Power alarms; MTN feedback awaiting..10.03.26; Power alarms; MTN feedback awaiting..10.03.26; Need FME on site to check MPR status which is probably hanged due to power issue; CM-20260310-00002332; FME Fabien is activated to check, update ASAP
+10.03.26; Power alarms; MTN feedback awaiting",Power Issue,Awaiting MTN's feedback,,MTN,ONGOING
+Afanoya-II,CTR_838,CAMUSAT,Medium Grid + GE,CENTRE,Yaounde,11032026,ZTE,12.090983527387035,0.091996236,8.669109895460919e-17,10.699990926599115,0.3219410931399237,6.805983615,14.330064713836645,INC-20260309-00011349..2026-03-09 20:42:40..Gen cannot be started at this time due to noise disturbance /The gen will be started in the morning..GE Fault,Generator cannot be started due to noise disturbance (GE fault),Fix Gen,,CAMUSAT,ONGOING
+Ndogp-Ecole-Publique,LIT_693,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0.2503965954258351,0.1638517172142904,0,0,21.03346036094574,14.224751066856328,14.224751066856328,"10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L5 camusat)
+10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L4 camusat)
+09/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L2 camusat)
+08.03.2026 CAMUSAT: Probable Grid outage, Grid only site / FME will check..site down..site down..site down..10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L4 camusat)
+09/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L2 camusat)
+08.03.2026 CAMUSAT: Probable Grid outage, Grid only site / FME will check..10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L4 camusat)
+09/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L2 camusat)
+08.03.2026 CAMUSAT: Probable Grid outage, Grid only site / FME will check..10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L5 camusat)
+10/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L4 camusat)
+09/03/2026 CAMUSAT: Grid outage, Grid only site (ESCALADE L2 camusat)
+08.03.2026 CAMUSAT: Probable Grid outage, Grid only site / FME will check","site down, Grid outage, Grid only site",Grid restoration awaited (ESCALADE L4 camusat),,CAMUSAT,ONGOING
+Nyalla-III,LIT_751,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,0,0,11.883100205468624,20.511282481311724,5.3120737696761084,14.224751066856328,"11.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L4
+10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+camusat activé pour le piower escalade L2 camusat..09/03/2026 : need BO RAN analysis..09/03/2026 : need BO RAN analysis || Site unstable => Transmission investigaiton needed..09/03/2026 : need BO RAN analysis || Site unstable => Transmission investigaiton needed..10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+camusat activé pour le piower escalade L2 camusat..10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+camusat activé pour le piower escalade L2 camusat..10.03.26; Grid outage, Grid only site / Grid return awaited, escalated to L3
+camusat activé pour le piower escalade L2 camusat",Grid outage,Grid restoration awaited (escalated to L3),,CAMUSAT,ONGOING
+Obobogo-Paloma,CTR_598,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0,0.9992265657470336,6.361752834706052,0.9443105386087849,0,13.82619827429769,10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis..Power status check ongoing..Power status check ongoing..INC-20260310-00010824..2026-03-10 18:35:54..investigations ongoing..Others,site Swap,site Swap,,BO RAN,Ongoing
+Kumba-Nkamlikum,SUO_216,IHS,Grid-Gen,SUD-OUEST,Kumba,11032026,HUAWEI,15.036143599740091,14.475367180045543,3.259838786154576,30.423424155149295,22.578499552183768,16.75478475551575,13.643339977404304,impacted by power kumba agence',Impacted by Kumba-agence. Power Issue on site,Solve Power Issue on site,,OCM,Ongoing
+Evidence-building-IHS,NRO_123,IHS,Grid-Gen,NORD-OUEST,Bamenda,11032026,HUAWEI,0.076373889,0,0,0,2.078558821979875,17.687460852665534,13.600003512284216,"IHS; Fme is informed and managing with L0..Power status check ongoing..INC-20260310-00013303..Grid fluctuations, poor backup. // Grid switched-off and manual start of Gen..Grid fluctuations, poor backup. // Grid switched-off and manual start of Gen..GE Fault","Grid fluctuations, poor backup",Stablilize Grid on site,,IHS,ONGOING
+Kumba-Lutherian-Church-MTN,SUO_054,IHS,Grid-Gen,SUD-OUEST,Kumba,11032026,HUAWEI,13.238896791528369,13.429054054054054,13.631156741536858,13.524105245596472,13.47528083639195,13.363308483922518,13.316697545498716,Power status check ongoing,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Buea-Boduma-IHS,SUO_186,IHS,Grid-Gen,SUD-OUEST,Buea,11032026,HUAWEI,39.22502546406056,31.806331184986146,26.33216184020277,16.50286982889322,22.554919685767636,25.245000117076142,13.169364539978575,Impacted by SUO_170_H_Buea-Low-Boduma-MTN..Impacted by SUO_170_H_Buea-Low-Boduma-MTN..Impacted by SUO_170_H_Buea-Low-Boduma-MTN,Impacted by SUO_170_H_Buea-Low-Boduma-MTN. Power Issue,Awaiting MTN's feedback,,MTN,ONGOING
+Ekounou-Lycee-MTN,CTR_726,,,CENTRE,Yaounde,11032026,ZTE,1.4215055698973829,0.8440640933330993,0.8258807052666706,0,8.404127812,14.109924983462998,12.85578341499394,"11.03.26; Power issue resolved and we need FME on site to check MPR status; CM-20260310-00005003; FME Eloundou is activated to check, ETA=11H UTC
+10/03/2026 Power alarm on site, MTN activated", Power issue,Power Issue resolved and Eloundou dispatched to site (ETA 11H UTC) to check MPR status and ensure normal operation.,,GNOC,Ongoing
+Etoa-Dispensaire,CTR_715,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,11032026,ZTE,0.001518331,0,0,0,0.11239309484923489,5.38398413,12.751878340328632,"10/03/2026 Gen cannot be started at this time due to noise disturbance /The gen will be started in the morning escalade L3 camusat
+09/03/2026 Gen cannot be started at this time due to noise disturbance /The gen will be started in the morning escalade L2 camusat..10/03/2026 : power issue || mail send to camusat ..INC-20260309-00011347..2026-03-09 20:42:40..Gen cannot be started at this time due to noise disturbance /The gen will be started in the morning..GE Fault",Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Ngomedzap,CTR_188,IHS,Grid-Gen,CENTRE,Ngomedzap,11032026,NOKIA,18.96523716699155,18.96474325202395,18.964962769787324,18.96512740810986,18.965401805314084,18.965346925873238,11.037517780938833,"09.03.2026: Site Ngomedzap à basculer en terrestre et prendra sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR  Fin Mars 26
+
+UE relay site; New site installation ongoing, ETR=Mars 26..09.03.2026: Site Ngomedzap à basculer en terrestre et prendra sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR  Fin Mars 26
+
+UE relay site; New site installation ongoing, ETR=Mars 26..INC-20260223-00002972..2026-02-23 08:52:31..Problème d'énergie sur le site de Nkolbewae affectant Ngomedzap et les autres...MW Link Down","Transmission dependency on TIGA site, link not yet operational",Migrate Ngomedzap transmission to terrestrial link via TIGA,Fin Mars 26,GNOC,ONGOING
+Nsimalen-highway-II,CTR_725,CAMUSAT,,CENTRE,Yaounde,11032026,ZTE,0.6163510001229302,0.11628953514918453,0,0,3.0741267583372847,19.45798137318605,10.90761814446025,10/03/2026 : power issue || mail semt to camusat..10/03/2026 : power issue || mail semt to camusat,Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+Japoma-Stade-Camtel,LIT_733,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,6.948706747683356,6.6609006667486215,11.943193193193194,1.207695268367783,0,3.037705102763582,10.452887097623941,10/03/2026 : power issue || mail sent to camusat..10/03/2026 : power issue || mail sent to camusat..INC-20260310-00008874..Others,Power Issue,Solve Power Issue on site,,CAMUSAT,Ongoing
+CTR_946_Z_Nkolfoulou-foret-Bar,CTR_946,ESCO,,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,8.883353382622388,0,9.855725608649585,10.03.26; Feedback Camusat; technician is managing (escalated to L2)..site down..10/03/2026 : power issue || mail sent to camusat..Power status check ongoing..10.03.26; Feedback Camusat; technician is managing (escalated to L2),"Site down, Power Issue",Solve Power Issue on site,,CAMUSAT,Ongoing
+Batoufam-Chefferie,OST_277,CAMUSAT,Good Grid + GE,OUEST,Batoufam,11032026,NOKIA,9.482069789087332,9.482289306850712,9.481905151,9.482179547969022,9.482069789087332,9.481740512442267,9.482124668528177,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONGOING
+Mandama-IHS,NRD_123,IHS,Grid-Hybrid-Gen,NORD,Mandama,11032026,NOKIA,9.481850271323957,9.481575874119732,9.481246597474668,9.482234427409866,9.481630753560578,9.482124668528177,9.482014909646487,"09.03.2026: Suite a des difficultes logistique qui ont retardes l'arrive du Materiel, les travaux se termineront le 13.03.2026
+
+02/03/2026 travaux en cours ETR=09/03/2026 
+24.02.26; Retour OCM; Redisign du lien en cours et update ce jour
+23.02.26; En attente de swap de la liaison par l'ing OCM, pas de nouveau délai
+07.02.2026: Défaut ODUs et indisponibles dans les warehouse de OCM et de Huawei; Lien TX Mandama<>Douroum à swaper; Swap du lien par l'ing OCM ETR=22.02.2026
+Point renvoyé a l’ingénierie OCM par le Directeur Narcisse.
+En attente swap du  lien Mandama_Douroum
+04/02/2026 Elaboration du PO en cours 
+28/01/2026 Redesign en cours avec l’Ingénierie, je vous reviens d’ici fin de semaine
+22/01/2026 Rapport d'intervention transmis a OCM 
+15/01/2026 OCM a donné les sites ou cannibaliser mais aucun compatibilite, pas d'autre solution jusqu'ici..09.03.2026: Suite a des difficultes logistique qui ont retardes l'arrive du Materiel, les travaux se termineront le 13.03.2026
+
+02/03/2026 travaux en cours ETR=09/03/2026 
+24.02.26; Retour OCM; Redisign du lien en cours et update ce jour
+23.02.26; En attente de swap de la liaison par l'ing OCM, pas de nouveau délai
+07.02.2026: Défaut ODUs et indisponibles dans les warehouse de OCM et de Huawei; Lien TX Mandama<>Douroum à swaper; Swap du lien par l'ing OCM ETR=22.02.2026
+Point renvoyé a l’ingénierie OCM par le Directeur Narcisse.
+En attente swap du  lien Mandama_Douroum
+04/02/2026 Elaboration du PO en cours 
+28/01/2026 Redesign en cours avec l’Ingénierie, je vous reviens d’ici fin de semaine
+22/01/2026 Rapport d'intervention transmis a OCM 
+15/01/2026 OCM a donné les sites ou cannibaliser mais aucun compatibilite, pas d'autre solution jusqu'ici..09.03.2026: Suite a des difficultes logistique qui ont retardes l'arrive du Materiel, les travaux se termineront le 13.03.2026
+
+02/03/2026 travaux en cours ETR=09/03/2026 
+24.02.26; Retour OCM; Redisign du lien en cours et update ce jour
+23.02.26; En attente de swap de la liaison par l'ing OCM, pas de nouveau délai
+07.02.2026: Défaut ODUs et indisponibles dans les warehouse de OCM et de Huawei; Lien TX Mandama<>Douroum à swaper; Swap du lien par l'ing OCM ETR=22.02.2026
+Point renvoyé a l’ingénierie OCM par le Directeur Narcisse.
+En attente swap du  lien Mandama_Douroum
+04/02/2026 Elaboration du PO en cours 
+28/01/2026 Redesign en cours avec l’Ingénierie, je vous reviens d’ici fin de semaine
+22/01/2026 Rapport d'intervention transmis a OCM 
+15/01/2026 OCM a donné les sites ou cannibaliser mais aucun compatibilite, pas d'autre solution jusqu'ici..09.03.2026: Suite a des difficultes logistique qui ont retardes l'arrive du Materiel, les travaux se termineront le 13.03.2026
+
+02/03/2026 travaux en cours ETR=09/03/2026 
+24.02.26; Retour OCM; Redisign du lien en cours et update ce jour
+23.02.26; En attente de swap de la liaison par l'ing OCM, pas de nouveau délai
+07.02.2026: Défaut ODUs et indisponibles dans les warehouse de OCM et de Huawei; Lien TX Mandama<>Douroum à swaper; Swap du lien par l'ing OCM ETR=22.02.2026
+Point renvoyé a l’ingénierie OCM par le Directeur Narcisse.
+En attente swap du  lien Mandama_Douroum
+04/02/2026 Elaboration du PO en cours 
+28/01/2026 Redesign en cours avec l’Ingénierie, je vous reviens d’ici fin de semaine
+22/01/2026 Rapport d'intervention transmis a OCM 
+15/01/2026 OCM a donné les sites ou cannibaliser mais aucun compatibilite, pas d'autre solution jusqu'ici",Transmission link redesign ongoing,Receive remaining materials,13.03.2026,GNOC,ONGOING
+Longtimbi,EST_072,IHS,Grid-Gen,EST,Longtimbi,11032026,NOKIA,9.481740512442267,9.481740512442267,9.481795392,9.481850271323957,9.481520995,9.481301476915514,9.481795392,"09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+16/02/2026: point renvoye a OCM
+10/02/2026 : Offre attendu de Huawei pour l'achat de la Spare
+09/02/2026 : EN attente de spare 
+08/02/2026: Fiche de travaux envoye a OCM pour validation
+28/01/2026:  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0|| site vendalise|| commande effectuee..09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+16/02/2026: point renvoye a OCM
+10/02/2026 : Offre attendu de Huawei pour l'achat de la Spare
+09/02/2026 : EN attente de spare 
+08/02/2026: Fiche de travaux envoye a OCM pour validation
+28/01/2026:  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0|| site vendalise|| commande effectuee..09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+16/02/2026: point renvoye a OCM
+10/02/2026 : Offre attendu de Huawei pour l'achat de la Spare
+09/02/2026 : EN attente de spare 
+08/02/2026: Fiche de travaux envoye a OCM pour validation
+28/01/2026:  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0|| site vendalise|| commande effectuee",Spare unvailable,Awaiting OCM's return,,OCM SPM,Ongoing
+Tikondi-MTN,EST_040,IHS,Grid-Gen,EST,Tikondi,11032026,NOKIA,9.481740512442267,9.481740512442267,9.481795392,9.481850271323957,9.481520995,9.481301476915514,9.481795392,"10/03/2026 : Spare toujours pas recue
+09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+13/02/2026: Site vendalise cable 2*35mm emporte mail transmis a Huawei spare|| point transmis a OCM SPMS
+12/02/2026: Action en cours avec le level 0|| le FME est actuellement sur le site de Ndelel qui est down|| Site vendalise, en attente du mail du RM pour confirmation
+11/02/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed..10/03/2026 : Spare toujours pas recue
+09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+13/02/2026: Site vendalise cable 2*35mm emporte mail transmis a Huawei spare|| point transmis a OCM SPMS
+12/02/2026: Action en cours avec le level 0|| le FME est actuellement sur le site de Ndelel qui est down|| Site vendalise, en attente du mail du RM pour confirmation
+11/02/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed..10/03/2026 : Spare toujours pas recue
+09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+13/02/2026: Site vendalise cable 2*35mm emporte mail transmis a Huawei spare|| point transmis a OCM SPMS
+12/02/2026: Action en cours avec le level 0|| le FME est actuellement sur le site de Ndelel qui est down|| Site vendalise, en attente du mail du RM pour confirmation
+11/02/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed",Spare unvailable,Awaiting OCM's return,,OCM SPM,Ongoing
+Brigaya,EST_056,IHS,Solar-Gen,EST,Brigaya,11032026,NOKIA,9.481740512442267,9.481740512442267,9.481795392,9.481850271323957,9.481520995,9.481301476915514,9.481795392,"10/03/2026 : Spare toujours pas recue
+07/03/2026 : etd 08032026
+02/03/2026 : inventaire en cours
+01/03/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed..10/03/2026 : Spare toujours pas recue
+07/03/2026 : etd 08032026
+02/03/2026 : inventaire en cours
+01/03/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed..10/03/2026 : Spare toujours pas recue
+07/03/2026 : etd 08032026
+02/03/2026 : inventaire en cours
+01/03/2026 : Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed",Spare unvailable,Awaiting OCM's return,,CELLDOWN,Ongoing
+EST_053_N_Mbele-Mbeke,EST_053,IHS,Solar-Gen,EST,Mbele-Mbeke,11032026,NOKIA,9.481740512442267,9.481740512442267,9.481795392,9.481850271323957,9.481520995,9.481301476915514,9.481795392,"09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+03/03/2026 : Point envoye a OCM
+02/03/2026 :  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed ..09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+03/03/2026 : Point envoye a OCM
+02/03/2026 :  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed ..09/03/2026 : Spare toujours pas recue
+06/03/2026 : ETD 08032026
+03/03/2026 : Point envoye a OCM
+02/03/2026 :  Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed ",Spare unvailable,Awaiting OCM's return,,CELLDOWN,Ongoing
+Bamenkombo,OST_155,IHS,Grid-Gen,OUEST,Bamenkombo,11032026,NOKIA,4.522859219746987,5.532315556553783,17.651917268145336,11.772792529371477,8.395987361630638,11.32232378577408,9.298552938903818,"10/03/2026 : Relance faite a IHS ce matin  || Several Grid Fluctuation
+Team Left Site Permanent
+09/03/2026 : Power issue || Mail sent to IHS..10/03/2026 : Relance faite a IHS ce matin  || Several Grid Fluctuation
+Team Left Site Permanent
+09/03/2026 : Power issue || Mail sent to IHS..10/03/2026 : Relance faite a IHS ce matin  || Several Grid Fluctuation
+Team Left Site Permanent
+09/03/2026 : Power issue || Mail sent to IHS",Power Issue,Awaiting IHS's return,,IHS,Ongoing
+Etam-Bafia,CTR_721,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,6.4654566847549315,25.382967031358845,12.236395752477625,9.564773106439773,6.768738768007774,8.839962038061454,"Site UP without action, power issue..10/03/2026 : power issue || mail sent to camusat..INC-20260310-00008334..2026-03-10 14:54:27..investigations ongoing..Others",Power Issue,Up without action,,CAMUSAT,obs
+Oyack-II,LIT_765,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0.10331969396296908,5.161411411411412,0,1.2928864537051676,3.661903862927256,5.072689648713042,8.760002692751232,"10.03.26; Grid outage, Grid only site / Grid return awaited..site down..site down..Power status check ongoing..10.03.26; Grid outage, Grid only site / Grid return awaited..INC-20260310-00004981..2026-03-10 11:39:07..Grid outage, Grid only site / Grid return awaited..Others","Site down, Grid outage",Grid restoration awaited,,CAMUSAT,Ongoing
+BTS-Mobile-Tagidor-Hotel,OST_306,CAMUSAT,Medium Grid + GE,OUEST,Bafoussam,11032026,NOKIA,0.090038808,0.015156353645119296,0.00459158,9.046435324213103,14.302171323370155,3.3153219008482164,8.281124691943406,Power status check ongoing..INC-20260310-00012460..2026-03-10 20:36:13..Analyse bo tx en cours..MW Link Down,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Brazzaville-II,LIT_694,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,11.307799027097271,1.6050590063747965,2.6176395693939556,5.016950429962126,10.712046110437923,1.7918686230089742,8.039453927611822,"10.03.26; Grid outage, Grid only site / Grid return awaited..site down..INC-20260310-00002030..2026-03-10 09:21:30..Présence d'alarme énergie Noc CAMUSAT merci de partager le statut du power svp..GE Fault","Grid outage, Grid only site",Grid return awaited,,CAMUSAT,Ongoing
+Bamenda-Ntasen-IHS,NRO_134,IHS,Grid-Gen,NORD-OUEST,Bamenda,11032026,HUAWEI,0.077636116,0,0.19460249723407613,0.14500977585772906,7.179035760907106,0.9695002019563425,7.814594565325559,Power status check ongoing,Impacted by NRO_244_H_Nkwein-Clinic-St-Louis-MTN. Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+LIMBE-MOTOWOH-MTN,SUO_224,MTN sharing,,SUD-OUEST,Limbe,11032026,HUAWEI,0.000823192,0.4351756727487721,0.12741176849363983,1.0118854234351309,0.4535236991377341,2.8200166540809817,7.6175407864004345,"Power status check ongoing..09/03/2026 FME activé update asap 
+Besoin d'un fme sur site pour verifier l'interco entre le MPR et la BTS S1P3..Power status check ongoing",Need BO RAN analysis,FME dispatched to site to check and restore MPR–BTS S1P3 interconnection,,GNOC,Ongoing
+KUMBA-BONAKAMA,SUO_218,IHS,Grid-Gen,SUD-OUEST,Kumba,11032026,HUAWEI,0.9557437554513577,2.8020893700718257,11.752816412904133,15.425403473649087,0.092380392,6.1985596707818935,7.345302173518548,en observation,No root cause,up sans action,,No root cause,obs
+Pitoa-Ville-IHS,NRD_096,IHS,Grid-Gen,NORD,Garoua,11032026,HUAWEI,0,1.1378337401729213,14.319198584549465,28.02363767276048,4.596537326800485,5.1726068173436595,7.219335563633807,10/03/2026 : SWAPE le 7 Fevrier..10/03/2026 : SWAPE le 7 Fevrier..10/03/2026 : SWAPE le 7 Fevrier..10/03/2026 : SWAPE le 7 Fevrier,Site swap to ZTE ongoing,site Swap ongoing,,BO RAN,Ongoing
+Ancien-Troisieme,LIT_653,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,3.6214943013188625,2.6786655076128763,3.2449664576857566,0,5.052219617278097,0.18596813187456487,6.805928735753297,10.02.26; Camusat; investigations ongoing..INC-20260310-00007935..2026-03-10 15:21:10..Analyse powerco en cours..sûrement énergie ..Others,Power Issue,Camusat team on site performing power analysis,,CAMUSAT,Ongoing
+Foret-Bar-Mabanda-IHS,LIT_360,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,10.382458481873687,0,0,0,0,0.5471297320712531,6.754707924298567,"10.03.26; CDS is activated for restoration of the AOF, ETR=14H UTC
+10.03.26; The Optim link Radio Foret-Bar-Mabanda_Grand-Hangar is cut so please to involve CDS..10.03.26; The Optim link Radio Foret-Bar-Mabanda_Grand-Hangar is cut so please to involve CDS..10.03.26; CDS is activated for restoration of the AOF, ETR=14H UTC
+10.03.26; The Optim link Radio Foret-Bar-Mabanda_Grand-Hangar is cut so please to involve CDS..10.03.26; CDS is activated for restoration of the AOF, ETR=14H UTC
+10.03.26; The Optim link Radio Foret-Bar-Mabanda_Grand-Hangar is cut so please to involve CDS",AOF / Optim radio link cut (Foret-Bar–Mabanda_Grand-Hangar),CDS to investigate and repair the AOF link,,GNOC,Ongoing
+Logpom-New,LIT_737,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,0,7.959000667334001,9.483167378,15.952483916665205,0.636546634,6.754159129890123,"11.03.26; Grid outage, Grid only site / Grid return awaited (escalated to L3)
+10/03/2026 grid outage grid only site awaited grid return..INC-20260310-00010290..MW Link Down","Grid outage, Grid only site",Grid return awaited (escalated to L3),,CAMUSAT,ONGOING
+CRTV_Yaounde_Mballa_II,CTR_842,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,2.8802742801280816,5.134886348,3.780809318090018,3.9507160669441372,4.3497993607642735,6.4119675230786335,10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis..INC-20260306-00008254..2026-03-09 21:53:47..Grid outage grid only site / awaiting grid return..Auto TT closure RCA..GE Fault,Grid outage,Grid restoration awaited (escalated to L3),,CAMUSAT,Ongoing
+Nkolmeyos-IHS,SUD_111,IHS,Gen-Lithium,SUD,Nkolmeyos,11032026,NOKIA,6.321160341628178,6.321160341628178,6.321196927922075,6.3212335142159715,6.321013996452593,6.320867651277008,6.321196927922075,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Galim-Tignere,ADM_024,IHS,Hybrid-Gen,ADAMAOUA,Galim-Tignere,11032026,NOKIA,0,1.6954585452459552,0.006037437,0.40007732593468504,1.4862959474647544,0.023764608,6.200854202467896,INC-20260310-00003619..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+De-La-Salle,LIT_245,IHS,Grid-GenLithium,LITTORAL,Douala,11032026,ZTE,0,0,0,0,3.2802722312956236,0.013939378,6.095642426051783,BO TRANS analysis ongoing..BO TRANS analysis ongoing..INC-20260310-00006291..2026-03-10 12:51:37..The FME should check if the both ODU 4.1 and 4.2 are normally powered or check connectivity between those ODU and MPTACC on Slot04 at Deido on the 10G_MPR_Deido_2..TX work on site SBC working on site ..MW Link Down,Need BO TX analysis,Awainting BO TX analysis,,BO TX,Ongoing
+IHS-Bamenda-Bujong,NRO_133,IHS,Grid-Gen,NORD-OUEST,Bamenda,11032026,HUAWEI,2.086424875167565,7.2563791862037474,13.348234930837272,1.0932716342073066,1.8556934127109563,1.4942025358692024,5.935687149137441,up sans action,No root cause,Up sans action,,No root cause,obs
+Ba-aba,CTR_755,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,0,1.3394790989820229,5.4708948714796675,Power status check ongoing..INC-20260310-00003015..2026-03-10 08:19:25..technician is managing with level 0..Alarm reset and GEN started manually..GE Fault..Grid outage GEN failed to start due to alarm,"Grid outage, gen failed",Grid restoration awaited (escalated to L3),,CAMUSAT,Ongoing
+Stade-Abega,CTR_274,IHS,Grid-Gen,CENTRE,Yaounde,11032026,ZTE,0,0,7.027861194527861,0,2.2915825181907077,2.535027717776257,5.4292047895849045,"Site UP without action, power issue..Power status check ongoing..INC-20260310-00007191..2026-03-10 13:52:52..technician on his way ETA 16H..passive power issue ..MW Link Down",Power Issue,Site UP without action,,IHS,obs
+Bekoko-HIS,LIT_477,IHS,Grid-Gen,LITTORAL,Bekoko,11032026,ZTE,0.518537543,0.30756267963870226,5.309402970221684,12.997811407899125,8.394176340082774,18.731414162700712,5.394045361150624,"10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis..INC-20260310-00016191..No Power Issue on Site, U = 56.9V and Site on Grid. TX FME Pascal 691648179 / HUAWEI is informed...No Power Issue on Site, U = 56.9V and Site on Grid. TX FME Pascal 691648179 / HUAWEI is informed...MW Link Down",Need BO RAN,Awaiting BO RAN analysis,,CELLDOWN,Ongoing
+Bonaberi-Magzi-IHS,LIT_738,,,LITTORAL,Douala,11032026,ZTE,0.055537994134485444,0,10.33540850792313,12.935980571214488,0.9584328480527314,0,4.834000667,INC-20260310-00006744..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkolmeyang-IHS,CTR_442,IHS,Grid-Gen,CENTRE,Nkolmeyang,11032026,NOKIA,4.740486100135223,4.739992185167623,4.740211703,4.740376341253534,4.740650738457757,4.740595859016911,4.740266582371846,"09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)..09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)..09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)..09.03.2026: Ce site prendra aussi sa transmission sur Tiga. Finalisation du site de Tiga (Fin Mars 26). ETR: Fin Mars 26
+
+04/03/2026 OCM: installation de la liaison NKOMEYANG <> TIGA ETR=FIN MARS
+28.02.26; Site UE Relay, plusieurs reset effectués sans succès (Technologie pas maîtrisée)
+27.02.26; FME Rodrigue activer manage avec le level 0. Update ASAP (Plusieurs reset effectués sans succès)
+BO TX; Site UE-RELAY. Cells L700 de son Donor Nkolbewae UP. Besoin d'un FME sur site pour:
+Reset Physique du HMC si NOK, Check des Antennes Yagui(Deconnection et reconnection)",UE relay site awaiting transmission link NKOMEYANG–TIGA installation.,Complete NKOMEYANG–TIGA transmission link installation,FIN MARS,OCM,ONGOING
+Nkomekui,SUD_016,,,SUD,Nkomekui,11032026,NOKIA,0.2550613478976051,0,0,0,2.0183011959327746,4.740595859016911,4.740266582371846,up sans action,No root cause,Up sans action,,No root cause,obs
+Yingui-IHS,LIT_180,IHS,Solar-Gen,LITTORAL,Yingui,11032026,NOKIA,4.740156823490158,4.740156823490158,4.740211703,4.740266582371846,4.739937306,4.739717787963402,4.740211703,"10/03/2026 : FME is on his way, but due to the  bad road Replacement planned tomorrow 
+04/03/2026 : Cde en cours  || Spare issue 
+03/03/2026 : ETA 15H ||  apres intervention la FXDB est faulty
+02/03/2026: Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0..10/03/2026 : FME is on his way, but due to the  bad road Replacement planned tomorrow 
+04/03/2026 : Cde en cours  || Spare issue 
+03/03/2026 : ETA 15H ||  apres intervention la FXDB est faulty
+02/03/2026: Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0..10/03/2026 : FME is on his way, but due to the  bad road Replacement planned tomorrow 
+04/03/2026 : Cde en cours  || Spare issue 
+03/03/2026 : ETA 15H ||  apres intervention la FXDB est faulty
+02/03/2026: Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed||Action en cours avec le level 0",FXDB board faulty,Receive spare FXDB,11/3/2026 0:00,CELLDOWN,Ongoing
+Balissa-MTN-IHS,CTR_170,IHS,Solar-Gen,CENTRE,Balissa,11032026,NOKIA,3.833128194800815,0.013447797693966217,1.689201767183502,0.000457382,0.9191395548309207,4.7452428053684494,4.579629233,"10.03.26; FME en route pour le site, ETA=12H UTC
+09.03.26; Disjonctions dans le DC pour probable sous dimensionnement du cable entre le DC et la baie power co. Visite conjointe ce 10.03.26
+09.03.26; Besoin d'un FME sur site pour vérifier la chaine antennaire de l'ODU 3.1; FME Bernard activé pour investigations, ETA=14H UTC..10.03.26; FME en route pour le site, ETA=12H UTC
+09.03.26; Disjonctions dans le DC pour probable sous dimensionnement du cable entre le DC et la baie power co. Visite conjointe ce 10.03.26
+09.03.26; Besoin d'un FME sur site pour vérifier la chaine antennaire de l'ODU 3.1; FME Bernard activé pour investigations, ETA=14H UTC",DC breaker trip,Joint visit scheduled; FME en route for on-site power check and cable sizing verification,,GNOC,Ongoing
+Olembe-MTN,CTR_778,,,CENTRE,Yaounde,11032026,ZTE,0,0.002579334,1.0762224212516613,0,0.4735546950459231,0,4.573012339825207,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Makepe-AES,LIT_357,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0,0,0,1.0897410568463202,0.054440405317598035,4.431148985242552,Power status check ongoing..INC-20260310-00007577..Instabilité Power suspecté... l'équipe maintenance power se déploie sur site pour examiner et nous faire un retour...MW Link Down,Power instability,FME deploy on site,,IHS,Ongoing
+Bonewonda-III,LIT_615,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,28.524869899138906,0,0,0.14239385584414782,0.3064833839687639,5.779406596973946e-17,4.3865685861299895,"10.03.26; Camusat; technician on site..site down..Power status check ongoing..INC-20260310-00006877..2026-03-10 14:37:53..Grid outage, gen fails to start due to battery discharge  /Gen started with battery backup
+..GE Fault","Site down, Grid outage, gen fails to start due to battery discharge",Grid restoration awaited and fix Generator,,CAMUSAT,Ongoing
+Makepe-Ecole-Sira,LIT_167,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0,9.364957062325484,0,0.001792728,0,4.385160013814984,Power status check ongoing..INC-20260310-00009895..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bois-Des-Singes-II-MTN,LIT_753,,,LITTORAL,Douala,11032026,ZTE,4.383092888209847,3.477307717073799,3.581523775237226,3.8692749767311176,9.196971093900919,4.438265019,4.3761963718104075,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ancienne-Mairie-Dla-V,LIT_771,CAMUSAT,Good Grid + GE,LITTORAL,Douala,11032026,ZTE,0,0,0,5.678613555075544,9.081870613303364,0,4.339536905326377,Power status check ongoing..Power status check ongoing..INC-20260310-00010158..GE Fault,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ekoumdoum,CTR_259,IHS,Grid-Gen,CENTRE,Yaounde,11032026,ZTE,0,0,3.0796147024217193,0,11.426704482260037,19.173449765555034,3.9586004132787753,"Site UP without action, power issue..Site UP without action, power issue..INC-20260310-00005642..2026-03-10 12:52:18..NOT MANAGED BY IHS..NOT MANAGED BY IHS..Others..Plantage du controller",Power Issue,Up without action,,IHS,obs
+Mvog-Mangaa-II,CTR_669,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,11032026,ZTE,6.814288703908586,9.852560894227562,7.588472975899876,9.763930597263933,6.5338547611939415,5.406429822,3.876573942363416,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Bafia-CRTV,CTR_101,CAMUSAT,Medium Grid + GE,CENTRE,Bafia,11032026,ZTE,0.5600264006696756,3.140805278963174,3.5424861996499417,3.5911642636788828,2.0281794952847587,0.77469648,3.6591415977380892,"10/03/2026 : need BO RAN analysis || GPS Issue => Check GPS connectivity(fuse protector, GPS module)..10/03/2026 : need BO RAN analysis || GPS Issue => Check GPS connectivity(fuse protector, GPS module)",GPS issue,"Check GPS connectivity(fuse protector, GPS module)",,CELLDOWN,Ongoing
+Ekounou-II,CTR_719,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0,4.908142791914721,0,1.627157127888122,1.3702481721487567,3.651513355460724,"Impacted by CTR_274_Z_Stade-Abega (Power issue)..Power status check ongoing..INC-20260310-00007308..2026-03-10 14:54:27..site impacted by CTR_274_Z_Stade/Abega/ Main site restoration 
+..GE Fault",Impacted by CTR_274_Z_Stade-Abega. Power Issue,Site UP without action,,IHS,obs
+Makepe-Conteneur,LIT_730,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,14.224751066856328,14.224751066856328,36.47349835215332,0.068727353,16.861543561104966,32.91959722880776,3.5759077791241545,Power status check ongoing..INC-20260310-00008550..2026-03-10 14:54:27..investigations ongoing..Others,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Pain-Magique,LIT_381,IHS,GridOnly,LITTORAL,Douala,11032026,ZTE,0.839326168,0,2.0269538544392356,0,0.7728671654110256,0,3.534894543666474,Power status check ongoing..Power status check ongoing..INC-20260310-00007393..2026-03-10 15:01:20..Présence d'alarme Transmission point transmis au BO TX pour analyse..MW Link Down,Need BO TX analysis,Awaiting BO TX analysis,,BO TX,Ongoing
+Mimboman-Village,CTR_245,IHS,Grid-Gen,CENTRE,Yaounde,11032026,ZTE,0,0,0.024695748379958554,0,0.3805157496677965,4.468430418722816,3.2649059878592044,"10/03/2026 : cde sfp en cours || ETA: 13h
+09/03/2026 : need BO RAN analysis || check Power cable of RRU 51/52/61 || intervention en cours || SFP faulty..10/03/2026 : cde sfp en cours
+09/03/2026 : need BO RAN analysis || check Power cable of RRU 51/52/61 || intervention en cours || SFP faulty..10/03/2026 : cde sfp en cours || ETA: 13h
+09/03/2026 : need BO RAN analysis || check Power cable of RRU 51/52/61 || intervention en cours || SFP faulty..10/03/2026 : cde sfp en cours || ETA: 13h
+09/03/2026 : need BO RAN analysis || check Power cable of RRU 51/52/61 || intervention en cours || SFP faulty",SFP faulty,SFP shipment ongoing,,CELLDOWN,Ongoing
+Bomono-ba-mbengue-IHS,LIT_790,IHS,,LITTORAL,Dibombari,11032026,ZTE,0.11036255553799436,0.079062981,2.9691423880020373,8.240038283897933,6.647638135211235,14.20296392884112,3.2088009061693277,10/03/2026 : need BO RAN analysis..10/03/2026 : need BO RAN analysis,Need BO RAN,Awaiting BO RAN analysis,,CELLDOWN,Ongoing
+Libong,ADM_149,CAMUSAT,Hybrid Solar - S3,ADAMAOUA,Libong,11032026,NOKIA,0.003293148,0.001921114,0.002195432,0.00795844,3.4211807013936175,3.1704778538293623,3.1671843515243316,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Beka-Hossere-MTN-IHS,ADM_132,IHS,Grid-Gen,ADAMAOUA,Ngaoundere,11032026,HUAWEI,0,0,0,0,0.26003708386749325,1.2057927810851787,2.916842280877369,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Sodiko-III-MTN,LIT_741,,,LITTORAL,Douala,11032026,ZTE,5.070622523107904,2.7358681781196394,10.127836169502837,6.2929706021811285,0,0.3072699892875324,2.8795059679562613,site down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ngodi-Cite,LIT_626,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,3.843682864,0,0,0.007701415,2.2729783877444696,2.872078950295325,Power status check ongoing..INC-20260310-00011273..2026-03-10 18:28:22..Investigation ongoing /Fme is managing with level zero..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ndogp-Bloc-13,LIT_292,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0.00226835,0,1.9097130756487475,2.466995504276205,0,2.6524514280362257,Power status check ongoing,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Tropicana-New,CTR_833,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,11032026,ZTE,24.26075563867961,5.267877526649454,10.19416712033671,34.42982456140351,34.47793553787705,45.16041992284683,2.541357146620307,Power status check ongoing..Power status check ongoing..INC-20260310-00005067..GE Fault,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mbangue-III-MTN,LIT_678,,,LITTORAL,Douala,11032026,ZTE,0,0.7533300844704348,0,15.262155430284087,17.23479693143436,0.6218389442073664,2.508722172464862,Power status check ongoing,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Dschang-Vallee,OST_096,IHS,Grid-Gen,OUEST,Dschang,11032026,HUAWEI,0,2.518326074612625,0,0,0,3.076267056530215,2.4853984101060127,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Limbe-Ngueme,SUO_235,CAMUSAT,Medium Grid + GE,SUD-OUEST,Limbe,11032026,HUAWEI,0,1.0262455437894034,0.5098300054440404,0.5651667749620967,0.3394659279162203,0,2.4661540195165923,Power status check ongoing,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Foumban-Mambain-MTN,OST_102,,,OUEST,Foumban,11032026,HUAWEI,4.976998197027436,1.7077018539006843,4.807091448173319,0.3582895761258334,1.4270483934226625,3.528656580557165,2.426860339872036,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ngd-Balam,ADM_165,CAMUSAT,Hybrid Solar - S1,ADAMAOUA,Ngaoundere,11032026,HUAWEI,0,0,0,0,2.0493812525976267,0,2.420274806970713,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Zemda,OST_262,CAMUSAT,Hybrid Solar - S3,OUEST,Zemda,11032026,NOKIA,0.4207812985250299,0.9816102652359965,2.594004823536987,1.550179565530443,0.037793642,0.21176146907141066,2.3849873265077948,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Mindourou,EST_012,IHS,Solar-Gen,EST,Mindourou,11032026,NOKIA,1.738745324,1.408791832768441,2.2770394663669515,1.8390649421351175,1.9709219453371498,0.9658049862728226,2.3020096119511324,"Power status check ongoing..Site UP without action, power issue..Power status check ongoing..INC-20260310-00015167..No Power Issue on Site U = 54.2V and site is on GEN, Hybrid with threshold 46.5V. TX FME Arthur (694466050/Huawei) is informed...MW Link Down",Power Issue,Up without action,,IHS,obs
+Lendi-Chefferie,LIT_774,CAMUSAT,Good Grid + GE,LITTORAL,Douala,11032026,ZTE,0,19.19529178301108,29.084347505400135,1.5922720966580617,2.253075443864918,1.6939454073957012,2.230391941649252,Power status check ongoing..Power status check ongoing..INC-20260310-00005033..GEN started manually..GE Fault..Grid outage GEN failed to start due to stop mode,"Grid outage, gen failed to start",Grid restoration awaited and fix Generator,,CAMUSAT,Ongoing
+La-Gare,CTR_019,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,11032026,ZTE,0.068105386,0.947365494,0,1.0619903529260262,0.27693995164755425,0.6530104666069592,2.1669513080331795,INC-20260310-00001050..Others,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkolfoulou-ENIA-MTN,CTR_837,,,CENTRE,Yaounde,11032026,ZTE,10.043102312839157,5.040018088263702,0,5.404966369878651,0,0.6924870777209965,2.163695127876414,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+KOTTO-MBANGUE-II,LIT_712,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,17.401703604188988,0.407242037,23.485181087520267,15.730588044184538,0.24474401301886678,2.074698967973822,Power status check ongoing..INC-20260310-00004906..power issue grid outage no backup awaiting grid return Camusat informed ..MW Link Down,"Grid outage, Grid only site",Awaiting grid return and Camusat feedback,,CAMUSAT,ONGOING
+Nyazoro-MTN-IHS,CTR_169,IHS,Solar-Gen,CENTRE,Nyazoro,11032026,NOKIA,3.3779461527556154,0,0,0,0.7576452376367528,3.1653546821675476,2.0588897358530174,INC-20260310-00003172..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ndjeleng-II,OST_165,IHS,Grid-Gen,OUEST,Bandjoun,11032026,HUAWEI,1.5916867159557218,0.19533422311200088,0,0,0.067209022,16.24457059,2.0326430231400994,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Diang-MTN,EST_076,IHS,Grid-Gen,EST,Diang,11032026,NOKIA,2.1746893091922326,0.880760146,0,0.4014614029233911,3.5326261934449072,0.001481745,1.9488969964116163,"Power status check ongoing..INC-20260310-00010839..2026-03-10 18:58:41..Notons que l'UBT se remplace sur le pylône, en hauteur donc actions en aerien et c'est déjà la nuit
+Nous gelons donc le ticket pour actions en aeriens impossible la nuit..Sans actions
+
+NB: UBT de Ref: 3DB29210ACAA01 a remplacer,..Others..Defaut UBT BOUAM Dir DIANG-MTN",Faulty UBT (Ref: 3DB29210ACAA01) ,Replace faulty UBT on tower during daylight,,GNOC,Ongoing
+Nkomedzap-Camtel,SUD_088,CAMUSAT,Medium Grid + GE,SUD,Nkomedzap,11032026,NOKIA,0,0,0,0,0.7357686634002425,3.6778449581479573,1.8870844528739268,INC-20260310-00014298..power issue  cami support is managing it we are following up ..MW Link Down,Power Issue,Solve Power Issue on site,,CAMUSAT,ONGOING
+Foumban-Njinka,OST_101,IHS,Grid-Gen,OUEST,Foumban,11032026,HUAWEI,0,0,0,1.9180730438040376,4.741583689,4.741583689,1.867455906198596,07/03/2026 : FMM swap encours,FMM SWAP en cours,FMM SWAP en cours,,GNOC,Ongoing
+Kotto-Denver,LIT_657,CAMUSAT,Good Grid no GE - 12h,LITTORAL,Douala,11032026,ZTE,3.2000201956342305,7.364601443548812,0.11164307582436225,14.774954047614864,13.923389764033038,0.21702989539246884,1.8432540727862365,Power status check ongoing..INC-20260310-00004893..Power issue grid outage no backup awaiting grid return ..MW Link Down,"Grid outage, Grid only site",Grid restoration awaited,,CAMUSAT,ONGOING
+Kotto-Bloc-II,LIT_611,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,4.639837205626679,0,14.770179536261407,13.93156680071885,0.2166640324535064,1.8426686920838962,Power status check ongoing..INC-20260310-00004899..Power issue grid outage no backup awaiting grid return Camusat informed ..MW Link Down,"Grid outage, Grid only site",Awaiting grid return and Camusat feedback,,CAMUSAT,ONGOING
+Mimboman-Liberte-II,CTR_655,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,0,6.9469323124293885,1.8062836228040913,INC-20260310-00010841..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Moulanga,LIT_670,CAMUSAT,Good Grid + GE,LITTORAL,Moulanga,11032026,ZTE,0,1.5157701561210324,0,0.22196904506846027,5.512639832815272,0,1.7993505201107545,"INC-20260310-00004096..Site Up 
+Après remplacement de L'ODU sur le site de Bekoko -MTN ..MW Link Down",ODU FAULTY,Up after replace ODU,,GNOC,obs
+Bekoko-MTN,SUO_061,IHS,Grid-Gen,SUD-OUEST,Bekoko,11032026,ZTE,0,0,0,0.22222514912573404,5.5201583162109475,0,1.799185881788221,"INC-20260310-00004080..2026-03-10 09:19:55..Site non supervisé bien vouloir impacter le FME de la zone pour investigation sur le site de SUO_061_Z_Bekoko-MTN..Site Up 
+Après remplacement de L'ODU en direction de Ndobo slot 4 port 1 ..MW Link Down..Site Up 
+Après remplacement de L'ODU en direction de Ndobo slot 4 port 1 ",Faulty ODU toward Ndobo (slot 4 port 1),Up after ODU replacement,,GNOC,obs
+Garoua-Ngalbidje-II,NRD_158,CAMUSAT,Good Grid + Solar + GE,NORD,Garoua,11032026,HUAWEI,5.287085331,3.3317491468076263,5.222382470189489,2.7326485842567716,3.4869847918093533,2.534954545188463,1.7770877602748947,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Lendi-II,LIT_582,CAMUSAT,Good Grid + GE,LITTORAL,Douala,11032026,ZTE,0,17.541774230370716,11.06369527422159,16.85947643549983,1.9384881957981375,1.1509133402408258,1.7464650322837456,Power status check ongoing..Power status check ongoing..INC-20260310-00005034..Power fluctuation grid outage Camusat informed feedback assap..MW Link Down,"Power fluctuation, grid outage",Awaiting grid return and Camusat feedback,,CAMUSAT,Ongoing
+Foumban-Camtel-II,OST_235,CAMUSAT,Medium Grid + GE,OUEST,Foumban,11032026,HUAWEI,0.10481973201271448,0.017287023865971234,0.6437358411042622,3.538699518231681,0,0.031262988,1.7404100006439192,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Ngouetou,CTR_300,IHS,Hybrid-Gen,CENTRE,Ngouetou,11032026,NOKIA,3.4656366893208994,5.237712127,2.9567396343712136,3.904836854398258,3.271747625,0.002103712,1.6908355724145196,Power status check ongoing..Power status check ongoing..INC-20260310-00012916..site up After power team cleared the issue on GE ..MW Link Down,Power Issue,up After power team cleared the issue on GE,,IHS,Obs
+Kika-IHS,EST_115,IHS,Hybrid-Gen,EST,Kika,11032026,NOKIA,3.190708983837639,2.455269597082462,1.756727488,1.6750120003043982,2.2969789965403997,2.7501185395922234,1.684030522,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Kotto-Mbangue,LIT_202,IHS,GridOnly,LITTORAL,Douala,11032026,ZTE,0,0,0.035214308,6.574502134,2.766161629465723,0,1.627815681178254,INC-20260310-00009257..power issue grid outage no backup awaiting grid return ..MW Link Down,"Grid outage, Grid only site",Grid restoration awaited,,IHS,ONGOING
+Mvangan-IHS,SUD_066,IHS,Grid-Hybrid-Gen,SUD,Mvangan,11032026,NOKIA,1.6333950909974306,1.6255839172505842,1.6078944441517542,1.6387001036123845,1.6443160997254564,1.6198947485497193,1.6081139619151315,"10/03/2026 : spare en cours d'expedition pour Yaounde
+09/03/2026 : FXDB faulty , not yet availabe according to SPM
+04/03/2026 : verification de la disponibilte en cours || Spare issue
+03/03/2026 : FXDB faulty || cde en cours
+02/03/2026 : need BO RAN analysis || check and replace module if needed..10/03/2026 : spare en cours d'expedition pour Yaounde
+09/03/2026 : FXDB faulty , not yet availabe according to SPM
+04/03/2026 : verification de la disponibilte en cours || Spare issue
+03/03/2026 : FXDB faulty || cde en cours
+02/03/2026 : need BO RAN analysis || check and replace module if needed..INC-20260310-00010082..MW Link Down",Faulty FXDB board; spare not available initially,Receive FXDB spare in Yaoundé,,GNOC,ONGOING
+Bonangang,LIT_358,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0,0.048842702,7.74277567,18.34348968851893,0,1.581680364575102,"INC-20260310-00009134..	Grid outage ,site went down because Gen stooped wit alarm""High Temp""//He added Coalant and Started Gen ...	Grid outage ,site went down because Gen stooped wit alarm""High Temp""//He added Coalant and Started Gen ...GE Fault",Grid outage; generator stopped due to high temperature alarm,Up  after coolant refill and generator restart,,IHS,obs
+Lokomo-MTN,EST_042,IHS,Grid-Gen,EST,Lokomo,11032026,NOKIA,1.5800522744967191,1.5835828518577058,1.580070567643667,1.582393797306078,1.581277915342243,1.587881741390513,1.5812596221952946,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Boubara-IHS,EST_096,IHS,Hybrid-Gen,EST,Boubara,11032026,NOKIA,3.8336948059170277,4.470095095095095,8.740611956986227,1.6229862903839514,1.5799791019089264,1.579905929321134,1.580070567643667,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Abome-II,CTR_662,CAMUSAT,Good Grid no GE - 12h,CENTRE,Yaounde,11032026,ZTE,5.997389933793443,2.528734875226103,6.946657915225167,16.941941941941945,0,0.9302431086056823,1.5756253329352747,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Kotto-Baden-Baden,LIT_713,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,7.150242347610768,0.3009588535904318,12.324897997412616,11.68209510680271,0.1839010062694276,1.5378682776343593,Power status check ongoing..INC-20260310-00004900..Power issue grid outage no backup awaiting grid return Camusat informé ..MW Link Down,"Grid outage, Grid only site",Grid restoration awaited,,CAMUSAT,ONGOING
+Cogefar-II,LIT_339,IHS,Grid-Gen,LITTORAL,Douala,11032026,ZTE,0,0.002158591,0,0.7657511312482074,1.1531085178745994,0,1.5281546166049094,INC-20260310-00007447..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+MVAMEBOD,CTR_981,,,CENTRE,Mvamebod,11032026,NOKIA,0,0,0,0.086599758,1.194762013475464,1.5801986196723037,1.4840864256068933,"10/03/2026 : Projet routier en cours
+09/03/2026 :   Check breaker and interconnection(sfp, optical fiber) between system and radio module, swap its if needed",Projet routier en cours,Projet routier en cours,,CELLDOWN,Ongoing
+Koweit-City,CTR_258,CAMUSAT,Good Grid + GE,CENTRE,Yaounde,11032026,ZTE,4.252626164175872,7.572978680434823,3.8071148634014143,6.027043124996342,0,1.6608713977135032,1.4645493446663038,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Nkong-CRTV,LIT_116,CAMUSAT,Good Grid + GE,LITTORAL,Nkongsamba,11032026,ZTE,1.1496511131014053,0.6895784673562461,0.7406895199292872,0,0.678694045,0.5104702655872251,1.4481769781477383,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Buea-Prime22,SUO_241,CAMUSAT,Medium Grid + GE,SUD-OUEST,Buea,11032026,HUAWEI,0.46122511400289185,0.6524616721985141,6.168010115378537,1.9476530624191442,2.3426021050290053,0.7609949130416966,1.4177920610669148,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,Ongoing
+Salapoumbe-Ville-MTN-IHS,EST_103,IHS,Hybrid-Gen,EST,SALAPOUMBE,11032026,NOKIA,0.7354210936082282,1.424962974670577,0.4508346065363609,0.5984054229668264,0.5356599289347828,0.6428394769038045,1.3970293392808013,10/03/2026 : need BO RAN analysis || Physical reset of FXDB || FME active ||  action avec le level 0 || ETA 18h..10/03/2026 : need BO RAN analysis || Physical reset of FXDB || FME active ||  action avec le level 0 || ETA 18h,FXDB faulty,Replace FXDB (action avec le level 0),,GNOC,Ongoing
+Cite-Berge-EPC,LIT_656,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,1.223244443273683,0.9785553096956611,1.7044456737439189,2.9382635559536148,7.308203671507765,3.8580978639458166,1.391230411698248,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Fin-goudron-Mbangue,LIT_844,CAMUSAT,,LITTORAL,Douala,11032026,ZTE,2.322132073594062,11.312847935654952,9.730088275409909,11.092946016191629,10.522455935467631,0.16376025147954953,1.383785100890364,Power status check ongoing..Power status check ongoing,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Ange-raphael-II,LIT_696,CAMUSAT,Good Grid no GE - 8h,LITTORAL,Douala,11032026,ZTE,0,9.598743480322426,11.06369527422159,32.42630422820481,4.926984733271284,0.3359536437021814,1.307868541055675,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+MOLYKO-CHIEF-STREET-MTN,SUO_228,MTN sharing,,SUD-OUEST,Buea,11032026,HUAWEI,1.5493380807708295,9.644512933986617,5.707388675224934,1.2538854644117803,1.4614029233912273,4.252150542355221,1.2935267138483515,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Bda-Mulang,NRO_243,IHS,Grid-Gen,NORD-OUEST,Bamenda,11032026,HUAWEI,0.070959117,0,0,0.007573363,8.079278108517874,0,1.247793846478057,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Mokolo3-IHS,EXN_156,IHS,Grid-Gen,EXTREME-NORD,Maroua,11032026,NOKIA,1.580527896,1.580527896,1.580527896,1.580527896,1.580527896,1.580527896,1.1897073339852051,01/03/2026 :  Travaux equipe projet ..01/03/2026 :  Travaux equipe projet ,Travaux Equipe projet,Travaux Equipe projet,,HWPJ,ONGoing
+Micro_SNH,CTR_843,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0.15446733282990574,0.13827789778082167,0.21944459078962036,0.32764855498773654,0.39207701853900634,4.641483589,1.1415838352972862,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Maroua-Zokok-Palar-IHS,EXN_116,IHS,Grid-Gen,EXTREME-NORD,Maroua,11032026,HUAWEI,1.9367320536911183,2.3200832411358725,2.2935032986202577,1.1308091717448443,0.7436164234409847,3.3004129860855005,1.103899952584163,10/03/2026 : Besoin d'analyse BO RAN..10/03/2026 : Besoin d'analyse BO RAN || Low voltage affecting RF module => power investigation needed..10/03/2026 : Besoin d'analyse BO RAN || Low voltage affecting RF module => power investigation needed,Low voltage affecting RF module,Awaiting BO RAN analysis,,GNOC,ONgoing
+Bfsam-Gouache-IHS,OST_121,IHS,Grid-Gen,OUEST,Bafoussam,11032026,HUAWEI,1.009232917127654,0,0,0,0.043995018410223095,0,1.098887630320379,,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Kye-Ossi-MTN-IHS,SUD_026,IHS,Grid-Gen-Lithium,SUD,Kye-Ossi,11032026,ZTE,0,0,0,0,3.5255101592820886,0,1.0916618372758726,INC-20260310-00013032..MW Link Down,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
+Mbalgong-Carrefour,CTR_831,CAMUSAT,Good Grid no GE - 8h,CENTRE,Yaounde,11032026,ZTE,0,0,0,0,1.1367727376499304,0,1.0527340205702769,INC-20260310-00010415..Others,Need BO RAN analysis,Awaiting BO RAN analysis,,BO RAN,ONgoing
