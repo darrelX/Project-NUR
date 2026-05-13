@@ -1,1 +1,0 @@
-# ALL-NUR-PROJECT
