@@ -198,15 +198,15 @@ if __name__ == "__main__":
     print("=" * 60)
     xl2 = SuperXlookup(
         source_file_path=r"C:\Users\f50056342\Desktop\computer science\NUR Project Lyne\inputs\Book1.xlsx",
-        target_file_path=r"C:\Users\f50056342\Desktop\my work\OCM RAN\OCM RAN INCIDENT FOLOW-UP 11-05-2026 00H UTC.xlsx",
+        target_file_path=r"C:\Users\f50056342\Desktop\my work\OCM RAN\OCM RAN INCIDENT FOLOW-UP 15-05-2026 12H UTC.xlsx",
         source_key_column="B",
         target_key_column="D",
         target_value_column="J",
         result_position_column="last_free",
-        result_column_name="OCM RAN 11-05-2026 00'H",
+        result_column_name="OCM RAN 15-05-2026 12H'",
         source_sheet_name="Sheet1",
         target_sheet_name="ALL SITES DOWN",
-        reference_name="OCM RAN"                # pas de préfixe
+        reference_name="OCM RAN 12H"                # pas de préfixe
     )
     xl2.run()
 

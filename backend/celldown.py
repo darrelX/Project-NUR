@@ -200,15 +200,15 @@ class CellDown:
 if __name__ == "__main__":
     celldown = CellDown(
         source_file_path=r"C:\Users\f50056342\Desktop\computer science\NUR Project Lyne\inputs\Book1.xlsx",
-        target_file_path=r"C:\Users\f50056342\Desktop\my work\cellsdow files\celldown Huawei\DAILY_W20_CELLS_DOWN_HUAWEI_11052026 16h.xlsx",
+        target_file_path=r"C:\Users\f50056342\Desktop\my work\cellsdow files\celldown ZTE\DAILY_W20_CELLS_DOWN_ZTE_AU 1105 au 15052026 16h.xlsx",
         colown_key_path_source="B",
         target_key_column="B",
         target_value_column="T",
         result_position_column="last_column",
         source_sheet_path="Sheet1",
-        date_str="11052026",
+        date_str="15052026",
         start_column="C",
-        reference_name="CellDown Huawei"
+        reference_name="CellDown ZTE"
     )
     celldown.super_xlookup_par_date()
 
