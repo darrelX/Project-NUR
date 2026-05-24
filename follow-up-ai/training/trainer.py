@@ -4,7 +4,7 @@ Gestionnaire d'entraînement pour le fine-tuning
 
 from trl import SFTTrainer, SFTConfig
 from typing import Dict, Any
-from ..utils.helpers import creer_dossier
+from utils.helpers import creer_dossier
 
 
 class ModelTrainer:

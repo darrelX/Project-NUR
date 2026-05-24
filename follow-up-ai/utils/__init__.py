@@ -2,7 +2,7 @@
 Module utilitaires
 """
 
-from .constants import (
+from utils.constants import (
     CATEGORIES,
     SYSTEM_PROMPT,
     BESOIN_OWNER_TOPOLOGY,
@@ -13,7 +13,7 @@ from .constants import (
     PATTERN_CODE_SITE,
 )
 
-from .helpers import (
+from utils.helpers import (
     propre,
     est_impacte,
     extraire_site_impactant,

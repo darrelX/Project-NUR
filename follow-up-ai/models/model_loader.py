@@ -6,7 +6,7 @@ import torch
 from transformers import AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 from typing import Optional
-from ..utils.helpers import nettoyer_memoire, afficher_info_gpu
+from utils.helpers import nettoyer_memoire, afficher_info_gpu
 
 
 class ModelLoader:

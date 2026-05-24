@@ -6,20 +6,61 @@ import argparse
 import sys
 import os
 
-# Ajouter le dossier parent au path pour les imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+print("🔧 [DEBUG] Démarrage du script main.py")
+print(f"🔧 [DEBUG] Répertoire de travail : {os.getcwd()}")
+print(f"🔧 [DEBUG] Chemin du script : {os.path.abspath(__file__)}")
 
+# Ajouter le dossier parent au path pour les imports
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, script_dir)
+print(f"🔧 [DEBUG] Ajout au sys.path : {script_dir}")
+print(f"🔧 [DEBUG] sys.path : {sys.path[:3]}")
+
+print("🔧 [DEBUG] Import de config.config_manager...")
 from config.config_manager import ConfigManager
+print("✅ [DEBUG] config.config_manager importé")
+
+print("🔧 [DEBUG] Import de data.loader...")
 from data.loader import DataLoader
+print("✅ [DEBUG] data.loader importé")
+
+print("🔧 [DEBUG] Import de data.tokenization...")
 from data.tokenization import TokenizerManager
+print("✅ [DEBUG] data.tokenization importé")
+
+print("🔧 [DEBUG] Import de data.preprocessing...")
 from data.preprocessing import DataPreprocessor
+print("✅ [DEBUG] data.preprocessing importé")
+
+print("🔧 [DEBUG] Import de models.model_loader...")
 from models.model_loader import ModelLoader
+print("✅ [DEBUG] models.model_loader importé")
+
+print("🔧 [DEBUG] Import de models.lora_manager...")
 from models.lora_manager import LoraManager
+print("✅ [DEBUG] models.lora_manager importé")
+
+print("🔧 [DEBUG] Import de training.trainer...")
 from training.trainer import ModelTrainer
+print("✅ [DEBUG] training.trainer importé")
+
+print("🔧 [DEBUG] Import de inference.predictor...")
 from inference.predictor import Predictor
+print("✅ [DEBUG] inference.predictor importé")
+
+print("🔧 [DEBUG] Import de inference.evaluator...")
 from inference.evaluator import Evaluator
+print("✅ [DEBUG] inference.evaluator importé")
+
+print("🔧 [DEBUG] Import de utils.constants...")
 from utils.constants import MODEL_NAME
+print("✅ [DEBUG] utils.constants importé")
+
+print("🔧 [DEBUG] Import de utils.helpers...")
 from utils.helpers import afficher_info_gpu, nettoyer_memoire
+print("✅ [DEBUG] utils.helpers importé")
+
+print("\n✅ [DEBUG] Tous les imports réussis !\n")
 
 
 class FineTuningPipeline:

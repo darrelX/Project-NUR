@@ -2,8 +2,8 @@
 Module d'inférence et évaluation
 """
 
-from .predictor import Predictor
-from .evaluator import Evaluator
+from inference.predictor import Predictor
+from inference.evaluator import Evaluator
 
 __all__ = [
     "Predictor",

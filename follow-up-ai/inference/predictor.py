@@ -4,8 +4,8 @@ Gestionnaire de prédiction pour le modèle fine-tuné
 
 import torch
 from typing import Tuple, Optional
-from ..utils.constants import SYSTEM_PROMPT, GENERATION_CONFIG
-from ..utils.helpers import (
+from utils.constants import SYSTEM_PROMPT, GENERATION_CONFIG
+from utils.helpers import (
     construire_prompt_utilisateur,
     extraire_cause_de_reponse,
     normaliser_cause,

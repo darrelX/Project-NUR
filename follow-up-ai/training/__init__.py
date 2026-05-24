@@ -2,7 +2,7 @@
 Module d'entraînement
 """
 
-from .trainer import ModelTrainer
+from training.trainer import ModelTrainer
 
 __all__ = [
     "ModelTrainer",

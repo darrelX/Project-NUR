@@ -5,7 +5,7 @@ Gestionnaire LoRA pour le fine-tuning
 import os
 from peft import LoraConfig, get_peft_model, TaskType, PeftModel
 from typing import Dict, Any, Optional
-from ..utils.helpers import nettoyer_memoire, creer_dossier
+from utils.helpers import nettoyer_memoire, creer_dossier
 
 
 class LoraManager:

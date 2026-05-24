@@ -6,8 +6,8 @@ import pandas as pd
 import time
 from typing import Dict, Any, List, Tuple
 from collections import Counter, defaultdict
-from ..utils.helpers import propre, est_impacte, extraire_site_impactant
-from ..utils.constants import CATEGORIES
+from utils.helpers import propre, est_impacte, extraire_site_impactant
+from utils.constants import CATEGORIES
 
 
 class Evaluator:
