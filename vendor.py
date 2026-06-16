@@ -2,9 +2,6 @@ import re
 import unicodedata
 from pathlib import Path
 from datetime import datetime
-import openpyxl
-from openpyxl.utils import column_index_from_string
-
 import pandas as pd
 
 
@@ -14,13 +11,12 @@ import pandas as pd
 INPUT_FILE = r"C:\Users\f50056342\Desktop\my work\REPETITIVES\STATUT DES SITES JOURNALIERS\statut.xlsx"
 OUTPUT_FILE = r"C:\Users\f50056342\Desktop\computer science\NUR Project Lyne\outputs\resultat_synthese.xlsx"
 
-TARGET_DATE = "22/5/2026"   # colonne à exploiter
+TARGET_DATE = ["14/6/2026", "15/6/2026"]   # Liste des dates à exploiter
 VALID_STATUTS = {"OPERATIONNEL", "INSECURITE"}
 VALID_VENDORS = {"ZTE", "HUAWEI", "NOKIA"}
 
 
 # Capitale de chaque région
-# (utilisé pour exclure la capitale quand on veut la "région")
 CAPITALS_BY_REGION = {
     "ADAMAOUA": "NGAOUNDERE",
     "CENTRE": "YAOUNDE",
@@ -33,13 +29,6 @@ CAPITALS_BY_REGION = {
     "SUD OUEST": "BUEA",
     "SUD": "EBOLOWA",
 }
-
-def col_letter_to_index(letter):
-    """Convertit une lettre de colonne Excel en index (0-based)"""
-    result = 0
-    for char in letter:
-        result = result * 26 + (ord(char.upper()) - ord('A') + 1)
-    return result - 1
 
 
 # =========================
@@ -57,55 +46,52 @@ def normalize_text(value) -> str:
     return text
 
 
-def find_date_column(df: pd.DataFrame, target_date: str) -> str:
+def find_date_column(df: pd.DataFrame, target_date: str):
     """
     Trouve la colonne correspondant à la date cible.
-    target_date au format: "7/5/2026" qui peut signifier:
-    - Format français jour/mois/année: 7 Mai 2026 -> cherche datetime(2026, 5, 7)
-    - Ou bien la valeur affichée "07/05" dans Excel qui correspond à datetime(2026, 7, 5)
-    
-    On essaie les deux interprétations.
+    target_date au format: "7/5/2026" (jour/mois/année).
+    Retourne l'objet colonne (datetime ou string).
     """
-    # Parser la date target en format français (jour/mois/année)
     parts = target_date.split('/')
-    if len(parts) == 3:
-        day_fr = int(parts[0])
-        month_fr = int(parts[1])
-        year_fr = int(parts[2])
-        
-        # Stratégie 1: Format français (jour/mois/année)
-        # Chercher datetime(year, month, day)
-        for col in df.columns:
-            if isinstance(col, (pd.Timestamp, datetime)):
-                if col.year == year_fr and col.month == month_fr and col.day == day_fr:
-                    return col
-            # Aussi vérifier les colonnes string
-            elif isinstance(col, str):
-                if col.strip() == target_date:
-                    return col
-        
-        # Stratégie 2: "7/5/2026" pourrait correspondre à datetime(2026, 7, 5)
-        # si Excel affiche en format MM/DD (mois avant jour)
-        for col in df.columns:
-            if isinstance(col, (pd.Timestamp, datetime)):
-                # Si le mois du datetime = premier chiffre ET jour = deuxième chiffre
-                if col.year == year_fr and col.month == day_fr and col.day == month_fr:
-                    return col
-    
+    if len(parts) != 3:
+        raise ValueError(f"Format de date invalide : {target_date}")
+
+    day_fr = int(parts[0])
+    month_fr = int(parts[1])
+    year_fr = int(parts[2])
+
+    # Stratégie 1: format français (jour/mois/année)
+    for col in df.columns:
+        if isinstance(col, (pd.Timestamp, datetime)):
+            if col.year == year_fr and col.month == month_fr and col.day == day_fr:
+                return col
+        elif isinstance(col, str):
+            if col.strip() == target_date:
+                return col
+
+    # Stratégie 2: format américain (mois/jour/année)
+    for col in df.columns:
+        if isinstance(col, (pd.Timestamp, datetime)):
+            if col.year == year_fr and col.month == day_fr and col.day == month_fr:
+                return col
+
     raise ValueError(f"Colonne date introuvable : {target_date}")
 
 
-def prepare_dataframe(path: str) -> pd.DataFrame:
-    # header=1 => l'en-tête est sur la 2e ligne
-    df = pd.read_excel(path, header=1, sheet_name=1)
+def prepare_dataframe(path: str, sheet_name: str):
+    """
+    Lit le fichier, nettoie les colonnes, filtre les lignes selon les statuts valides.
+    Retourne (df, date_columns) où date_columns est un dict {target_date: column_object}.
+    """
+    df = pd.read_excel(path, header=1, sheet_name=sheet_name)
 
-    # Nettoyage des noms de colonnes (mais garder les datetime comme datetime)
+    # Nettoyage des noms de colonnes (garder les datetime)
     cleaned_cols = []
     for c in df.columns:
         if isinstance(c, (pd.Timestamp, datetime)):
-            cleaned_cols.append(c)  # Garder les datetime tels quels
+            cleaned_cols.append(c)
         else:
-            cleaned_cols.append(str(c).strip())  # Nettoyer les strings
+            cleaned_cols.append(str(c).strip())
     df.columns = cleaned_cols
 
     # Colonnes obligatoires
@@ -114,22 +100,22 @@ def prepare_dataframe(path: str) -> pd.DataFrame:
     if missing:
         raise ValueError(f"Colonnes manquantes dans le fichier : {missing}")
 
-    # Trouver la colonne date
-    date_col = find_date_column(df, TARGET_DATE)
-
     # Normalisation des champs utiles
     df["_REGION_N"] = df["Region"].map(normalize_text)
     df["_VILLE_N"] = df["Ville"].map(normalize_text)
     df["_VENDOR_N"] = df["VENDOR"].map(normalize_text)
     df["_STATUT_N"] = df["STATUT"].map(normalize_text)
 
-    # Valeurs numériques sur la colonne date
-    df["_VALUE"] = pd.to_numeric(df[date_col], errors="coerce").fillna(0)
-
     # Filtre statut
     df = df[df["_STATUT_N"].isin(VALID_STATUTS)].copy()
 
-    return df
+    # Construction du mapping date -> colonne
+    date_columns = {}
+    for date_str in TARGET_DATE:
+        col = find_date_column(df, date_str)
+        date_columns[date_str] = col
+
+    return df, date_columns
 
 
 def mask_city_vendor(df, city: str, vendor: str) -> pd.Series:
@@ -145,76 +131,98 @@ def mask_region_vendor(df, region: str, vendor: str, exclude_capital: bool = Tru
     return mask
 
 
-def mask_region_all_except_zte(df, region: str, exclude_capital: bool = True) -> pd.Series:
+def mask_region(df, region: str, exclude_capital: bool = True) -> pd.Series:
     region_n = normalize_text(region)
-    mask = (df["_REGION_N"] == region_n) & (df["_VENDOR_N"] != "ZTE")
+    mask = (df["_REGION_N"] == region_n)
     if exclude_capital and region_n in CAPITALS_BY_REGION:
         mask &= (df["_VILLE_N"] != normalize_text(CAPITALS_BY_REGION[region_n]))
     return mask
 
 
-def mask_city_all_vendors(df, city: str) -> pd.Series:
-    return df["_VILLE_N"] == normalize_text(city)
+def mask_region_all_except_vendor(df, region: str, exclude_vendor: str, exclude_capital: bool = True) -> pd.Series:
+    region_n = normalize_text(region)
+    exclude_vendor_n = normalize_text(exclude_vendor)
+    mask = (df["_REGION_N"] == region_n) & (df["_VENDOR_N"] != exclude_vendor_n)
+    if exclude_capital and region_n in CAPITALS_BY_REGION:
+        mask &= (df["_VILLE_N"] != normalize_text(CAPITALS_BY_REGION[region_n]))
+    return mask
 
 
-def summarize_targets(df: pd.DataFrame) -> pd.DataFrame:
+def mask_city_all_vendors(df, city: str, exclude_vendor: str = None) -> pd.Series:
+    mask = df["_VILLE_N"] == normalize_text(city)
+    if exclude_vendor:
+        mask &= df["_VENDOR_N"] != normalize_text(exclude_vendor)
+    return mask
+
+
+def summarize_targets(df: pd.DataFrame, date_columns: dict) -> pd.DataFrame:
     """
-    Les règles ci-dessous reprennent ta logique :
-    - ville + vendor : ville précise, vendor précis
-    - région + vendor : toute la région, capital exclue, vendor précis
-    - région seule : toute la région, capital exclue, vendors sauf ZTE
-    - ville seule : ville précise, tous vendors
+    Calcule pour chaque cible :
+      - NB_LIGNES (indépendant de la date)
+      - SOMME pour chaque date cible (à partir de la colonne correspondante)
     """
-
     targets = [
         # Ville + vendor
         ("DOUALA ZTE", lambda x: mask_city_vendor(x, "DOUALA", "ZTE")),
         ("YAOUNDE ZTE", lambda x: mask_city_vendor(x, "YAOUNDE", "ZTE")),
-        ("ADAMAOUA HUAWEI", lambda x: mask_city_vendor(x, "NGAOUNDERE", "HUAWEI")),
+        ("CENTRE ZTE", lambda x: mask_region_vendor(x, "CENTRE", "ZTE", exclude_capital=True)),
+        ("LITTORAL ZTE", lambda x: mask_region_vendor(x, "LITTORAL", "ZTE", exclude_capital=True)),
+        ("ADAMAOUA HUAWEI", lambda x: mask_region_vendor(x, "ADAMAOUA", "HUAWEI", exclude_capital=True)),
         ("BAFOUSSAM HUAWEI", lambda x: mask_city_vendor(x, "BAFOUSSAM", "HUAWEI")),
-        ("EXTREME NORD HUAWEI", lambda x: mask_city_vendor(x, "MAROUA", "HUAWEI")),
+        ("EXTREME NORD HUAWEI", lambda x: mask_region_vendor(x, "EXTREME NORD", "HUAWEI", exclude_capital=True)),
         ("GAROUA HUAWEI", lambda x: mask_city_vendor(x, "GAROUA", "HUAWEI")),
         ("MAROUA HUAWEI", lambda x: mask_city_vendor(x, "MAROUA", "HUAWEI")),
-        ("NORD HUAWEI", lambda x: mask_city_vendor(x, "GAROUA", "HUAWEI")),
+        ("NORD HUAWEI", lambda x: mask_region_vendor(x, "NORD", "HUAWEI", exclude_capital=True)),
         ("NGAOUNDERE HUAWEI", lambda x: mask_city_vendor(x, "NGAOUNDERE", "HUAWEI")),
         ("OUEST HUAWEI", lambda x: mask_city_vendor(x, "BAFOUSSAM", "HUAWEI")),
         ("NORD OUEST - HUAWEI", lambda x: mask_city_vendor(x, "BAMENDA", "HUAWEI")),
         ("SUD OUEST HUAWEI", lambda x: mask_city_vendor(x, "BUEA", "HUAWEI")),
 
+        ("BAFOUSSAM", lambda x: mask_city_all_vendors(x, "BAFOUSSAM", exclude_vendor="HUAWEI")),
+        ("ADAMAOUA", lambda x: mask_region_all_except_vendor(x, "ADAMAOUA", "HUAWEI", exclude_capital=True)),
         # Région + vendor
-        ("CENTRE ZTE", lambda x: mask_region_vendor(x, "CENTRE", "ZTE", exclude_capital=True)),
-        ("LITTORAL ZTE", lambda x: mask_region_vendor(x, "LITTORAL", "ZTE", exclude_capital=True)),
-
-        # Région seule = région complète sauf capitale, et sans ZTE
-        ("ADAMAOUA", lambda x: mask_region_all_except_zte(x, "ADAMAOUA", exclude_capital=True)),
-        ("CENTRE", lambda x: mask_region_all_except_zte(x, "CENTRE", exclude_capital=True)),
-        ("EXTREME-NORD", lambda x: mask_region_all_except_zte(x, "EXTREME NORD", exclude_capital=True)),
-        ("LITTORAL", lambda x: mask_region_all_except_zte(x, "LITTORAL", exclude_capital=True)),
-        ("NORD", lambda x: mask_region_all_except_zte(x, "NORD", exclude_capital=True)),
-        ("NORD-OUEST", lambda x: mask_region_all_except_zte(x, "NORD OUEST", exclude_capital=True)),
-        ("OUEST", lambda x: mask_region_all_except_zte(x, "OUEST", exclude_capital=True)),
-        ("SUD-OUEST", lambda x: mask_region_all_except_zte(x, "SUD OUEST", exclude_capital=True)),
-
-        # Ville seule = ville précise, tous vendors
-        ("BAFOUSSAM", lambda x: mask_city_all_vendors(x, "BAFOUSSAM")),
-        ("DOUALA", lambda x: mask_city_all_vendors(x, "DOUALA")),
-        ("GAROUA", lambda x: mask_city_all_vendors(x, "GAROUA")),
-        ("MAROUA", lambda x: mask_city_all_vendors(x, "MAROUA")),
-        ("NGAOUNDERE", lambda x: mask_city_all_vendors(x, "NGAOUNDERE")),
-        ("YAOUNDE", lambda x: mask_city_all_vendors(x, "YAOUNDE")),
+        ("CENTRE", lambda x: mask_region_vendor(x, "CENTRE", "ZTE", exclude_capital=True)),
+        
+        ("DOUALA", lambda x: mask_city_all_vendors(x, "DOUALA", exclude_vendor="ZTE")),
+        ("EXTREME-NORD", lambda x: mask_region(x, "EXTREME NORD", exclude_capital=True)),        
+        ("GAROUA", lambda x: mask_city_all_vendors(x, "GAROUA", exclude_vendor="HUAWEI")),
+        ("LITTORAL", lambda x: mask_region(x, "LITTORAL", exclude_capital=True)),
+        ("MAROUA", lambda x: mask_city_all_vendors(x, "MAROUA", exclude_vendor="HUAWEI")),
+        ("NGAOUNDERE", lambda x: mask_city_all_vendors(x, "NGAOUNDERE", exclude_vendor="HUAWEI")),
+        ("NORD", lambda x: mask_region(x, "NORD", exclude_capital=True)),
+        ("NORD-OUEST", lambda x: mask_region(x, "NORD OUEST", exclude_capital=True)),
+        ("OUEST", lambda x: mask_region(x, "OUEST", exclude_capital=True)),
+        ("SUD-OUEST", lambda x: mask_region(x, "SUD OUEST", exclude_capital=False)),
+        ("YAOUNDE", lambda x: mask_city_all_vendors(x, "YAOUNDE", exclude_vendor="ZTE")),
     ]
 
     rows = []
     for label, rule in targets:
         mask = rule(df)
         subset = df[mask]
-        rows.append({
-            "CIBLE": label,
-            "NB_LIGNES": int(subset.shape[0]),
-            "SOMME_7_5_2026": float(subset["_VALUE"].sum()),
-        })
+        nb_lignes = int(subset.shape[0])
+
+        # Dictionnaire des sommes pour chaque date
+        sums = {}
+        for date_str, col in date_columns.items():
+            # Convertir la colonne en numérique, valeurs manquantes -> 0
+            values = pd.to_numeric(subset[col], errors="coerce").fillna(0)
+            sums[f"SOMME_{date_str}"] = float(values.sum())
+
+        row = {"CIBLE": label, "NB_LIGNES": nb_lignes}
+        row.update(sums)
+        rows.append(row)
 
     return pd.DataFrame(rows)
+
+
+def display_summary(summary_df: pd.DataFrame):
+    """Affiche le tableau de synthèse dans le terminal."""
+    print("\n" + "="*80)
+    print("SYNTHÈSE DES RÉSULTATS (multi-dates)")
+    print("="*80)
+    print(summary_df.to_string(index=False))
+    print("="*80 + "\n")
 
 
 def main():
@@ -222,10 +230,11 @@ def main():
     if not input_path.exists():
         raise FileNotFoundError(f"Fichier introuvable : {input_path}")
 
-    df = prepare_dataframe(str(input_path))
-    summary = summarize_targets(df)
+    df, date_columns = prepare_dataframe(str(input_path), sheet_name="SITE")
+    summary = summarize_targets(df, date_columns)
 
-    # Export Excel
+    display_summary(summary)
+
     with pd.ExcelWriter(OUTPUT_FILE, engine="openpyxl") as writer:
         summary.to_excel(writer, index=False, sheet_name="Synthese")
         df.to_excel(writer, index=False, sheet_name="Donnees_filtrees")

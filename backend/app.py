@@ -12,8 +12,8 @@ import msvcrt
 # Ajouter le dossier 'compilation tool' au path Python
 sys.path.insert(0, str(Path(__file__).parent.parent / 'compilation tool'))
 
-from celldown import CellDown
-from super_xlookup import SuperXlookup
+from automate.celldown import CellDown
+from automate.super_xlookup import SuperXlookup
 from excel_analyzer import ExcelAnalyzer
 
 app = Flask(__name__)

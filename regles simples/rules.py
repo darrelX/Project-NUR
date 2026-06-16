@@ -6,11 +6,17 @@ import pandas as pd
 
 
 # =========================
-# FICHIER SOURCE
+# CONFIGURATION
 # =========================
-file = Path("inputs/APRIL BREAKDOWN.xlsx")
-output_file = Path("inputs/APRIL BREAKDOWN_OUTPUT.xlsx")
-sheet_name = "BREAKDOWN"
+CONFIG = {
+    "source_type": "excel",  # Options: "excel", "csv", "dataframe"
+    "input_file": Path("inputs/APRIL BREAKDOWN.xlsx"),
+    "output_file": Path("inputs/APRIL BREAKDOWN_OUTPUT.xlsx"),
+    "sheet_name": "BREAKDOWN",
+    # Pour CSV
+    "csv_encoding": "utf-8",
+    "csv_separator": ",",
+}
 
 
 # =========================
@@ -44,6 +50,7 @@ POWER_KEYWORDS = [
     "mains failure",
     "grid issue",
     "bat GE hs",
+    "ge"
     ""
 ]
 
@@ -273,12 +280,169 @@ def determine_sub_rca(row: pd.Series) -> str | None:
     return None
 
 
-def build_enrichment(df: pd.DataFrame) -> pd.DataFrame:
+# =========================
+# CRÉATION DE DATAFRAME DEPUIS LISTE
+# =========================
+def create_dataframe_from_comments(
+    comments: list[str],
+    owners: list[str] | str | None = None,
+    topologies: list[str] | str | None = None,
+) -> pd.DataFrame:
     """
-    Applique la logique uniquement sur les cas simples.
-    Les autres lignes gardent leur valeur actuelle de SUB RCA.
+    Crée un DataFrame à partir d'une liste de commentaires.
+    
+    Cette fonction est utile pour créer rapidement des données de test
+    ou pour intégrer des données provenant d'autres sources (API, base de données, etc.).
+    La complexité est automatiquement définie à "Cas Simple" pour tous les commentaires.
+    
+    Args:
+        comments: Liste de commentaires (obligatoire)
+        owners: Owner(s) - peut être:
+            - None: utilise "IHS" par défaut pour tous
+            - str: même valeur pour tous les commentaires
+            - list[str]: une valeur par commentaire (doit avoir même longueur que comments)
+        topologies: Topologie(s) - peut être:
+            - None: utilise "Grid Only" par défaut pour tous
+            - str: même valeur pour tous les commentaires
+            - list[str]: une valeur par commentaire (doit avoir même longueur que comments)
+    
+    Returns:
+        DataFrame avec les colonnes COMMENTAIRE, Owner, Topology, Complexity (= "Cas Simple")
+    
+    Examples:
+        >>> # Utilisation basique avec valeurs par défaut
+        >>> comments = ["Grid outage", "Power cut", "ENEO failure"]
+        >>> df = create_dataframe_from_comments(comments)
+        
+        >>> # Avec owners spécifiques
+        >>> df = create_dataframe_from_comments(
+        ...     comments=["Grid outage", "Power cut"],
+        ...     owners=["IHS", "CAMUSAT"]
+        ... )
+        
+        >>> # Avec une valeur unique pour tous
+        >>> df = create_dataframe_from_comments(
+        ...     comments=["Grid outage", "Power cut"],
+        ...     owners="CAMUSAT",
+        ...     topologies="Grid Only"
+        ... )
+    """
+    n = len(comments)
+    
+    if n == 0:
+        raise ValueError("La liste de commentaires ne peut pas être vide")
+    
+    # Gestion des owners
+    if owners is None:
+        owners_list = ["IHS"] * n
+    elif isinstance(owners, str):
+        owners_list = [owners] * n
+    elif isinstance(owners, list):
+        if len(owners) != n:
+            raise ValueError(
+                f"La liste owners doit avoir la même longueur que comments "
+                f"({len(owners)} != {n})"
+            )
+        owners_list = owners
+    else:
+        raise TypeError("owners doit être None, str, ou list[str]")
+    
+    # Gestion des topologies
+    if topologies is None:
+        topologies_list = ["Grid Only"] * n
+    elif isinstance(topologies, str):
+        topologies_list = [topologies] * n
+    elif isinstance(topologies, list):
+        if len(topologies) != n:
+            raise ValueError(
+                f"La liste topologies doit avoir la même longueur que comments "
+                f"({len(topologies)} != {n})"
+            )
+        topologies_list = topologies
+    else:
+        raise TypeError("topologies doit être None, str, ou list[str]")
+    
+    # Création du DataFrame (Complexity toujours "Cas Simple")
+    df = pd.DataFrame({
+        "COMMENTAIRE": comments,
+        "Owner": owners_list,
+        "Topology": topologies_list,
+        "Complexity": ["Cas Simple"] * n,
+    })
+    
+    return df
+
+
+# =========================
+# CHARGEMENT DES DONNÉES
+# =========================
+def load_data_from_excel(file_path: Path, sheet_name: str) -> pd.DataFrame:
+    """Charge les données depuis un fichier Excel."""
+    return pd.read_excel(file_path, sheet_name=sheet_name)
+
+
+def load_data_from_csv(file_path: Path, encoding: str = "utf-8", separator: str = ",") -> pd.DataFrame:
+    """Charge les données depuis un fichier CSV."""
+    return pd.read_csv(file_path, encoding=encoding, sep=separator)
+
+
+def load_data_from_config(config: dict) -> pd.DataFrame:
+    """
+    Charge les données selon la configuration spécifiée.
+    
+    Args:
+        config: Dictionnaire de configuration contenant:
+            - source_type: Type de source ("excel", "csv", "dataframe")
+            - input_file: Chemin du fichier (pour excel/csv)
+            - sheet_name: Nom de la feuille (pour excel)
+            - csv_encoding: Encodage (pour csv)
+            - csv_separator: Séparateur (pour csv)
+    
+    Returns:
+        DataFrame chargé
+    """
+    source_type = config.get("source_type", "excel")
+    
+    if source_type == "excel":
+        return load_data_from_excel(
+            config["input_file"],
+            config["sheet_name"]
+        )
+    elif source_type == "csv":
+        return load_data_from_csv(
+            config["input_file"],
+            encoding=config.get("csv_encoding", "utf-8"),
+            separator=config.get("csv_separator", ",")
+        )
+    else:
+        raise ValueError(f"Type de source non supporté: {source_type}")
+
+
+# =========================
+# TRAITEMENT PRINCIPAL
+# =========================
+def process_breakdown_data(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Fonction principale de traitement des données de breakdown.
+    
+    Cette fonction applique la logique d'enrichissement sur un DataFrame:
+    - Détection des cas simples
+    - Détermination du SUB RCA basé sur le commentaire, owner et topology
+    - Enrichissement avec CATEGORY, CAUSE et OCM_NOMENCLATURE
+    
+    Args:
+        df: DataFrame contenant les colonnes requises (COMMENTAIRE, Owner, etc.)
+    
+    Returns:
+        DataFrame enrichi avec les colonnes SUB RCA, CATEGORY, CAUSE, OCM_NOMENCLATURE
     """
     df = df.copy()
+
+    # Sécurité minimale sur les colonnes attendues
+    expected_cols = ["COMMENTAIRE", "Owner"]
+    for col in expected_cols:
+        if col not in df.columns:
+            raise KeyError(f"Colonne manquante: {col}")
 
     # Récupération souple des noms de colonnes selon les variantes
     complexity_col = None
@@ -306,18 +470,43 @@ def build_enrichment(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def main():
-    df = pd.read_excel(file, sheet_name=sheet_name)
+def save_data(df: pd.DataFrame, output_path: Path, output_format: str = "excel"):
+    """
+    Sauvegarde le DataFrame dans le format spécifié.
+    
+    Args:
+        df: DataFrame à sauvegarder
+        output_path: Chemin du fichier de sortie
+        output_format: Format de sortie ("excel" ou "csv")
+    """
+    if output_format == "excel":
+        df.to_excel(output_path, index=False)
+    elif output_format == "csv":
+        df.to_csv(output_path, index=False, encoding="utf-8")
+    else:
+        raise ValueError(f"Format de sortie non supporté: {output_format}")
 
-    # Sécurité minimale sur les colonnes attendues
-    expected_cols = ["COMMENTAIRE", "Owner"]
-    for col in expected_cols:
-        if col not in df.columns:
-            raise KeyError(f"Colonne manquante: {col}")
 
-    df_out = build_enrichment(df)
-    df_out.to_excel(output_file, index=False)
-
+def main(config: dict = None):
+    """
+    Fonction principale orchestrant le chargement, traitement et sauvegarde des données.
+    
+    Args:
+        config: Dictionnaire de configuration optionnel. Si None, utilise CONFIG global.
+    """
+    if config is None:
+        config = CONFIG
+    
+    # Chargement des données selon la configuration
+    df = load_data_from_config(config)
+    
+    # Traitement des données
+    df_out = process_breakdown_data(df)
+    
+    # Sauvegarde
+    output_file = config.get("output_file", Path("output.xlsx"))
+    save_data(df_out, output_file)
+    
     print(f"Fichier généré: {output_file}")
 
 

@@ -1,96 +1,87 @@
-interface DataRow {
-  siteId: string
-  owner: string
-  comments: string
-  topology: string
-  rca: string
-  subRca: string
-  status: string
-  quality: number
+export interface DataRow {
+  [key: string]: any  // Support dynamic columns
 }
 
 interface DataTableProps {
   data: DataRow[]
   showDuplicates?: boolean
   showConflicts?: boolean
+  maxRows?: number  // Limiter le nombre de lignes affichées
 }
 
-export default function DataTable({ data }: DataTableProps) {
+export default function DataTable({ data, maxRows }: DataTableProps) {
+  // Limiter les données affichées si maxRows est défini
+  const displayData = maxRows ? data.slice(0, maxRows) : data
+  
   const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
+    if (!status) return 'text-gray-400 bg-gray-400/10'
+    
+    const statusLower = String(status).toLowerCase()
+    switch (statusLower) {
       case 'open':
-        return 'text-orange-400 bg-orange-400/10'
-      case 'in progress':
-        return 'text-yellow-400 bg-yellow-400/10'
-      case 'resolved':
+      case 'active':
         return 'text-green-400 bg-green-400/10'
+      case 'in progress':
+      case 'down':
+        return 'text-orange-400 bg-orange-400/10'
+      case 'resolved':
+      case 'closed':
+        return 'text-blue-400 bg-blue-400/10'
       default:
         return 'text-gray-400 bg-gray-400/10'
     }
   }
-
-  const getQualityColor = (quality: number) => {
-    if (quality >= 90) return 'text-green-400'
-    if (quality >= 85) return 'text-yellow-400'
-    return 'text-orange-400'
-  }
+  
+  // Get columns from first row
+  const columns = displayData.length > 0 ? Object.keys(displayData[0]) : []
 
   return (
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead className="bg-[#0d1117]">
           <tr>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">
-              <div className="flex items-center gap-2">
-                Site ID
-                <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">Owner</th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">Commentaires concaténés</th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">
-              <div className="flex items-center gap-2">
-                Topologie
-                <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">RCA</th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">SUB_RCA</th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">Status</th>
-            <th className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d]">Qualité</th>
+            {columns.map((col) => (
+              <th 
+                key={col}
+                className="text-left px-6 py-5 text-gray-400 font-semibold text-sm uppercase tracking-wide border-b border-[#21262d] whitespace-nowrap"
+              >
+                {col}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
+          {displayData.map((row, index) => (
             <tr 
               key={index}
               className="border-b border-[#21262d] hover:bg-[#161b22] transition-colors"
             >
-              <td className="px-6 py-5 text-white text-base font-medium">{row.siteId}</td>
-              <td className="px-6 py-5 text-gray-300 text-base">{row.owner}</td>
-              <td className="px-6 py-5 text-gray-400 text-sm max-w-md truncate">
-                {row.comments}
-              </td>
-              <td className="px-6 py-5 text-gray-300 text-base">{row.topology}</td>
-              <td className="px-6 py-5 text-gray-300 text-base">{row.rca}</td>
-              <td className="px-6 py-5 text-gray-300 text-base">{row.subRca}</td>
-              <td className="px-6 py-5 text-sm font-semibold">
-                <span className={`px-4 py-1.5 rounded-full ${getStatusColor(row.status)}`}>
-                  {row.status}
-                </span>
-              </td>
-              <td className={`px-6 py-5 text-base font-bold ${getQualityColor(row.quality)}`}>
-                {row.quality}%
-              </td>
+              {columns.map((col) => {
+                const value = row[col]
+                const isStatusLike = col.toLowerCase().includes('status')
+                
+                return (
+                  <td 
+                    key={col} 
+                    className="px-6 py-5 text-gray-300 text-sm max-w-md"
+                  >
+                    {isStatusLike && value ? (
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(value)}`}>
+                        {String(value)}
+                      </span>
+                    ) : (
+                      <span className={`${col.toLowerCase().includes('codesite') || col.toLowerCase().includes('site') ? 'text-white font-medium' : ''}`}>
+                        {value !== null && value !== undefined ? String(value) : '-'}
+                      </span>
+                    )}
+                  </td>
+                )
+              })}
             </tr>
           ))}
         </tbody>
       </table>
-      {data.length === 0 && (
+      {displayData.length === 0 && (
         <div className="text-center py-20 text-gray-400">
           Aucune donnée à afficher
         </div>

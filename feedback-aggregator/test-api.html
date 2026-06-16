@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API</title>
+</head>
+<body>
+    <h1>Test de connexion API</h1>
+    <button onclick="testHealth()">Test Health</button>
+    <button onclick="testUpload()">Test Upload (avec fichier test)</button>
+    <button onclick="testGetData()">Test Get Data</button>
+    <pre id="result"></pre>
+
+    <script>
+        const API_BASE_URL = 'http://127.0.0.1:5000/api';
+        const resultEl = document.getElementById('result');
+
+        async function testHealth() {
+            try {
+                resultEl.textContent = '🔄 Test en cours...';
+                const response = await fetch(`${API_BASE_URL}/health`);
+                const data = await response.json();
+                resultEl.textContent = '✅ Health OK:\n' + JSON.stringify(data, null, 2);
+            } catch (error) {
+                resultEl.textContent = '❌ Erreur Health:\n' + error.message + '\n' + error.stack;
+            }
+        }
+
+        async function testGetData() {
+            try {
+                resultEl.textContent = '🔄 Test en cours...';
+                const response = await fetch(`${API_BASE_URL}/get-data?limit=5&offset=0`);
+                const data = await response.json();
+                resultEl.textContent = '✅ Get Data OK:\n' + JSON.stringify(data, null, 2).substring(0, 500) + '...';
+            } catch (error) {
+                resultEl.textContent = '❌ Erreur Get Data:\n' + error.message + '\n' + error.stack;
+            }
+        }
+
+        async function testUpload() {
+            resultEl.textContent = '⚠️ Vous devez uploader un fichier via l\'interface React pour tester l\'upload';
+        }
+    </script>
+</body>
+</html>

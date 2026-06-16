@@ -4,9 +4,6 @@ interface Category {
   id: string
   name: string
   description: string
-  filesCount: number
-  icon: string
-  color: string
 }
 
 interface CategorySelectorProps {
@@ -17,45 +14,20 @@ interface CategorySelectorProps {
 
 const categories: Category[] = [
   {
-    id: 'celldown',
-    name: 'Celldown',
+    id: 'CellDown',
+    name: 'CellDown',
     description: 'Données liées aux incidents de type cellule down (ID, alarme, logs...)',
-    filesCount: 12,
-    icon: '📱',
-    color: 'bg-blue-600'
   },
   {
-    id: 'transmission',
-    name: 'Transmission',
-    description: 'Données de transmission (microwave, fibre, backhaul...)',
-    filesCount: 8,
-    icon: '📡',
-    color: 'bg-green-600'
+    id: 'Ticket',
+    name: 'Ticket',
+    description: 'Données de Ticket (microwave, fibre, backhaul...)',
   },
   {
-    id: 'infra',
-    name: 'Infra',
+    id: 'OCM RAN',
+    name: 'OCM RAN',
     description: 'Données d\'infrastructure (power, batteries, rectifiers...)',
-    filesCount: 6,
-    icon: '🏗️',
-    color: 'bg-orange-600'
   },
-  {
-    id: 'sites',
-    name: 'Sites',
-    description: 'Informations générales sur les sites (ID, coordonnées...)',
-    filesCount: 5,
-    icon: '📍',
-    color: 'bg-purple-600'
-  },
-  {
-    id: 'autres',
-    name: 'Autres',
-    description: 'Autres types de données',
-    filesCount: 3,
-    icon: '📋',
-    color: 'bg-gray-600'
-  }
 ]
 
 export default function CategorySelector({ isOpen, onClose, onSelectCategory }: CategorySelectorProps) {
@@ -111,7 +83,7 @@ export default function CategorySelector({ isOpen, onClose, onSelectCategory }: 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-        </div>
+        </div>  
 
         {/* Categories List */}
         <div className="px-8 pb-8 max-h-96 overflow-y-auto bg-[#0d1117]">
@@ -125,16 +97,12 @@ export default function CategorySelector({ isOpen, onClose, onSelectCategory }: 
                 }}
                 className="w-full flex items-center gap-5 p-5 bg-[#161b22] hover:bg-[#1c2128] rounded-xl border border-[#30363d] hover:border-[#58a6ff] transition-all duration-200 text-left group"
               >
-                <div className={`w-16 h-16 ${category.color} rounded-xl flex items-center justify-center text-3xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-200`}>
-                  {category.icon}
-                </div>
+
                 <div className="flex-1 min-w-0">
                   <h3 className="text-white font-semibold text-base">{category.name}</h3>
                   <p className="text-gray-400 text-sm truncate mt-1">{category.description}</p>
                 </div>
-                <div className="text-[#58a6ff] text-sm font-semibold flex-shrink-0 bg-[#58a6ff]/10 px-4 py-2 rounded-full">
-                  {category.filesCount} fichiers
-                </div>
+
               </button>
             ))}
           </div>

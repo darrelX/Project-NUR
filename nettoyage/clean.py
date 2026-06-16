@@ -6,80 +6,67 @@ from pathlib import Path
 # VARIABLES GLOBALES
 # =====================================================
 SHEET_NAME = "daily break down"
-COMMENT_COLUMN = "Verifications 29/04/2026"
+COMMENT_COLUMN = "VerificationS"
 CLEAN_COLUMN = "cleaning comment"
 
-# Fichier source
-file = Path("inputs\\file-RAG2.xlsx")
+file = r"C:\Users\f50056342\Desktop\computer science\NUR Project Lyne\inputs\daily-break-down -06-07-2026..xlsx"
 
 
 def clean_comment(text):
-    """
-    Nettoyage léger des commentaires terrain
-    sans détruire le sens métier.
-    """
-
     if pd.isna(text):
         return ""
 
     text = str(text)
 
-    # =====================================================
-    # SUPPRESSION DES BLOCS DUPLIQUÉS
-    # =====================================================
+    # Suppression des blocs dupliqués
     parts = [p.strip() for p in text.split(";..;..;")]
     unique_parts = []
-
-    for part in parts:
+    for part in parts:  
         if part not in unique_parts:
             unique_parts.append(part)
-
     text = " ; ".join(unique_parts)
 
-    # =====================================================
-    # SUPPRESSION DES TICKETS
-    # =====================================================
-    text = re.sub(
-        r"\b[A-Z]{2,10}-\d{8}-\d{6,12}\b",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
+    # Suppression des tickets
+    text = re.sub(r"\b[A-Z]{2,10}-\d{8}-\d{6,12}\b", "", text, flags=re.IGNORECASE)
 
-    # =====================================================
-    # SUPPRESSION DES PARENTHÈSES CONTENANT
-    # OCM RAN / TICKET / OWS / CELLDOWN / CELLDOWNS / HOURLY
-    # =====================================================
-    text = re.sub(
-        r"\([^()]*\b(?:ocm\s+ran|ticket|ows|celldown|celldowns|hourly)\b[^()]*\)",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
+    # Mots‑clés à supprimer entre parenthèses ou accolades
+    keywords = r"ocm\s+ran|ticket|ows|celldown|celldowns|hourly|camusat|ihs|top\s+offenders?|cell|zte|BO RAN"
 
-    # =====================================================
-    # SUPPRESSION DES BLOCS TECHNIQUES INUTILES
-    # =====================================================
+    # Suppression des parenthèses
+    text = re.sub(r"\([^()]*\b(?:" + keywords + r")\b[^()]*\)", "", text, flags=re.IGNORECASE)
+    # Suppression des accolades
+    text = re.sub(r"\{[^{}]*\b(?:" + keywords + r")\b[^{}]*\}", "", text, flags=re.IGNORECASE)
+
+    # Blocs techniques inutiles
     useless_patterns = [
         r"FME\s+\w+\s+activer",
         r"Action en cours avec le lkevel\s*\d+",
         r"Power status check ongoing\.\.;\.\.",
-        r"Others Transmission equipement fault"
+        r"Others Transmission equipement fault",
+        r"Power status check Ongoing",
+        r"others",
+        r"other",
     ]
-
     for pattern in useless_patterns:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE)
 
     # =====================================================
-    # UNIFORMISATION
+    # UNIFORMISATION (conserve les retours à la ligne)
     # =====================================================
-    text = text.replace("\n", " ")
+    # On ne remplace pas \n par espace
     text = text.replace("||", " || ")
     text = re.sub(r"\|\|\s*\|\|", " || ", text)
     text = re.sub(r"\.{2,}", ".", text)
     text = re.sub(r"\s*:\s*", " : ", text)
-    text = re.sub(r"(^|[.!?]\s+)[^\w\s]+", r"\1", text)
-    text = re.sub(r"\s+", " ", text).strip()
+
+    # Suppression des : et ; en début de phrase (début de chaîne ou après espace ou retour à la ligne)
+    text = re.sub(r"(^|\s+)[:;]+", r"\1", text)
+
+    # Nettoyage : réduire les espaces multiples (mais garder les \n)
+    text = re.sub(r"[ \t]+", " ", text)  # remplace les espaces/tabulations multiples par un espace
+    # Supprime les espaces en début/fin de ligne et réduit les sauts de ligne multiples
+    lines = [line.strip() for line in text.split("\n")]
+    text = "\n".join(line for line in lines if line)  # enlève les lignes vides
 
     if re.fullmatch(r"[\W_]+", text):
         return ""

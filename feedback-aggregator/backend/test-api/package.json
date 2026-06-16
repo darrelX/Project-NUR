@@ -1,0 +1,28 @@
+{
+  "name": "backend-api-tests",
+  "version": "1.0.0",
+  "description": "Tests TypeScript pour toutes les routes de l'API backend",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node dist/test-all-routes.js",
+    "test:health": "node dist/test-health.js",
+    "test:upload": "node dist/test-upload.js",
+    "test:celldown": "node dist/test-celldown.js",
+    "test:xlookup": "node dist/test-xlookup.js",
+    "test:ticket": "node dist/test-ticket.js",
+    "dev": "ts-node src/test-all-routes.ts"
+  },
+  "keywords": ["api", "testing", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}

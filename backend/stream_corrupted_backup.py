@@ -9,9 +9,9 @@ import tempfile
 import os
 
 # Import des classes métier
-from celldown import CellDown
-from super_xlookup import SuperXlookup
-from ticket import Ticket
+from automate.celldown import CellDown
+from automate.super_xlookup import SuperXlookup
+from automate.ticket import Ticket
 
 
 # =============================================================================
