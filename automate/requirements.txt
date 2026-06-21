@@ -17,3 +17,6 @@ plotly>=5.17.0
 
 # Utilitaires
 python-dateutil>=2.8.2
+
+# Communication HTTP (pour l'interface chat avec LLM)
+requests>=2.31.0

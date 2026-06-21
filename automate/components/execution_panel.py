@@ -17,7 +17,9 @@ from utils.logger import Logger, ProgressTracker
 def render_execution_panel(source_config: Dict, 
                           celldown_config: Dict, 
                           ticket_config: Dict, 
-                          ocm_config: Dict):
+                          ocm_config: Dict,
+                          dashboard_celldown_config: Dict = None,
+                          hourly_ihs_config: Dict = None):
     """
     Affiche le panneau d'exécution avec le bouton principal et les résultats
     
@@ -26,6 +28,8 @@ def render_execution_panel(source_config: Dict,
         celldown_config: Configuration CellDown
         ticket_config: Configuration Ticket
         ocm_config: Configuration OCM RAN
+        dashboard_celldown_config: Configuration Dashboard Celldown
+        hourly_ihs_config: Configuration Hourly IHS
     """
     st.markdown("---")
     st.markdown("## 🚀 Exécution")
@@ -71,6 +75,20 @@ def render_execution_panel(source_config: Dict,
                 st.warning("⊘ OCM RAN : aucun fichier")
         else:
             st.warning("⊘ OCM RAN : non configuré")
+        
+        # Dashboard Celldown
+        if dashboard_celldown_config and dashboard_celldown_config.get('enabled'):
+            st.success(f"✓ Dashboard Celldown : {dashboard_celldown_config.get('date_str', 'N/A')}")
+            categories.append('dashboard_celldown')
+        else:
+            st.warning("⊘ Dashboard Celldown : non configuré")
+        
+        # Hourly IHS
+        if hourly_ihs_config and hourly_ihs_config.get('enabled'):
+            st.success(f"✓ Hourly IHS")
+            categories.append('hourly_ihs')
+        else:
+            st.warning("⊘ Hourly IHS : non configuré")
     
     with col2:
         st.metric("Traitements actifs", len(categories))
@@ -101,7 +119,8 @@ def render_execution_panel(source_config: Dict,
     
     # Exécution
     if execute_button:
-        _execute_treatments(source_config, celldown_config, ticket_config, ocm_config, categories)
+        _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
+                        dashboard_celldown_config, hourly_ihs_config, categories)
 
 
 def _preview_matches(source_config, celldown_config, ticket_config, ocm_config, categories):
@@ -171,9 +190,12 @@ def _preview_matches(source_config, celldown_config, ticket_config, ocm_config, 
                             st.caption(f"Total source : {stats['source_total']:,}")
                         if 'target_total' in stats:
                             st.caption(f"Total cible : {stats['target_total']:,}")
+    else:
+        st.info("Aucune correspondance trouvée")
 
 
-def _execute_treatments(source_config, celldown_config, ticket_config, ocm_config, categories):
+def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
+                    dashboard_celldown_config, hourly_ihs_config, categories):
     """Exécute les traitements configurés"""
     st.markdown("### ⚙️ Exécution en cours")
     
@@ -185,9 +207,10 @@ def _execute_treatments(source_config, celldown_config, ticket_config, ocm_confi
             "celldown_enabled": celldown_config.get('enabled') if celldown_config else False,
             "celldown_files_count": celldown_config.get('count', 0) if celldown_config else 0,
             "ticket_enabled": ticket_config.get('enabled') if ticket_config else False,
-            "ticket_config_keys": list(ticket_config.keys()) if ticket_config else [],
             "ocm_enabled": ocm_config.get('enabled') if ocm_config else False,
-            "ocm_files_count": ocm_config.get('count', 0) if ocm_config else 0
+            "ocm_files_count": ocm_config.get('count', 0) if ocm_config else 0,
+            "dashboard_celldown_enabled": dashboard_celldown_config.get('enabled') if dashboard_celldown_config else False,
+            "hourly_ihs_enabled": hourly_ihs_config.get('enabled') if hourly_ihs_config else False
         })
     
     # Initialiser le logger
@@ -202,6 +225,10 @@ def _execute_treatments(source_config, celldown_config, ticket_config, ocm_confi
         total_steps += 1
     if 'ocm' in categories and ocm_config.get('files'):
         total_steps += len(ocm_config['files'])
+    if 'dashboard_celldown' in categories:
+        total_steps += 1
+    if 'hourly_ihs' in categories:
+        total_steps += 1
     
     # Initialiser le tracker de progression
     progress = ProgressTracker(total_steps, session_key="execution_progress")
@@ -215,7 +242,9 @@ def _execute_treatments(source_config, celldown_config, ticket_config, ocm_confi
     results = {
         'celldown': [],
         'ticket': None,
-        'ocm': []
+        'ocm': [],
+        'dashboard_celldown': False,
+        'hourly_ihs': False
     }
     
     start_time = time.time()
@@ -285,6 +314,114 @@ def _execute_treatments(source_config, celldown_config, ticket_config, ocm_confi
                 st.markdown("#### 📄 Logs en temps réel")
                 logger.render()
     
+    # Exécuter Dashboard Celldown
+    if 'dashboard_celldown' in categories and dashboard_celldown_config and dashboard_celldown_config.get('enabled'):
+        current_step += 1
+        progress.update(current_step, "Exécution de Dashboard Celldown...")
+        
+        # Mise à jour de la progression en temps réel
+        progress_placeholder.markdown(f"🔄 **Progression** : {progress.get_percentage():.0f}% - Dashboard Celldown")
+        
+        logger.info("🔵 Démarrage de Dashboard Celldown")
+        
+        try:
+            # Importer la classe DashboardCelldown
+            import sys
+            from pathlib import Path
+            sys.path.insert(0, str(Path(__file__).parent.parent))
+            from dashboard_celldown import DashboardCelldown
+            
+            # Construire la configuration
+            dashboard = DashboardCelldown(
+                source_file_path=source_config['source_file_path'],
+                target_file_path=dashboard_celldown_config['target_file_path'],
+                colown_key_path_source=dashboard_celldown_config['source_key_column'],
+                target_key_column=dashboard_celldown_config['target_key_column'],
+                target_value_column=dashboard_celldown_config['target_value_column'],
+                result_position_column=dashboard_celldown_config['start_column'],
+                source_sheet_path=source_config.get('source_sheet_path', ''),
+                target_sheet_name=dashboard_celldown_config.get('target_sheet_name'),
+                date_str=dashboard_celldown_config['date_str'],
+                start_column=dashboard_celldown_config['start_column'],
+                reference_date=dashboard_celldown_config.get('reference_date', '')
+            )
+            
+            # Exécuter
+            dashboard.super_xlookup_par_date()
+            
+            logger.success("✅ Dashboard Celldown terminé avec succès")
+            results['dashboard_celldown'] = True
+            
+        except Exception as e:
+            logger.error(f"❌ Erreur Dashboard Celldown : {e}")
+            results['dashboard_celldown'] = False
+        
+        # Mise à jour des logs en temps réel
+        with log_placeholder.container():
+            st.markdown("#### 📄 Logs en temps réel")
+            logger.render()
+    
+    # Exécuter Hourly IHS
+    if 'hourly_ihs' in categories and hourly_ihs_config and hourly_ihs_config.get('enabled'):
+        current_step += 1
+        progress.update(current_step, "Exécution de Hourly IHS...")
+        
+        # Mise à jour de la progression en temps réel
+        progress_placeholder.markdown(f"🔄 **Progression** : {progress.get_percentage():.0f}% - Hourly IHS")
+        
+        logger.info("🔵 Démarrage de Hourly IHS")
+        
+        try:
+            # Importer la classe HourlyIHS
+            import sys
+            import traceback
+            from pathlib import Path
+            sys.path.insert(0, str(Path(__file__).parent.parent))
+            from hourly_IHS import HourlyIHS
+            
+            # DEBUG: Afficher les configurations avant l'exécution
+            logger.info(f"📋 Config source_file_path: {source_config['source_file_path']}")
+            logger.info(f"📋 Config target_file_path: {hourly_ihs_config['target_file_path']}")
+            logger.info(f"📋 Config source_sheet: {source_config.get('source_sheet_path', '')}")
+            logger.info(f"📋 Config target_sheet: {hourly_ihs_config.get('target_sheet_name', '')}")
+            logger.info(f"📋 Config source_key_column: {hourly_ihs_config['source_key_column']}")
+            logger.info(f"📋 Config target_key_column: {hourly_ihs_config.get('target_key_column')}")
+            
+            # Construire la configuration
+            hourly = HourlyIHS(
+                source_file_path=source_config['source_file_path'],
+                target_file_path=hourly_ihs_config['target_file_path'],
+                source_key_column=hourly_ihs_config['source_key_column'],
+                result_position_column=hourly_ihs_config['result_position_column'],
+                result_column_name=hourly_ihs_config['result_column_name'],
+                source_sheet_name=source_config.get('source_sheet_path', ''),  # Utiliser la feuille source principale
+                target_sheet_name=hourly_ihs_config.get('target_sheet_name', ''),
+                reference_name=hourly_ihs_config['reference_name'],
+                reference_date=hourly_ihs_config.get('reference_date'),
+                target_join_columns=hourly_ihs_config.get('target_join_columns'),
+                join_separator=hourly_ihs_config.get('join_separator', ' .. '),
+                ignore_empty=hourly_ihs_config.get('ignore_empty', True),
+                target_key_column=hourly_ihs_config.get('target_key_column')
+            )
+            
+            logger.info("🔄 Lancement de l'exécution Hourly IHS...")
+            # Exécuter
+            hourly.run()
+            
+            logger.success("✅ Hourly IHS terminé avec succès")
+            results['hourly_ihs'] = True
+            
+        except Exception as e:
+            error_trace = traceback.format_exc()
+            logger.error(f"❌ Erreur Hourly IHS : {e}")
+            logger.error(f"📝 Détails de l'erreur :\n{error_trace}")
+            results['hourly_ihs'] = False
+        
+        # Mise à jour des logs en temps réel
+        with log_placeholder.container():
+            st.markdown("#### 📄 Logs en temps réel")
+            logger.render()
+    
     # Fin
     end_time = time.time()
     duration = end_time - start_time
@@ -308,6 +445,12 @@ def _execute_treatments(source_config, celldown_config, ticket_config, ocm_confi
     if 'ocm' in categories and results['ocm']:
         for result in results['ocm']:
             result_cols.append((result['label'], result['success']))
+    
+    if 'dashboard_celldown' in categories:
+        result_cols.append(('Dashboard Celldown', results.get('dashboard_celldown', False)))
+    
+    if 'hourly_ihs' in categories:
+        result_cols.append(('Hourly IHS', results.get('hourly_ihs', False)))
     
     # Afficher en colonnes
     if result_cols:
