@@ -46,10 +46,10 @@ def render_dashboard_celldown_card() -> Optional[Dict]:
             help="⚠️ OBLIGATOIRE - Format: DDMMYYYY (ex: 19062026) ou pattern (ex: 1906 pour 'Top 1906')"
         )
         
-        # Validation du champ obligatoire
-        if date_str.strip() == "":
-            st.error("⚠️ Le champ Date/Pattern est obligatoire !")
-        else:
+        # Validation du champ obligatoire (seulement si un fichier est uploadé)
+        if uploaded_file and date_str.strip() == "":
+            st.error("⚠️ Le champ Date/Pattern est obligatoire pour Dashboard Celldown !")
+        elif date_str.strip() != "":
             st.success(f"✓ Pattern de recherche : '{date_str}'")
         
         # Feuille cible

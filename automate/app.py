@@ -13,19 +13,8 @@ from pathlib import Path
 # Ajouter le dossier automate au path
 sys.path.insert(0, str(Path(__file__).parent))
 
-# Import des composants
-from components.source_panel import render_source_panel
-from components.celldown_card import render_celldown_card
-from components.ticket_card import render_ticket_card
-from components.ocm_card import render_ocm_card
-from components.dashboard_celldown_card import render_dashboard_celldown_card
-from components.hourly_ihs_card import render_hourly_ihs_card
-from components.execution_panel import render_execution_panel
-from components.preview_panel import render_preview_panel
-from components.chat_panel import render_chat_panel
-
 # Import des utilitaires
-from utils.styles import get_custom_css, get_header_html
+from utils.styles import get_custom_css
 
 
 def initialize_session_state():
@@ -44,6 +33,8 @@ def initialize_session_state():
         st.session_state['dashboard_celldown_config'] = {'enabled': False}
     if 'hourly_ihs_config' not in st.session_state:
         st.session_state['hourly_ihs_config'] = {'enabled': False}
+    if 'personalized_xlookup_config' not in st.session_state:
+        st.session_state['personalized_xlookup_config'] = {'enabled': False}
 
 
 def main():
@@ -51,7 +42,7 @@ def main():
     
     # Configuration de la page
     st.set_page_config(
-        page_title="Plateforme Excel - CellDown, Ticket, OCM RAN",
+        page_title="Plateforme Excel - NUR Project Lyne",
         page_icon="🚀",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -63,140 +54,138 @@ def main():
     # Appliquer les styles CSS personnalisés
     st.markdown(get_custom_css(), unsafe_allow_html=True)
     
-    # Header principal
-    st.markdown(get_header_html(), unsafe_allow_html=True)
+    # Page d'accueil
+    st.markdown("""
+    <div style="text-align: center; padding: 2rem;">
+        <h1 style="color: #1e40af; font-size: 3rem; margin-bottom: 1rem;">🚀 Plateforme Excel NUR</h1>
+        <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 2rem;">
+            Automatisation et traitement intelligent de fichiers Excel
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
-    # Sidebar avec informations
-    with st.sidebar:
-        st.markdown("## ℹ️ Information")
+    # Message d'information pour la navigation
+    st.info("👈 **Utilisez le menu latéral à gauche** pour naviguer entre les pages ou cliquez sur les boutons ci-dessous", icon="ℹ️")
+    
+    st.markdown("---")
+    
+    # Présentation des fonctionnalités
+    col1, col2 = st.columns(2)
+    
+    with col1:
         st.markdown("""
-        Cette application permet d'exécuter trois moteurs de traitement Excel :
+        ### 📊 Traitement Excel
+        
+        Accédez aux puissants moteurs de traitement :
         
         - **📱 CellDown** : Filtrage et enrichissement par date
         - **🎫 Ticket** : Extraction et liaison de tickets
         - **📡 OCM RAN** : Recherche et correspondance OCM
-        - **� Dashboard Celldown** : XLOOKUP multi-feuilles avec filtrage date/pattern
+        - **📊 Dashboard Celldown** : XLOOKUP multi-feuilles avec filtrage
         - **⏰ Hourly IHS** : Extraction et TEXTJOIN d'événements horaires
-        - **�💬 Assistant IA** : Aide et analyse avec LLM
         
-        ### Mode d'emploi
-        1. Chargez votre fichier source principal
-        2. Sélectionnez la feuille à traiter
-        3. Configurez les catégories souhaitées
-        4. Prévisualisez les correspondances
-        5. Lancez l'exécution
-        6. Discutez avec l'assistant IA
+        👉 **Utilisez le menu latéral pour accéder à cette section**
         """)
+    
+    with col2:
+        st.markdown("""
+        ### 💬 Assistant IA
         
-        st.markdown("---")
+        Discutez avec un assistant intelligent :
         
-        st.markdown("### 📊 Statistiques")
+        - ❓ **Posez des questions** sur vos données
+        - 📈 **Obtenez des analyses** et des insights
+        - 🔍 **Explorez vos fichiers** Excel
+        - 💡 **Recevez des suggestions** d'amélioration
+        - 🤖 **Support par LLM** distant configurable
         
-        # Compter les catégories actives
-        active_categories = 0
-        
+        👉 **Utilisez le menu latéral pour accéder au chat**
+        """)
+    
+    st.markdown("---")
+    
+    # Guide rapide
+    st.markdown("## 🎯 Guide de démarrage rapide")
+    
+    step1, step2, step3 = st.columns(3)
+    
+    with step1:
+        st.markdown("""
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 10px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 1rem;">1️⃣ Traitement</h3>
+            <p>Configurez vos fichiers sources et sélectionnez les moteurs de traitement</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with step2:
+        st.markdown("""
+        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 10px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 1rem;">2️⃣ Exécution</h3>
+            <p>Prévisualisez et lancez l'exécution des traitements configurés</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with step3:
+        st.markdown("""
+        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 10px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 1rem;">3️⃣ Assistance</h3>
+            <p>Utilisez l'assistant IA pour obtenir de l'aide et des analyses</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # Statistiques de session
+    st.markdown("## 📊 Statistiques de la session")
+    
+    metric1, metric2, metric3, metric4 = st.columns(4)
+    
+    with metric1:
         celldown_count = st.session_state['celldown_config'].get('count', 0)
-        if celldown_count > 0:
-            active_categories += celldown_count
-        
-        if st.session_state['ticket_config'].get('enabled', False):
-            active_categories += 1
-        
+        st.metric("CellDown actifs", celldown_count)
+    
+    with metric2:
+        ticket_enabled = "Oui" if st.session_state['ticket_config'].get('enabled', False) else "Non"
+        st.metric("Ticket", ticket_enabled)
+    
+    with metric3:
         ocm_count = st.session_state['ocm_config'].get('count', 0)
-        if ocm_count > 0:
-            active_categories += ocm_count
-        
-        if st.session_state['dashboard_celldown_config'].get('enabled', False):
-            active_categories += 1
-        
-        if st.session_state['hourly_ihs_config'].get('enabled', False):
-            active_categories += 1
-        
-        st.metric("Traitements actifs", active_categories)
-        
-        if st.session_state.get('source_file_path'):
-            st.success("✅ Source configurée")
-        else:
-            st.warning("⏳ Source à configurer")
-        
-        st.markdown("---")
-        
-        st.markdown("### 🔧 Actions")
-        
-        if st.button("🔄 Réinitialiser", use_container_width=True):
-            # Effacer toute la session
+        st.metric("OCM actifs", ocm_count)
+    
+    with metric4:
+        source_status = "✅ Configuré" if st.session_state.get('source_file_path') else "⏳ À configurer"
+        st.metric("Fichier source", source_status)
+    
+    st.markdown("---")
+    
+    # Actions rapides
+    st.markdown("## 🔧 Actions rapides")
+    
+    col_action1, col_action2, col_action3 = st.columns(3)
+    
+    with col_action1:
+        if st.button("🔄 Réinitialiser la session", use_container_width=True, type="secondary"):
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
             st.rerun()
-        
-        st.markdown("---")
-        st.caption("NUR Project Lyne © 2026")
     
-    # Créer des onglets pour séparer les fonctionnalités
-    tab1, tab2 = st.tabs(["📊 Traitement Excel", "💬 Assistant IA"])
+    with col_action2:
+        if st.button("📊 Aller au traitement", use_container_width=True, type="primary"):
+            st.switch_page("pages/1_📊_Traitement_Excel.py")
     
-    with tab1:
-        # ONGLET TRAITEMENT EXCEL
-        # Section 1 : Configuration de la source principale
-        source_config = render_source_panel()
-        
-        # Stocker la config source dans la session
-        if source_config:
-            st.session_state['source_config'] = source_config
-        
-        st.markdown("---")
-        
-        # Section 2 : Catégories de traitement
-        st.markdown("## 📋 Catégories de traitement")
-        st.markdown("Configurez les moteurs de traitement à exécuter")
-        
-        # Afficher les 3 cartes principales côte à côte
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            celldown_config = render_celldown_card()
-        
-        with col2:
-            ticket_config = render_ticket_card()
-        
-        with col3:
-            ocm_config = render_ocm_card()
-        
-        # Afficher les 2 nouvelles cartes : Dashboard Celldown et Hourly IHS
-        st.markdown("---")
-        st.markdown("### 🆕 Traitements supplémentaires")
-        
-        col4, col5 = st.columns(2)
-        
-        with col4:
-            dashboard_celldown_config = render_dashboard_celldown_card()
-        
-        with col5:
-            hourly_ihs_config = render_hourly_ihs_card()
-        
-        # Section 3 : Exécution
-        render_execution_panel(
-            source_config=st.session_state.get('source_config'),
-            celldown_config=st.session_state.get('celldown_config'),
-            ticket_config=st.session_state.get('ticket_config'),
-            ocm_config=st.session_state.get('ocm_config'),
-            dashboard_celldown_config=st.session_state.get('dashboard_celldown_config'),
-            hourly_ihs_config=st.session_state.get('hourly_ihs_config')
-        )
-        
-        # Section 4 : Prévisualisation
-        if st.session_state.get('source_config'):
-            render_preview_panel(st.session_state.get('source_config'))
-    
-    with tab2:
-        # ONGLET ASSISTANT IA
-        render_chat_panel()
+    with col_action3:
+        if st.button("💬 Aller au chat", use_container_width=True, type="primary"):
+            st.switch_page("pages/2_💬_Assistant_IA.py")
     
     # Footer
     st.markdown("---")
     st.markdown("""
     <div style="text-align: center; color: #94a3b8; padding: 2rem;">
-        <p>Plateforme de traitement Excel | NUR Project Lyne | Version 1.0</p>
+        <p><strong>Plateforme de traitement Excel</strong></p>
+        <p>NUR Project Lyne © 2026 | Version 1.0</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem;">
+            💡 Utilisez le <strong>menu latéral</strong> pour naviguer entre les pages
+        </p>
     </div>
     """, unsafe_allow_html=True)
 

@@ -3,7 +3,7 @@ Composant pour le panneau d'exécution des traitements
 """
 
 import streamlit as st
-from typing import Dict, List
+from typing import Dict, List, Optional
 import time
 from datetime import datetime
 from pathlib import Path
@@ -18,8 +18,9 @@ def render_execution_panel(source_config: Dict,
                           celldown_config: Dict, 
                           ticket_config: Dict, 
                           ocm_config: Dict,
-                          dashboard_celldown_config: Dict = None,
-                          hourly_ihs_config: Dict = None):
+                          dashboard_celldown_config: Optional[Dict] = None,
+                          hourly_ihs_config: Optional[Dict] = None,
+                          personalized_xlookup_config: Optional[Dict] = None):
     """
     Affiche le panneau d'exécution avec le bouton principal et les résultats
     
@@ -89,6 +90,15 @@ def render_execution_panel(source_config: Dict,
             categories.append('hourly_ihs')
         else:
             st.warning("⊘ Hourly IHS : non configuré")
+        
+        # Personalized XLOOKUP
+        if personalized_xlookup_config and personalized_xlookup_config.get('enabled'):
+            target_file = personalized_xlookup_config.get('target_file')
+            file_name = target_file.name if target_file and hasattr(target_file, 'name') else 'N/A'
+            st.success(f"✓ Personalized XLOOKUP : {file_name}")
+            categories.append('personalized_xlookup')
+        else:
+            st.warning("⊘ Personalized XLOOKUP : non configuré")
     
     with col2:
         st.metric("Traitements actifs", len(categories))
@@ -120,7 +130,7 @@ def render_execution_panel(source_config: Dict,
     # Exécution
     if execute_button:
         _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
-                        dashboard_celldown_config, hourly_ihs_config, categories)
+                        dashboard_celldown_config, hourly_ihs_config, personalized_xlookup_config, categories)
 
 
 def _preview_matches(source_config, celldown_config, ticket_config, ocm_config, categories):
@@ -195,7 +205,7 @@ def _preview_matches(source_config, celldown_config, ticket_config, ocm_config, 
 
 
 def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
-                    dashboard_celldown_config, hourly_ihs_config, categories):
+                    dashboard_celldown_config, hourly_ihs_config, personalized_xlookup_config, categories):
     """Exécute les traitements configurés"""
     st.markdown("### ⚙️ Exécution en cours")
     
@@ -229,6 +239,8 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
         total_steps += 1
     if 'hourly_ihs' in categories:
         total_steps += 1
+    if 'personalized_xlookup' in categories:
+        total_steps += 1
     
     # Initialiser le tracker de progression
     progress = ProgressTracker(total_steps, session_key="execution_progress")
@@ -244,7 +256,8 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
         'ticket': None,
         'ocm': [],
         'dashboard_celldown': False,
-        'hourly_ihs': False
+        'hourly_ihs': False,
+        'personalized_xlookup': False
     }
     
     start_time = time.time()
@@ -422,6 +435,127 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
             st.markdown("#### 📄 Logs en temps réel")
             logger.render()
     
+    # Exécuter Personalized XLOOKUP
+    if 'personalized_xlookup' in categories and personalized_xlookup_config and personalized_xlookup_config.get('enabled'):
+        current_step += 1
+        progress.update(current_step, "Exécution de Personalized XLOOKUP...")
+        
+        # Mise à jour de la progression en temps réel
+        progress_placeholder.markdown(f"🔄 **Progression** : {progress.get_percentage():.0f}% - Personalized XLOOKUP")
+        
+        logger.info("🔵 Démarrage de Personalized XLOOKUP")
+        
+        try:
+            # Importer la classe PersonnalizedXlookup
+            import sys
+            import traceback
+            from pathlib import Path
+            sys.path.insert(0, str(Path(__file__).parent.parent))
+            from personnalized import PersonnalizedXlookup
+            
+            # Sauvegarder le fichier target uploadé temporairement
+            import tempfile
+            import os
+            target_file_obj = personalized_xlookup_config.get('target_file')
+            
+            if target_file_obj:
+                # Réinitialiser le curseur du fichier uploadé au début
+                target_file_obj.seek(0)
+                
+                # Créer un fichier temporaire et écrire le contenu
+                temp_target_path = None
+                file_creation_success = False
+                
+                try:
+                    # Lire le contenu du fichier uploadé
+                    file_content = target_file_obj.read()
+                    
+                    # Créer un fichier temporaire
+                    with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix='.xlsx') as tmp_file:
+                        tmp_file.write(file_content)
+                        temp_target_path = tmp_file.name
+                    
+                    # Vérifier que le fichier a bien été créé
+                    if not os.path.exists(temp_target_path):
+                        raise FileNotFoundError(f"Le fichier temporaire {temp_target_path} n'a pas été créé")
+                    
+                    file_creation_success = True
+                    logger.info(f"📋 Fichier cible temporaire créé: {temp_target_path}")
+                    logger.info(f"📋 Taille du fichier: {os.path.getsize(temp_target_path)} bytes")
+                    
+                except Exception as file_error:
+                    logger.error(f"❌ Erreur lors de la création du fichier temporaire: {file_error}")
+                    results['personalized_xlookup'] = False
+                    file_creation_success = False
+                
+                if file_creation_success and temp_target_path:
+                    logger.info(f"📋 Config source_file_path: {source_config['source_file_path']}")
+                    logger.info(f"📋 Config target_sheet_name: {personalized_xlookup_config.get('target_sheet_name', '')}")
+                    logger.info(f"📋 Config result_column_name: {personalized_xlookup_config.get('result_column_name')}")
+                    logger.info(f"📋 Config reference_name: {personalized_xlookup_config.get('reference_name')}")
+                    
+                    # Préparer les colonnes join
+                    join_columns = personalized_xlookup_config.get('join_columns')
+                    if join_columns and len(join_columns) > 0:
+                        logger.info(f"📋 Colonnes TEXTJOIN: {join_columns}")
+                        target_join_columns = join_columns
+                        target_value_column = None
+                    else:
+                        logger.info("📋 Pas de colonnes TEXTJOIN spécifiées")
+                        target_join_columns = None
+                        target_value_column = None
+                    
+                    # Préparer les préfixes d'extraction
+                    extract_prefixes = personalized_xlookup_config.get('extract_prefixes', ['ABC'])
+                    
+                    # Construire la configuration
+                    personalized = PersonnalizedXlookup(
+                        source_file_path=source_config['source_file_path'],
+                        target_file_path=temp_target_path,
+                        source_key_column=["code site", "site code", "site id"],  # Par défaut
+                        result_position_column=personalized_xlookup_config.get('result_position', 'last_free'),
+                        result_column_name=personalized_xlookup_config.get('result_column_name'),
+                        source_sheet_name=source_config.get('source_sheet_path', ''),
+                        target_sheet_name=personalized_xlookup_config.get('target_sheet_name', ''),
+                        reference_name=personalized_xlookup_config.get('reference_name', ''),
+                        reference_date=None,  # Date du jour par défaut
+                        target_value_column=target_value_column,
+                        target_join_columns=target_join_columns,
+                        join_separator=personalized_xlookup_config.get('join_separator', ' .. '),
+                        ignore_empty=True,
+                        target_key_column=None,  # Auto-détection
+                        extract_source_column=personalized_xlookup_config.get('extract_column'),
+                        extract_prefixes=extract_prefixes
+                    )
+                    
+                    logger.info("🔄 Lancement de l'exécution Personalized XLOOKUP...")
+                    # Exécuter
+                    personalized.run()
+                    
+                    # Nettoyer le fichier temporaire
+                    try:
+                        os.unlink(temp_target_path)
+                        logger.info(f"🗑️ Fichier temporaire supprimé: {temp_target_path}")
+                    except:
+                        pass
+                    
+                    logger.success("✅ Personalized XLOOKUP terminé avec succès")
+                    results['personalized_xlookup'] = True
+            else:
+                logger.error("❌ Aucun fichier cible fourni")
+                results['personalized_xlookup'] = False
+            
+        except Exception as e:
+            error_trace = traceback.format_exc()
+            logger.error(f"❌ Erreur Personalized XLOOKUP : {e}")
+            logger.error(f"📝 Détails de l'erreur :\n{error_trace}")
+            results['personalized_xlookup'] = False
+        
+        # Mise à jour des logs en temps réel
+        with log_placeholder.container():
+            st.markdown("#### 📄 Logs en temps réel")
+            logger.render()
+    
     # Fin
     end_time = time.time()
     duration = end_time - start_time
@@ -451,6 +585,9 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
     
     if 'hourly_ihs' in categories:
         result_cols.append(('Hourly IHS', results.get('hourly_ihs', False)))
+    
+    if 'personalized_xlookup' in categories:
+        result_cols.append(('Personalized XLOOKUP', results.get('personalized_xlookup', False)))
     
     # Afficher en colonnes
     if result_cols:

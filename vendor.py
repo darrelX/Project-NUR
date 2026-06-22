@@ -11,7 +11,7 @@ import pandas as pd
 INPUT_FILE = r"C:\Users\f50056342\Desktop\my work\REPETITIVES\STATUT DES SITES JOURNALIERS\statut.xlsx"
 OUTPUT_FILE = r"C:\Users\f50056342\Desktop\computer science\NUR Project Lyne\outputs\resultat_synthese.xlsx"
 
-TARGET_DATE = ["14/6/2026", "15/6/2026"]   # Liste des dates à exploiter
+TARGET_DATE = ["19/6/2026", "20/6/2026", "21/6/2026"]   # Liste des dates à exploiter
 VALID_STATUTS = {"OPERATIONNEL", "INSECURITE"}
 VALID_VENDORS = {"ZTE", "HUAWEI", "NOKIA"}
 
