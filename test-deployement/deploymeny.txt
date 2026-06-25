@@ -1,0 +1,140 @@
+curl https://rclone.org/install.sh | bash
+
+which unzip(si rien ne daffiche)
+
+apt update
+apt install -y unzip
+
+unzip -v
+
+curl https://rclone.org/install.sh | bash
+
+rclone version
+
+configurer et fais monter le modele : rclone config
+
+rclone lsd gdrive:
+
+rclone lsd gdrive:Lynes
+
+Creer un workspace sur le serveur et copier votre modele et vos differents fichiers :
+mkdir -p /workspace/model_final
+rclone copy gdrive:Lynes/model_final /workspace/model_final/ -P
+
+mkdir -p /workspace/test-deployement
+rclone copy gdrive:Lynes/test-deployement /workspace/test-deployement/ -P
+
+Verification du montage : ls -lh /workspace/model_final/  , ls -lh /workspace/test-deployement/
+
+Suite des étapes — déploiement final
+Vérification rapide avant de continuer: root@8bf13e41c98c:/# python3 -c "import py_compile; py_compile.compile('/workspace/test-deployement/server.py', doraise=True); print('SYNTAXE VALIDE')"
+
+ÉTAPE 3 — Lancer le serveur
+cd /workspace / cd test-deployement
+python server.py
+- si le serveur ne lance pas et n'arrive pas a charger le modele , verifier la compatibiliter des dependances : 
+commande :  pip install transformers==4.46.3 accelerate==1.1.1 bitsandbytes==0.46.1
+verification : python3 -c "import torch; print(torch.__version__)"
+
+
+Le serveur tourne, le modèle est chargé en 4-bit (1.91 GB VRAM, cohérent avec un Qwen 2.5-3B quantifié). On passe aux tests.
+ÉTAPE 1 — Ouvrir un DEUXIÈME terminal sur le pod
+[ATTENTION] Ne touche pas à CE terminal — il fait tourner
+            le serveur. Ne tape rien dedans, ne fais pas
+            Ctrl+C.
+Dans l'interface RunPod (le navigateur, pas ce terminal) :
+  1. Reste sur la page de ton pod
+  2. Clique à nouveau sur "Connect"
+  3. Clique à nouveau sur "Start Web Terminal"
+  4. Un NOUVEL onglet de terminal s'ouvre
+
+ÉTAPE 2 — Tester le serveur en interne (dans le Terminal 2)
+bashcurl http://localhost:8000/health
+[OK] Réponse attendue (en une ligne) :
+{"status":"ok","modele":"Qwen2.5-3B fine-tuné","gpu":"NVIDIA ...","vram_utilisee_gb":1.91}
+
+ÉTAPE 3 — Récupérer l'URL publique du pod
+Dans l'interface RunPod (le navigateur) :
+  1. Sur la page de ton pod actif
+  2. Clique "Connect"
+  3. Cherche la section "HTTP Service [Port 8000]"
+  4. Copie l'URL affichée
+     -> ressemble à :
+     https://abc123xyz-8000.proxy.runpod.net
+
+     -------[ATTENTION] Si tu ne vois PAS cette section du tout, le
+            port 8000 n'a pas été exposé à la création du
+            pod -- dis-le-moi immédiatement si c'est le cas,
+            il faudra l'ajouter (parfois possible via "Edit
+            Pod" sans recréer le pod entièrement).----------
+    Bien identifié. Effectivement, le port 8000 n'a pas été exposé à la création du pod — il faut corriger ça. Bonne nouvelle : sur RunPod, ce n'est généralement pas nécessaire de recréer le pod entièrement, on peut souvent éditer les ports exposés sur un pod existant.
+    Solution 1 — Éditer le pod existant pour ajouter le port 8000 (à essayer en premier)
+        1. Va sur l'interface RunPod, page "Pods"
+2. Sur ton pod actif, cherche un bouton "Edit Pod" ou
+   l'icône en forme de crayon ⚙️ / "..." à côté du pod
+3. Cherche la section "Expose HTTP Ports" ou
+   "TCP/HTTP Ports"
+4. Ajoute 8000 à la liste des ports exposés
+   (en plus du 8888 déjà présent pour Jupyter)
+5. Sauvegarde / Applique les changements
+(1. Clique dans le champ "Expose HTTP Ports"
+2. Place ton curseur juste après "8888"
+3. Tape : ,8000
+   (virgule collée, puis 8000, sans espace)
+4. Le champ doit afficher : 8888,8000
+5. Sauvegarde / Applique les changements)
+
+[ATTENTION] Sur certains types de pods (notamment Community
+            Cloud), modifier les ports exposés nécessite un
+            REDÉMARRAGE du pod. Si c'est le cas :
+            - Le serveur Python qui tourne sera arrêté
+            - Mais le modèle reste sur le disque (déjà
+              transféré, donc pas à refaire)
+            - Il faudra juste relancer "python server.py"
+              après le redémarrage
+
+Une fois le pod redémarré : relance le server 
+Réinstaller toutes les dépendances
+bashpip install fastapi uvicorn python-multipart pandas openpyxl
+pip install transformers==4.46.3 accelerate==1.1.1 bitsandbytes==0.46.1
+
+ÉTAPE 1 — Ouvrir un DEUXIÈME terminal
+[ATTENTION] Ne touche pas à CE terminal — il fait tourner
+            le serveur.
+Dans l'interface RunPod (navigateur) :
+  1. "Connect" sur ton pod
+  2. "Start Web Terminal"
+  3. Un nouvel onglet de terminal s'ouvre
+
+  ÉTAPE 2 — Tester en interne
+Dans ce nouveau terminal :
+bashcurl http://localhost:8000/health   :  [OK] Réponse attendue :
+{"status":"ok","modele":"Qwen2.5-3B fine-tuné","gpu":"NVIDIA ...","vram_utilisee_gb":1.91}
+
+
+ÉTAPE 3 — Récupérer l'URL publique du port 8000
+Dans l'interface RunPod (navigateur) :
+  1. Sur ton pod actif → "Connect"
+  2. Tu devrais maintenant voir DEUX sections :
+     - HTTP Service [Port 8888]  (Jupyter)
+     - HTTP Service [Port 8000]  (ton serveur — nouveau)
+  3. Copie l'URL de la section [Port 8000]
+     → https://xxxxxxxx-8000.proxy.runpod.net         ( https://7z66mkxwkkwmyi-8000.proxy.runpod.net/)
+
+
+Lance cette commande (depuis le terminal du pod ou depuis ton PC, les deux fonctionnent puisque c'est une URL publique) et dis-moi ce qui s'affiche.
+curl https://7z66mkxwkkwmyi-8000.proxy.runpod.net/health
+Si ça répond correctement, l'étape suivante sera de mettre à jour SERVEUR_IA_URL dans app_streamlit.py sur ton PC :
+pythonSERVEUR_IA_URL = "https://7z66mkxwkkwmyi-8000.proxy.runpod.net"
+[ATTENTION] Pas de "/" à la fin de l'URL ici, le code
+            ajoute déjà "/health", "/classifier", "/chat"
+            avec leur propre "/" devant
+
+Étape suivante — connecter ton app Streamlit
+Sur ton PC, ouvre app_streamlit.py et modifie la ligne tout en haut :
+python    SERVEUR_IA_URL = "https://7z66mkxwkkwmyi-8000.proxy.runpod.net"
+[ATTENTION] Pas de "/" à la fin
+Sauvegarde, puis lance l'app :
+bashstreamlit run app_streamlit.py
+[OK] Dans la sidebar, le statut doit passer à :
+🟢 Modèle connecté

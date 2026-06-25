@@ -340,7 +340,6 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
         try:
             # Importer la classe DashboardCelldown
             import sys
-            from pathlib import Path
             sys.path.insert(0, str(Path(__file__).parent.parent))
             from dashboard_celldown import DashboardCelldown
             
@@ -388,7 +387,6 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
             # Importer la classe HourlyIHS
             import sys
             import traceback
-            from pathlib import Path
             sys.path.insert(0, str(Path(__file__).parent.parent))
             from hourly_IHS import HourlyIHS
             
@@ -449,7 +447,6 @@ def _execute_matches(source_config, celldown_config, ticket_config, ocm_config,
             # Importer la classe PersonnalizedXlookup
             import sys
             import traceback
-            from pathlib import Path
             sys.path.insert(0, str(Path(__file__).parent.parent))
             from personnalized import PersonnalizedXlookup
             

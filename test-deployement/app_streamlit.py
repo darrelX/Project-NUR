@@ -1,39 +1,49 @@
-"""
-Page Assistant IA - Chat avec LLM distant et Classification de fichiers
-Adapté depuis app_streamlit.py pour s'intégrer au projet NUR
-"""
+# ══════════════════════════════════════════════════════════════
+# app_streamlit.py — Application Breakdown IA (Streamlit)
+# ══════════════════════════════════════════════════════════════
+#
+# Installation :
+#   pip install streamlit requests pandas openpyxl
+#
+# Lancement :
+#   streamlit run app_streamlit.py
+#
+# ══════════════════════════════════════════════════════════════
 
 import streamlit as st
-import sys
-from pathlib import Path
 import requests
 import pandas as pd
 import time
 from io import BytesIO
 from datetime import datetime
 
-# Ajouter le dossier parent au path
-parent_dir = Path(__file__).parent.parent
-sys.path.insert(0, str(parent_dir))
-
-# Import des utilitaires
-from utils.styles import get_custom_css
-
-
 # ── CONFIGURATION ────────────────────────────────────────────
 # ⚠️ Remplace par l'URL réelle de ton pod RunPod (onglet Connect)
 SERVEUR_IA_URL = "https://7z66mkxwkkwmyi-8000.proxy.runpod.net"
 
-TIMEOUT_CHAT = 30  # 30s max pour une réponse de chat
+# Note : la classification de fichier ne dépend plus d'un timeout
+# unique long — le traitement se fait en arrière-plan côté serveur
+# et est suivi par interrogations courtes successives (polling),
+# chacune avec son propre timeout court défini directement dans
+# les fonctions demarrer/consulter/telecharger ci-dessous.
+TIMEOUT_CHAT = 30          # 30s max pour une réponse de chat
 
+st.set_page_config(
+    page_title="Breakdown IA",
+    page_icon="🟠",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-# ── STYLES ORANGE ADDITIONNELS — cohérent avec la charte du projet ──────────
-STYLES_SUPPLEMENTAIRES = """
+# ── STYLE ORANGE — cohérent avec la charte du projet ──────────
+st.markdown("""
 <style>
     :root {
         --orange: #FF7900;
         --orange-dark: #E66D00;
     }
+    .stApp { background-color: #FAFAFA; }
+    h1, h2, h3 { color: #1A1A1A; }
 
     .badge-cause {
         display: inline-block;
@@ -64,24 +74,24 @@ STYLES_SUPPLEMENTAIRES = """
         font-size: 13px;
         font-weight: 600;
     }
+    div[data-testid="stSidebarNav"] { display: none; }
 
     .stButton button[kind="primary"] {
-        background-color: #FF7900 !important;
-        border-color: #FF7900 !important;
+        background-color: #FF7900;
+        border-color: #FF7900;
     }
     .stButton button[kind="primary"]:hover {
-        background-color: #E66D00 !important;
-        border-color: #E66D00 !important;
+        background-color: #E66D00;
+        border-color: #E66D00;
     }
 </style>
-"""
+""", unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════
 # FONCTIONS D'APPEL AU SERVEUR IA
 # ══════════════════════════════════════════════════════════════
 def verifier_serveur_ia():
-    """Vérifie si le serveur IA est disponible"""
     try:
         r = requests.get(f"{SERVEUR_IA_URL}/health", timeout=5)
         if r.status_code == 200:
@@ -92,7 +102,6 @@ def verifier_serveur_ia():
 
 
 def demander_cause_ia(commentaire, owner="", topology="", vendors=""):
-    """Envoie un commentaire au modèle et récupère la cause prédite"""
     try:
         payload = {
             "commentaire": commentaire,
@@ -111,7 +120,12 @@ def demander_cause_ia(commentaire, owner="", topology="", vendors=""):
 
 
 def demarrer_classification(fichier_bytes, nom_fichier):
-    """Démarre la classification d'un fichier Excel complet"""
+    """
+    Envoie le fichier complet (en une seule fois, sans découpage)
+    et récupère immédiatement un identifiant de tâche. Le serveur
+    répond en moins d'une seconde, bien avant que le proxy RunPod
+    ne puisse couper la connexion.
+    """
     try:
         fichiers = {
             "file": (
@@ -131,7 +145,12 @@ def demarrer_classification(fichier_bytes, nom_fichier):
 
 
 def consulter_statut_classification(task_id):
-    """Interroge l'avancement du traitement"""
+    """
+    Interroge l'avancement du traitement. Réponse quasi instantanée,
+    jamais bloquée par le proxy, à appeler en boucle toutes les
+    quelques secondes pendant que le fichier complet est traité
+    en arrière-plan sur le serveur.
+    """
     try:
         response = requests.get(
             f"{SERVEUR_IA_URL}/classifier/statut/{task_id}", timeout=15
@@ -144,7 +163,10 @@ def consulter_statut_classification(task_id):
 
 
 def telecharger_resultat_classification(task_id):
-    """Récupère le fichier final classifié"""
+    """
+    Récupère le fichier final, uniquement une fois le statut passé
+    à "termine" côté serveur.
+    """
     try:
         response = requests.get(
             f"{SERVEUR_IA_URL}/classifier/resultat/{task_id}", timeout=120
@@ -170,28 +192,27 @@ if "nom_fichier_resultat" not in st.session_state:
 
 
 # ══════════════════════════════════════════════════════════════
-# INTERFACE PRINCIPALE
+# SIDEBAR — navigation + statut serveur
 # ══════════════════════════════════════════════════════════════
-
-# Appliquer les styles CSS du projet
-st.markdown(get_custom_css(), unsafe_allow_html=True)
-st.markdown(STYLES_SUPPLEMENTAIRES, unsafe_allow_html=True)
-
-# Titre de la page
-st.markdown("# 💬 Assistant IA")
-st.markdown("Analysez vos incidents réseau avec l'IA - Chat et Classification de fichiers")
-
-st.markdown("---")
-
-# Vérification du statut serveur en sidebar
 with st.sidebar:
-    st.markdown("### 🟠 Statut du serveur IA")
-    
+    st.markdown("### 🟠 Breakdown IA")
+    st.caption("NOC Orange Cameroun")
+    st.divider()
+
+    page = st.radio(
+        "Navigation",
+        ["💬 Chat", "📂 Classification de fichier"],
+        label_visibility="collapsed",
+    )
+
+    st.divider()
+
+    # Vérification du statut serveur
     ok, info = verifier_serveur_ia()
     if ok:
         st.markdown(
             f'<div class="carte-statut-ok">🟢 Modèle connecté<br>'
-            f'<small>{info.get("gpu", "GPU disponible")}</small></div>',
+            f'<small>{info.get("gpu", "")}</small></div>',
             unsafe_allow_html=True,
         )
     else:
@@ -200,28 +221,16 @@ with st.sidebar:
             f'<small>Vérifie que le pod RunPod est actif</small></div>',
             unsafe_allow_html=True,
         )
-    
+
     if st.button("🔄 Rafraîchir le statut", use_container_width=True):
         st.rerun()
-    
-    st.divider()
-
-
-# Navigation entre les deux modes
-page = st.radio(
-    "Mode d'utilisation",
-    ["💬 Chat interactif", "📂 Classification de fichier"],
-    horizontal=True,
-)
-
-st.markdown("---")
 
 
 # ══════════════════════════════════════════════════════════════
-# MODE 1 — CHAT INTERACTIF
+# PAGE 1 — CHAT
 # ══════════════════════════════════════════════════════════════
-if page == "💬 Chat interactif":
-    st.markdown("### Discuter avec le modèle")
+if page == "💬 Chat":
+    st.title("Discuter avec le modèle")
     st.caption("Décris un incident réseau, le modèle propose une cause parmi les 21 catégories du référentiel NOC.")
 
     col_chat, col_contexte = st.columns([2.4, 1])
@@ -290,10 +299,10 @@ if page == "💬 Chat interactif":
 
 
 # ══════════════════════════════════════════════════════════════
-# MODE 2 — CLASSIFICATION DE FICHIER
+# PAGE 2 — CLASSIFICATION DE FICHIER
 # ══════════════════════════════════════════════════════════════
 else:
-    st.markdown("### Classifier un fichier Breakdown")
+    st.title("Classifier un fichier Breakdown")
     st.caption("Dépose le fichier Excel déjà compilé et nettoyé. Le modèle ajoute les colonnes CAUSE_PREDITE et ANALYSE.")
 
     st.markdown("##### Étapes du traitement")
@@ -316,7 +325,8 @@ else:
         st.success(f"📄 **{fichier.name}** sélectionné ({taille_ko} Ko)")
 
         if st.button("🚀 Lancer la classification", type="primary", use_container_width=True):
-            # Étape 1 — démarrer la tâche
+            # Étape 1 — démarrer la tâche (réponse quasi instantanée,
+            # le fichier complet est transmis en une seule fois)
             succes, resultat = demarrer_classification(fichier.getvalue(), fichier.name)
 
             if not succes:
@@ -327,7 +337,11 @@ else:
                 barre = st.progress(0, text="Démarrage du traitement...")
                 statut_texte = st.empty()
 
-                # Étape 2 — interroger l'avancement toutes les 3 secondes
+                # Étape 2 — interroger l'avancement toutes les 3 secondes.
+                # Chaque appel est quasi instantané : le proxy RunPod ne
+                # coupe jamais ce type de requête courte, contrairement
+                # à l'ancien appel bloquant unique qui durait plusieurs
+                # minutes.
                 while True:
                     ok_statut, info = consulter_statut_classification(task_id)
 
@@ -366,7 +380,7 @@ else:
                             st.error(f"❌ Échec du téléchargement : {contenu}")
                         break
 
-    # ── Affichage du résultat (persistant) ──
+    # ── Affichage du résultat (persistant tant qu'une nouvelle classification n'est pas lancée) ──
     if st.session_state.resultat_classification is not None:
         st.divider()
         st.markdown("##### Résultat")
